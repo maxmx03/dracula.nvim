@@ -1,5 +1,4 @@
-
-local c = require('dracula.palette')
+local c = require('dracula.palettes.soft')
 
 local hl = vim.api.nvim_set_hl
 local theme = {}
@@ -274,7 +273,7 @@ theme.set_highlights = function()
   -- NvimTree
   hl(0, "NvimTreeFolderIcon", { link = 'Directory' })
   hl(0, "NvimTreeIndentMarker", { link = 'Directory' })
-  hl(0, "NvimTreeNormal", { link = 'Normal' })
+  hl(0, "NvimTreeNormal", { fg = c.fg, bg = c.float_bg })
   hl(0, "NvimTreeWinSeparator", { link = 'WinSeparator' })
   hl(0, "NvimTreeVertSplit", { link = 'VertSplit' })
   hl(0, "NvimTreeFolderName", { fg = c.fg, bg = 'NONE' })
