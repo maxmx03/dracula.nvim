@@ -166,6 +166,7 @@
  '@attribute' = 'pink'
  '@field' = 'fg'
  '@property' = 'link:@field'
+ '@property.css' = 'cyan'
  '@variable' = 'fg'
  '@variable.builtin' = 'purple'
  '@constant' = 'purple'
