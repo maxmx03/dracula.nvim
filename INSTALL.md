@@ -1,17 +1,39 @@
-### [Foobar](https://foobar.com)
+### [Neovim](https://neovim.io)
 
-#### Install using Git
+#### Prerequisits
 
-If you are a git user, you can install the theme and keep up to date by cloning the repo:
+To install dracula you need a plugin manager.
+A plugin manager is a tool that helps users install and manage plugins.
+Below is a list of some plugin managers that you could install.
 
-    git clone https://github.com/dracula/foobar.git
+- [lazy.nvim](folke/lazy.nvim) *recommended*
+- [packer.nvim](wbthomason/packer.nvim)
+- [vim-plug](https://github.com/junegunn/vim-plug)
 
-#### Install manually
+#### Install using Plugin Manager
 
-Download using the [GitHub .zip download](https://github.com/dracula/foobar/archive/master.zip) option and unzip them.
+Here's an example of how to install dracula using the [lazy.nvim](https://github.com/folke/lazy.nvim) plugin manager:
 
-#### Activating theme
+    require('lazy').setup({
+       {
+        'dracula/nvim',
+        lazy = false, -- make sure we load this during startup if it is your main colorscheme
+        priority = 1000, -- make sure to load this before all the other start plugins
+        config = function ()
+        local dracula = require('dracula')
 
-1. Do this
-2. Then that
-3. Boom! It's working
+            dracula.setup({})
+
+            vim.cmd('colorscheme dracula')
+        end
+       },
+    })
+
+Lazy will install Dracula colorscheme in the following directories:
+
+    DATA DIRECTORY (DEFAULT)  
+                  *$XDG_DATA_HOME*              Nvim: stdpath("data")
+    Unix:         ~/.local/share              ~/.local/share/nvim/lazy
+    Windows:      ~/AppData/Local             ~/AppData/Local/nvim-data/lazy
+
+That's it!

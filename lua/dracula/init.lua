@@ -3,7 +3,9 @@ require("dracula.autocmd")
 local theme = require("dracula.theme")
 
 M.setup = function()
-  vim.cmd("hi clear")
+  if vim.g.colors_name then
+    vim.cmd("hi clear")
+  end
 
   vim.o.background = "dark"
   if vim.fn.exists("syntax_on") then
