@@ -1,18 +1,20 @@
 local M = {}
-local theme = require('dracula.theme')
+require("dracula.autocmd")
+local theme = require("dracula.theme")
 
 M.setup = function()
-  vim.cmd('hi clear')
+  vim.cmd("hi clear")
 
-  vim.o.background = 'dark'
-  if vim.fn.exists('syntax_on') then
-    vim.cmd('syntax reset')
+  vim.o.background = "dark"
+  if vim.fn.exists("syntax_on") then
+    vim.cmd("syntax reset")
   end
 
   vim.o.termguicolors = true
-  vim.g.colors_name = 'dracula'
+  vim.g.colors_name = "dracula"
 
   theme.set_highlights()
 end
 
 return M
+
