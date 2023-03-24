@@ -1,5 +1,4 @@
 # Dracula for [Neovim](https://neovim.io)
-Created with [colorgen-nvim](https://github.com/ChristianChiarulli/colorgen-nvim)
 
 > A dark theme for [Neovim](https://neovim.io).
 

@@ -289,7 +289,7 @@
  SagaNormal = 'link:NormalFloat'
 
 [Telescope]
- TelescopeTitle = 'link:Title'
+ TelescopeTitle = 'cyan - r'
  TelescopeNormal = 'link:NormalFloat'
  TelescopeSelection = 'hint'
  TelescopeMatching = 'info - b'

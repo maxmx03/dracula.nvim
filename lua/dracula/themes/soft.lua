@@ -264,7 +264,7 @@ theme.set_highlights = function()
   hl(0, "SagaNormal", { link = 'NormalFloat' })
 
   -- Telescope
-  hl(0, "TelescopeTitle", { link = 'Title' })
+  hl(0, "TelescopeTitle", { fg = c.cyan, bg = 'NONE', reverse=true, })
   hl(0, "TelescopeNormal", { link = 'NormalFloat' })
   hl(0, "TelescopeSelection", { fg = c.hint, bg = 'NONE' })
   hl(0, "TelescopeMatching", { fg = c.info, bg = 'NONE', bold=true, })
