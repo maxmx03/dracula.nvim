@@ -2,7 +2,7 @@
 
 > A dark theme for [Neovim](https://neovim.io).
 
-![Screenshot](./screenshot.png)
+![Screenshot](https://user-images.githubusercontent.com/50273941/227609477-cd5e46c2-5420-4576-aea6-5ef3b3641954.png)
 
 ## Install
 
