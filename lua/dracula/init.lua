@@ -15,7 +15,7 @@ M.setup = function(config)
 	vim.o.termguicolors = true
 	vim.g.colors_name = "dracula"
 
-	if config.soft then
+	if config and config.soft then
 		require("dracula.themes.soft").set_highlights()
 
 		return
