@@ -315,7 +315,7 @@
  DashboardFooter = 'comment'
  DashboardProjectTitle = 'link:Title'
  DashboardProjectTitleIcon = 'link:Title'
- DashboardProjectIcon = 'pink'
+ DashboardProjectIcon = 'purple'
  DashboardMruTitle = 'link:Title'
  DashboardMruIcon = 'link:Title'
  DashboardFiles = 'fg'
