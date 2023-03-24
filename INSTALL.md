@@ -23,6 +23,7 @@ Here's an example of how to install dracula using the [lazy.nvim](https://github
         local dracula = require('dracula')
 
             dracula.setup({})
+            -- dracula.setup({ soft = true })
 
             vim.cmd('colorscheme dracula')
         end
