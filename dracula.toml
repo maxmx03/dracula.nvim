@@ -229,7 +229,7 @@
  GitSignsDelete = 'sign_delete'
 
 [Illuminate]
- illuminatedWord = 'currentline'
+ illuminatedWord = '- currentline'
  illuminatedCurWord = 'link:illuminatedWord'
  IlluminatedWordText = 'link:illuminatedWord'
  IlluminatedWordRead = 'link:illuminatedWord'
