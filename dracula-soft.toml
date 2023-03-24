@@ -86,7 +86,7 @@
  MoreMsg = 'cyan - b'
  Question = 'cyan - b'
  EndOfBuffer = 'bg'
- NonText = 'bg'
+ NonText = 'comment'
  Variable = 'fg'
  String = 'yellow'
  Character = 'yellow'
@@ -228,6 +228,13 @@
  GitSignsChange = 'sign_change'
  GitSignsDelete = 'sign_delete'
 
+[Illuminate]
+ illuminatedWord = 'currentline'
+ illuminatedCurWord = 'link:illuminatedWord'
+ IlluminatedWordText = 'link:illuminatedWord'
+ IlluminatedWordRead = 'link:illuminatedWord'
+ IlluminatedWordWrite = 'link:illuminatedWord'
+
 [LSP]
  LspDiagnosticsDefaultError = 'error'
  LspDiagnosticsDefaultWarning = 'warning'
@@ -296,6 +303,7 @@
  TelescopeBorder = 'link:WinSeparator'
 
 [NvimTree]
+ NvimTreeRootFolder = 'link:Directory'
  NvimTreeFolderIcon = 'link:Directory'
  NvimTreeIndentMarker = 'link:Directory'
  NvimTreeNormal = 'fg float_bg'
@@ -313,6 +321,25 @@
  NvimTreeGitDeleted = 'sign_delete'
  NvimTreeGitMerge = 'sign_change'
  NvimTreeGitDirty = 'sign_change'
+
+[NeoTree]
+ NeoTreeRootName = 'link:NvimTreeRootFolder'
+ NeoTreeDirectoryIcon = 'link:NvimTreeFolderIcon'
+ NeoTreeNormal = 'link:NvimTreeNormal'
+ NeoTreeNormalNC = 'link:NvimTreeNormalNC'
+ NeoTreeWinSeparator = 'link:NvimTreeWinSeparator'
+ NeoTreeDirectoryName = 'link:NvimTreeFolderName'
+ NeoTreeOpenedDirectoryName = 'link:NvimTreeOpenedFolderName'
+ NeoTreeHiddenByName = 'link:NvimTreeEmptyFolderName'
+ NeoTreeEndOfBuffer = 'link:NvimTreeEndOfBuffer'
+ NeoTreeCursorLine = 'link:NvimTreeCursorLine'
+ NeoTreeGitIgnored = 'link:NvimTreeGitIgnored'
+ NeoTreeGitAdded = 'link:NvimTreeGitStaged'
+ NeoTreeGitConflict = 'link:NvimTreeGitDeleted'
+ NeoTreeGitDeleted = 'link:NvimTreeGitDeleted'
+ NeoTreeGitModified = 'link:NvimTreeGitDirty'
+ NeoTreeGitUnstaged = 'link:NvimTreeGitUnstaged'
+ NeoTreeGitUntracked = 'link:NvimTreeGitNew'
 
 [Dap]
  DapUINormal = 'link:NormalFloat'
