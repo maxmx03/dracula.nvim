@@ -186,17 +186,28 @@
  '@tag.attribute' = 'green'
  '@tag.delimiter' = 'fg'
 
-[SemanticHighlight]
- '@lsp.type.property' = 'link:@property'
- '@lsp.typemod.variable.defaultLibrary' = 'link:@constant'
- '@lsp.type.variable' = 'link:@variable'
+[Semantic]
+ '@lsp.type.namespace' = 'link:@namespace'
+ '@lsp.type.type' = 'link:@type'
+ '@lsp.type.class' = 'link:@type'
+ '@lsp.type.enum' = 'link:@type'
+ '@lsp.type.interface' = 'link:@type'
+ '@lsp.type.struct' = 'link:@structure'
  '@lsp.type.parameter' = 'link:@parameter'
+ '@lsp.type.variable' = 'link:@variable'
+ '@lsp.type.property' = 'link:@property'
+ '@lsp.type.enumMember' = 'link:@constant'
+ '@lsp.type.function' = 'link:@function'
+ '@lsp.type.method' = 'link:@method'
+ '@lsp.type.macro' = 'link:@macro'
+ '@lsp.type.decorator' = 'link:@function'
+ '@lsp.typemod.variable.defaultLibrary' = 'link:@constant'
  '@lsp.typemod.parameter.readyonly' = 'link:Italic'
  '@lsp.typemod.variable.readonly' = 'link:@variable.builtin'
- '@lsp.type.class' = 'link:@type'
 
 [Whichkey]
  WhichKey = 'fg'
+ WhichKeyValue = 'pink'
  WhichKeySeperator = 'pink'
  WhichKeyGroup = 'green'
  WhichKeyDesc = 'cyan'
@@ -276,8 +287,8 @@
  NvimTreeGitDirty = 'sign_change'
 
 [StatusLine]
- StatusLine = '- float_bg'
- StatusLineNC = '- float_bg'
+ StatusLine = 'fg float_bg'
+ StatusLineNC = 'float_bg float_bg'
  StatusLineSeparator = 'float_bg'
  StatusLineTerm = 'float_bg'
  StatusLineTermNC = 'float_bg'
