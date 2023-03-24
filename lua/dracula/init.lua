@@ -18,10 +18,12 @@ M.setup = function(config)
 	vim.g.colors_name = "dracula"
 
 	if vim.tbl_isempty(M.config) then
-		M.config.soft = config.soft
+		if config and config.soft then
+			M.config.soft = config.soft
+		end
 	end
 
-	if M.config.soft then
+	if M.config and M.config.soft then
 		require("dracula.themes.soft").set_highlights()
 
 		return
