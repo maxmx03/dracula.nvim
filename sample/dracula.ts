@@ -10,7 +10,7 @@ interface VampireProps {
 }
 
 class Vampire {
-  location: string;
+  location: string
   birthDate: number;
   deathDate: number;
   weaknesses: string[];

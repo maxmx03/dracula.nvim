@@ -16,13 +16,14 @@ local colors = {
   sign_add = "#50fa7b",
   sign_change = "#ffb866",
   sign_delete = "#ff5555",
-  tree_sign_add = "#50fa7b",
-  tree_sign_change = "#ffb866",
   error = "#ff555b",
   warning = "#ffb866",
   info = "#8be9fd",
   hint = "#8be9fd",
   other = "#bd93f9",
+  blended_orange = "#483F3E",
+  blended_red = "#48303B",
+  blended_cyan = "#374754",
 }
 
 return colors
