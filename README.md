@@ -1,20 +1,20 @@
-# Dracula for [Foobar](https://foobar.com)
+# Dracula for [Neovim](https://neovim.io)
 
-> A dark theme for [Foobar](https://foobar.com).
+> A dark theme for [Neovim](https://neovim.io).
 
 ![Screenshot](./screenshot.png)
 
 ## Install
 
-All instructions can be found at [draculatheme.com/foobar](https://draculatheme.com/foobar).
+All instructions can be found at [draculatheme.com/neovim](https://draculatheme.com/neovim).
 
 ## Team
 
-This theme is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/dracula/foobar/graphs/contributors).
+This theme is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/dracula/neovim/graphs/contributors).
 
 | [![Zeno Rocha](https://github.com/zenorocha.png?size=100)](https://github.com/zenorocha) |
 | ---------------------------------------------------------------------------------------- |
-| [Zeno Rocha](https://github.com/zenorocha)                                               |
+| [Max](https://github.com/maxmx03)                                               |
 
 ## Community
 
