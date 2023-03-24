@@ -14,4 +14,3 @@
 <!-- ...There was a guy named Vlad -->
 
 > The **age** is the `deathDate` minus the `birthDate`
-
