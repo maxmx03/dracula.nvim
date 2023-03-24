@@ -212,8 +212,7 @@
 
 [Whichkey]
  WhichKey = 'fg'
- WhichKeyValue = 'pink'
- WhichKeySeperator = 'pink'
+ WhichKeySeparator = 'pink'
  WhichKeyGroup = 'green'
  WhichKeyDesc = 'cyan'
  WhichKeyFloat = '- float_bg'
