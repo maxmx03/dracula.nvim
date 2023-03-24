@@ -1,9 +1,7 @@
-local c = require("dracula.palettes")
-
 local hl = vim.api.nvim_set_hl
 local theme = {}
 
-theme.set_highlights = function()
+theme.set_highlights = function(c)
 
   -- highlights
   hl(0, "Normal", { fg = c.fg, bg = c.bg })
