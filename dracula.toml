@@ -29,6 +29,7 @@
  blended_orange = '#483F3E'
  blended_red = '#48303B'
  blended_cyan = '#374754'
+ blended_green = '#2E4940'
 
 [highlights]
  Normal = 'fg bg'
@@ -229,6 +230,9 @@
  GitSignsAdd = 'sign_add'
  GitSignsChange = 'sign_change'
  GitSignsDelete = 'sign_delete'
+ GitSignsAddInline = 'green blended_green'
+ GitSignsChangeInline = 'orange blended_orange'
+ GitSignsDeleteInline = 'red blended_red'
 
 [Illuminate]
  illuminatedWord = '- currentline'

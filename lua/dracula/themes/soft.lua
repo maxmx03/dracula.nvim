@@ -202,6 +202,9 @@ theme.set_highlights = function(c)
   hl(0, "GitSignsAdd", { fg = c.sign_add, bg = 'NONE' })
   hl(0, "GitSignsChange", { fg = c.sign_change, bg = 'NONE' })
   hl(0, "GitSignsDelete", { fg = c.sign_delete, bg = 'NONE' })
+  hl(0, "GitSignsAddInline", { fg = c.green, bg = c.blended_green })
+  hl(0, "GitSignsChangeInline", { fg = c.orange, bg = c.blended_orange })
+  hl(0, "GitSignsDeleteInline", { fg = c.red, bg = c.blended_red })
 
   -- Illuminate
   hl(0, "illuminatedWord", { fg = 'NONE', bg = c.currentline })

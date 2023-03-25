@@ -22,8 +22,9 @@ local colors = {
   hint = "#97e1f1",
   other = "#bf9eee",
   blended_orange = "#483F3E",
-  blended_red = "#48303B",
-  blended_cyan = "#374754",
+  blended_red = "#46333D",
+  blended_cyan = "#394552",
+  blended_green = "#314742",
 }
 
 return colors
