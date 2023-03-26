@@ -30,6 +30,8 @@
  blended_red = '#46333D'
  blended_cyan = '#394552'
  blended_green = '#314742'
+ blended_purple = '#3F3B52'
+ blended_pink = '#5B415A'
 
 [highlights]
  Normal = 'fg bg'
@@ -474,7 +476,7 @@
  '@neorg.links.file' = 'link:@text.uri'
 
 [IndentBlankLine]
- IndentBlanklineChar = 'bg'
- IndentBlanklineContextChar = 'comment'
- IndentBlanklineSpaceChar = 'comment'
+ IndentBlanklineChar = 'blended_purple'
+ IndentBlanklineContextChar = 'blended_pink'
+ IndentBlanklineSpaceChar = 'purple'
  IndentBlanklineContextSpaceChar = 'pink' 

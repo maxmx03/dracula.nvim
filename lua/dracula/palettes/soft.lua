@@ -25,6 +25,8 @@ local colors = {
   blended_red = "#46333D",
   blended_cyan = "#394552",
   blended_green = "#314742",
+  blended_purple = "#3F3B52",
+  blended_pink = "#5B415A",
 }
 
 return colors
