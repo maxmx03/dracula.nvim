@@ -360,7 +360,7 @@
  StatusLineTermNC = 'float_bg'
 
 [Dashboard]
- DashboardHeader = 'link:Comment'
+ DashboardHeader = 'red'
  DashboardCenter = 'fg'
  DashboardFooter = 'comment'
  DashboardProjectTitle = 'link:Title'

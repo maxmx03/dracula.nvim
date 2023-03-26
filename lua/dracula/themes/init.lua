@@ -330,7 +330,7 @@ theme.set_highlights = function(c)
   hl(0, "StatusLineTermNC", { fg = c.float_bg, bg = 'NONE' })
 
   -- Dashboard
-  hl(0, "DashboardHeader", { link = 'Comment' })
+  hl(0, "DashboardHeader", { fg = c.red, bg = 'NONE' })
   hl(0, "DashboardCenter", { fg = c.fg, bg = 'NONE' })
   hl(0, "DashboardFooter", { fg = c.comment, bg = 'NONE' })
   hl(0, "DashboardProjectTitle", { link = 'Title' })
