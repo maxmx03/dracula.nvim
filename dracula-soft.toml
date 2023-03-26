@@ -472,3 +472,9 @@
  '@neorg.lists.unordered.5.prefix' = 'link:@neorg.lists.ordered.5.prefix'
  '@neorg.lists.unordered.6.prefix' = 'link:@neorg.lists.ordered.6.prefix'
  '@neorg.links.file' = 'link:@text.uri'
+
+[IndentBlankLine]
+ IndentBlanklineChar = 'bg'
+ IndentBlanklineContextChar = 'comment'
+ IndentBlanklineSpaceChar = 'comment'
+ IndentBlanklineContextSpaceChar = 'pink' 

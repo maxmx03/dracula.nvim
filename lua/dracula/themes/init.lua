@@ -444,6 +444,12 @@ theme.set_highlights = function(c)
   hl(0, "@neorg.lists.unordered.5.prefix", { link = '@neorg.lists.ordered.5.prefix' })
   hl(0, "@neorg.lists.unordered.6.prefix", { link = '@neorg.lists.ordered.6.prefix' })
   hl(0, "@neorg.links.file", { link = '@text.uri' })
+
+  -- IndentBlankLine
+  hl(0, "IndentBlanklineChar", { fg = c.bg, bg = 'NONE' })
+  hl(0, "IndentBlanklineContextChar", { fg = c.comment, bg = 'NONE' })
+  hl(0, "IndentBlanklineSpaceChar", { fg = c.comment, bg = 'NONE' })
+  hl(0, "IndentBlanklineContextSpaceChar", { fg = c.pink, bg = 'NONE' })
 end
 
 return theme
