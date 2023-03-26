@@ -451,6 +451,11 @@ theme.set_highlights = function(c)
   hl(0, "IndentBlanklineContextChar", { fg = c.blended_pink, bg = 'NONE' })
   hl(0, "IndentBlanklineSpaceChar", { fg = c.purple, bg = 'NONE' })
   hl(0, "IndentBlanklineContextSpaceChar", { fg = c.pink, bg = 'NONE' })
+
+  -- Hop
+  hl(0, "HopNextKey", { fg = c.pink, bg = 'NONE', bold=true, })
+  hl(0, "HopNextKey1", { fg = c.cyan, bg = 'NONE', bold=true, })
+  hl(0, "HopUnmatched", { fg = c.comment, bg = 'NONE' })
 end
 
 return theme

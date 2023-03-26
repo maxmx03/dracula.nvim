@@ -481,3 +481,8 @@
  IndentBlanklineContextChar = 'blended_pink'
  IndentBlanklineSpaceChar = 'purple'
  IndentBlanklineContextSpaceChar = 'pink' 
+
+[Hop]
+ HopNextKey = 'pink - b'
+ HopNextKey1 = 'cyan - b'
+ HopUnmatched = 'comment'
