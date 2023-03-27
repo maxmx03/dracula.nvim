@@ -160,6 +160,7 @@
  '@number' = 'purple'
  '@float' = 'purple'
  '@label.json' = 'cyan'
+ '@label.ruby' = 'link:@variable.builtin'
  '@exception' = 'link:Exception'
  '@type' = 'link:Type'
  '@type.dart' = 'link:@type'
@@ -175,6 +176,7 @@
  '@property.css' = 'cyan'
  '@variable' = 'fg'
  '@variable.builtin' = 'purple - i'
+ '@variable.global.ruby' = 'link:@constant'
  '@constant' = 'purple'
  '@constant.builtin' = 'purple'
  '@constant.macro' = 'purple'
@@ -209,6 +211,7 @@
  '@lsp.type.struct' = 'link:@structure'
  '@lsp.type.parameter' = 'link:@parameter'
  '@lsp.type.variable' = 'link:@variable'
+ '@lsp.type.variable.lua' = '- -'
  '@lsp.type.property' = 'link:@property'
  '@lsp.type.enumMember' = 'link:@constant'
  '@lsp.type.function' = 'link:@function'
@@ -217,7 +220,8 @@
  '@lsp.type.decorator' = 'link:@function'
  '@lsp.typemod.variable.defaultLibrary' = 'link:@constant'
  '@lsp.typemod.parameter.readyonly' = 'link:Italic'
- '@lsp.typemod.variable.readonly' = 'link:@variable.builtin'
+ '@lsp.typemod.variable.readonly' = 'link:@constant'
+ '@lsp.typemod.variable.global' = 'link:@constant'
 
 [Whichkey]
  WhichKey = 'fg'
