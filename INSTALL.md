@@ -6,7 +6,7 @@ To install dracula you need a plugin manager.
 A plugin manager is a tool that helps users install and manage plugins.
 Below is a list of some plugin managers that you could install.
 
-- [lazy.nvim](folke/lazy.nvim) *recommended*
+- [lazy.nvim](folke/lazy.nvim) _recommended_
 - [packer.nvim](wbthomason/packer.nvim)
 - [vim-plug](https://github.com/junegunn/vim-plug)
 
@@ -14,7 +14,8 @@ Below is a list of some plugin managers that you could install.
 
 Here's an example of how to install dracula using the [lazy.nvim](https://github.com/folke/lazy.nvim) plugin manager:
 
-    require('lazy').setup({
+```lua
+ require('lazy').setup({
        {
         'dracula/nvim',
         lazy = false, -- make sure we load this during startup if it is your main colorscheme
@@ -23,16 +24,38 @@ Here's an example of how to install dracula using the [lazy.nvim](https://github
         local dracula = require('dracula')
 
             dracula.setup({})
-            -- dracula.setup({ soft = false, transparent = false }) available options
 
             vim.cmd('colorscheme dracula')
         end
        },
     })
+```
+
+#### Configuration
+
+The dracula.nvim theme can be configured using the following options:
+
+`soft`
+ - Type: boolean
+ - Default: false
+
+Set this option to true to enable the soft version of the Dracula color palette, which has reduced color saturation. 
+Set it to false to use the original, more vibrant colors.
+
+`transparent`
+- Type: boolean
+- Default: false
+
+```lua
+require('dracula').setup({
+    soft = false,
+    transparent = false
+})
+```
 
 Lazy will install Dracula colorscheme in the following directories:
 
-    DATA DIRECTORY (DEFAULT)  
+    DATA DIRECTORY (DEFAULT)
                   *$XDG_DATA_HOME*              Nvim: stdpath("data")
     Unix:         ~/.local/share              ~/.local/share/nvim/lazy
     Windows:      ~/AppData/Local             ~/AppData/Local/nvim-data/lazy
