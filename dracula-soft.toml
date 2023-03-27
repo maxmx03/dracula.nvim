@@ -84,7 +84,7 @@
  Title = 'cyan - b'
  ErrorMsg = 'error blended_red'
  Search = 'link:Visual'
- IncSearch = 'fg - b'
+ IncSearch = 'red blended_red'
  Substitute = 'link:IncSearch'
  MoreMsg = 'cyan - b'
  Question = 'cyan - b'
