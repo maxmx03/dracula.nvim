@@ -10,7 +10,7 @@ All instructions can be found at [INSTALL.md](https://github.com/maxmx03/dracula
 
 ## How to customize
 
-All instructions can be found at [CUSTOMIZE.md](https://github.com/maxmx03/dracula.nvim/blob/master/INSTALL.md).
+All instructions can be found at [CUSTOMIZE.md](https://github.com/maxmx03/dracula.nvim/blob/master/CUSTOMIZE.md).
 
 ## Constributions
 
