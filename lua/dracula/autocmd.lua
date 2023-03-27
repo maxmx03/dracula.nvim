@@ -1,4 +1,4 @@
-if vim.fn.has("nvim-0.8.3") == 1 then
+if vim.fn.has("nvim-0.9.0") == 1 then
   vim.api.nvim_create_autocmd("LspTokenUpdate", {
     callback = function(args)
       local token = args.data.token
