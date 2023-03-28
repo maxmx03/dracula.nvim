@@ -12,7 +12,7 @@ All instructions can be found at [INSTALL.md](https://github.com/maxmx03/dracula
 
 All instructions can be found at [CUSTOMIZE.md](https://github.com/maxmx03/dracula.nvim/blob/master/CUSTOMIZE.md).
 
-## Constributions
+## Contributions
 
 All instructions can be found at [CONTRIBUTING.md](https://github.com/maxmx03/dracula.nvim/blob/master/CONTRIBUTING.md)
 

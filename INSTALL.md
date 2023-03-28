@@ -17,7 +17,7 @@ Here's an example of how to install dracula using the [lazy.nvim](https://github
 ```lua
  require('lazy').setup({
        {
-        'dracula/nvim',
+        'maxmx03/dracula.nvim',
         lazy = false, -- make sure we load this during startup if it is your main colorscheme
         priority = 1000, -- make sure to load this before all the other start plugins
         config = function ()
