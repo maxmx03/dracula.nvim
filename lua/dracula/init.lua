@@ -2,7 +2,7 @@ local M = {}
 require("dracula.autocmd")
 local colors = require("dracula.palettes")
 local soft_colors = require("dracula.palettes.soft")
-local theme = require("dracula.themes")
+local theme = require("dracula.theme")
 
 M.config = {}
 
@@ -46,7 +46,7 @@ M.setup = function(config)
 	M.set_config(config)
 
 	if M.config and M.config.soft then
-		require("dracula.themes.soft").set_highlights(soft_colors)
+		theme.set_highlights(soft_colors)
 		M.set_transparent(soft_colors)
 
 		return
