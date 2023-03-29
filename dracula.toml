@@ -224,6 +224,7 @@
  '@lsp.typemod.variable.global' = 'link:@constant'
  '@lsp.typemod.keyword.documentation' = 'link:@keyword'
  '@lsp.typemod.class.documentation' = 'link:@type'
+ '@lsp.typemod.property.readonly' = 'link:@constant'  
 
 [Whichkey]
  WhichKey = 'fg'

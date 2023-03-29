@@ -194,6 +194,7 @@ theme.set_highlights = function(c)
   hl(0, "@lsp.typemod.variable.global", { link = '@constant' })
   hl(0, "@lsp.typemod.keyword.documentation", { link = '@keyword' })
   hl(0, "@lsp.typemod.class.documentation", { link = '@type' })
+  hl(0, "@lsp.typemod.property.readonly", { link = '@constant' })
 
   -- Whichkey
   hl(0, "WhichKey", { fg = c.fg, bg = 'NONE' })
