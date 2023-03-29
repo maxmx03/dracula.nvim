@@ -175,6 +175,7 @@ theme.set_highlights = function(c)
   -- Semantic
   hl(0, "@lsp.type.namespace", { link = '@namespace' })
   hl(0, "@lsp.type.type", { link = '@type' })
+  hl(0, "@lsp.type.typeParameter", { link = '@type' })
   hl(0, "@lsp.type.class", { link = '@type' })
   hl(0, "@lsp.type.enum", { link = '@type' })
   hl(0, "@lsp.type.interface", { link = '@type' })
