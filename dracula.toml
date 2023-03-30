@@ -232,7 +232,7 @@
  WhichKeySeparator = 'pink'
  WhichKeyGroup = 'green'
  WhichKeyDesc = 'cyan'
- WhichKeyFloat = '- float_bg'
+ WhichKeyFloat = 'link:NormalFloat'
 
 [Git]
  SignAdd = 'sign_add'
@@ -330,7 +330,7 @@
  NvimTreeOpenedFolderName = 'purple - b'
  NvimTreeEmptyFolderName = 'purple - i'
  NvimTreeGitIgnored = 'comment - i'
- NvimTreeEndOfBuffer = '- float_bg'
+ NvimTreeEndOfBuffer = 'float_bg'
  NvimTreeCursorLine = 'link:CursorLine'
  NvimTreeGitStaged = 'sign_add'
  NvimTreeGitNew = 'sign_add'
