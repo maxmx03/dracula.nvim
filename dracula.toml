@@ -232,7 +232,7 @@
  WhichKeySeparator = 'pink'
  WhichKeyGroup = 'green'
  WhichKeyDesc = 'cyan'
- WhichKeyFloat = 'link:NormalFloat'
+ WhichKeyFloat = '- float_bg'
 
 [Git]
  SignAdd = 'sign_add'

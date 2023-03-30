@@ -202,7 +202,7 @@ theme.set_highlights = function(c)
   hl(0, "WhichKeySeparator", { fg = c.pink, bg = 'NONE' })
   hl(0, "WhichKeyGroup", { fg = c.green, bg = 'NONE' })
   hl(0, "WhichKeyDesc", { fg = c.cyan, bg = 'NONE' })
-  hl(0, "WhichKeyFloat", { link = 'NormalFloat' })
+  hl(0, "WhichKeyFloat", { fg = 'NONE', bg = c.float_bg })
 
   -- Git
   hl(0, "SignAdd", { fg = c.sign_add, bg = 'NONE' })
