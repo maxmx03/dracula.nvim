@@ -12,6 +12,10 @@ local colors = require('dracula.palettes')
 
 vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = colors.yellow })
 ```
+
+![example1](https://user-images.githubusercontent.com/50273941/228698201-4a8a57fd-51e6-473a-aecd-4771cd07ad6f.png)
+
+
 In this example, we first load the dracula color palette into the colors variable. Then, we use vim.api.nvim_set_hl() 
 to set the color of the CursorLineNr highlight group to the value of colors.yellow.
 
@@ -39,6 +43,7 @@ vim.api.nvim_set_hl(0, 'NormalFloat', { fg = colors.fg, bg = custom_colors.float
 -- of course, we need to change the WinSeparator background color to match the NormalFloat bg
 vim.api.nvim_set_hl(0, 'WinSeparator', { fg = colors.comment, bg = custom_colors.float_bg })
 ```
+![example2](https://user-images.githubusercontent.com/50273941/228698426-6acd98f2-bc11-45a7-b217-744389265730.png)
 
 #### How to find a Highlight group
 
