@@ -3,6 +3,7 @@ local colors = {
   bg = "#282a36",
   float_bg = "#23252f",
   currentline = "#44475a",
+  selection = "#44475a",
   comment = "#6272a4",
   cyan = "#8be9fd",
   green = "#50fa7b",
@@ -27,6 +28,13 @@ local colors = {
   blended_green = "#2E4940",
   blended_purple = "#3E3A53",
   blended_pink = "#5E3E5A",
+  blended_add = "#2E4940",
+  blended_change = "#483F3E",
+  blended_warning = "#483F3E",
+  blended_error = "#48303B",
+  blended_info = "#374754",
+  blended_hint = "#374754",
+  blended_other = "#3E3A53",
 }
 
 return colors
