@@ -36,20 +36,39 @@ Here's an example of how to install dracula using the [lazy.nvim](https://github
 The dracula.nvim theme can be configured using the following options:
 
 `soft`
- - Type: boolean
- - Default: false
 
-Set this option to true to enable the soft version of the Dracula color palette, which has reduced color saturation. 
+- Type: boolean
+- Default: false
+
+Set this option to true to enable the soft version of the Dracula color palette, which has reduced color saturation.
 Set it to false to use the original, more vibrant colors.
 
 `transparent`
+
 - Type: boolean
 - Default: false
+
+`colors`
+
+- Type: table or callback(colors: table)
+- Default: dracula colors
+
+`callback`
+
+- Type: callback(colors: table)
 
 ```lua
 require('dracula').setup({
     soft = false,
     transparent = false
+    colors = function (colors)
+      return {
+        error = colors.purple,
+      }
+    end,
+    callback = function (colors)
+     vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = colors.yellow })
+    end
 })
 ```
 
