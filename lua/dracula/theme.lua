@@ -464,6 +464,10 @@ theme.set_highlights = function(c)
   hl(0, "HopNextKey", { fg = c.pink, bg = 'NONE', bold=true, })
   hl(0, "HopNextKey1", { fg = c.cyan, bg = 'NONE', bold=true, })
   hl(0, "HopUnmatched", { fg = c.comment, bg = 'NONE' })
+
+  -- Lazy
+  hl(0, "LazyH1", { fg = c.purple, bg = c.blended_purple })
+  hl(0, "LazyButtonActive", { link = 'LazyH1' })
 end
 
 return theme

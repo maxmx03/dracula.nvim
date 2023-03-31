@@ -494,3 +494,7 @@
  HopNextKey = 'pink - b'
  HopNextKey1 = 'cyan - b'
  HopUnmatched = 'comment'
+
+[Lazy]
+ LazyH1 = 'purple blended_purple'
+ LazyButtonActive = 'link:LazyH1'
