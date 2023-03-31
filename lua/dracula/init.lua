@@ -43,7 +43,7 @@ M.setup = function(user_config)
 
 	theme.set_highlights(M.colors)
   M:apply_transparency()
-  M.callback()
+  M.callback(M.colors)
 end
 
 return M

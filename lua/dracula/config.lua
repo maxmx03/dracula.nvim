@@ -6,7 +6,7 @@ function M:new()
 		transparent = false,
 		colors = {},
 		user_config = {},
-		callback = function() end,
+		callback = function(colors) end,
 	}
 
 	setmetatable(config, self)
