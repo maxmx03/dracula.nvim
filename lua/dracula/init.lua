@@ -37,11 +37,13 @@ M.setup = function(user_config)
 
 	M:set_soft(M.user_config.soft)
 	M:set_transparent(M.user_config.transparent)
+  M:set_callback(M.user_config.callback)
 	M:set_colors()
 	M:set_user_colors()
 
 	theme.set_highlights(M.colors)
   M:apply_transparency()
+  M.callback()
 end
 
 return M

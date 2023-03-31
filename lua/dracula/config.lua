@@ -6,6 +6,7 @@ function M:new()
 		transparent = false,
 		colors = {},
 		user_config = {},
+		callback = function() end,
 	}
 
 	setmetatable(config, self)
@@ -54,6 +55,12 @@ function M:set_transparent(transparent)
 	end
 
 	self.transparent = false
+end
+
+function M:set_callback(cb)
+	if type(cb) == "function" then
+		self.callback = cb
+	end
 end
 
 return M
