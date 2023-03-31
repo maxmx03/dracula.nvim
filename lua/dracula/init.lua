@@ -33,14 +33,15 @@ M.setup = function(user_config)
 
 	if vim.tbl_isempty(M.user_config) then
 		M.user_config = user_config
-	else
-		M:set_soft(M.user_config.soft)
-		M:set_transparent(M.user_config.transparent)
-    M:set_colors()
-    M:set_user_colors()
 	end
 
+	M:set_soft(M.user_config.soft)
+	M:set_transparent(M.user_config.transparent)
+	M:set_colors()
+	M:set_user_colors()
+
 	theme.set_highlights(M.colors)
+  M:apply_transparency()
 end
 
 return M
