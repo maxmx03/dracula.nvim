@@ -31,21 +31,19 @@ end
 
 M.setup = function(user_config)
 	M.load_default()
-	user_config = user_config or {}
 
 	if vim.tbl_isempty(M.user_config) then
-		M.user_config = user_config
+		M.user_config = user_config or {}
 	end
 
 	M:set_soft(M.user_config.soft)
 	M:set_transparent(M.user_config.transparent)
-	M:set_callback(M.user_config.callback)
 	M:set_colors()
 	M:set_user_colors()
 
 	theme.set_highlights(M.colors)
 	M:apply_transparency()
-	M.callback(M.colors)
+	M:call_user_callback(M.user_config.callback)
 end
 
 return M
