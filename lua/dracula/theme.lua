@@ -319,7 +319,7 @@ theme.set_highlights = function(c)
   hl(0, "SagaWinbarFilename", { fg = c.fg, bg = 'NONE' })
   hl(0, "SagaWinbarFolderName", { fg = c.fg, bg = 'NONE' })
   hl(0, "SagaWinbarFileIcon", { link = 'Directory' })
-  hl(0, "SagaWinbarSep", { fg = c.purple, bg = 'NONE' })
+  hl(0, "SagaWinbarSep", { fg = c.pink, bg = 'NONE' })
 
   -- Telescope
   hl(0, "TelescopeTitle", { fg = c.cyan, bg = 'NONE', reverse=true, })

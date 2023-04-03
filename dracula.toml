@@ -357,7 +357,7 @@
  SagaWinbarFilename = 'fg'
  SagaWinbarFolderName = 'fg'
  SagaWinbarFileIcon = 'link:Directory'
- SagaWinbarSep = 'purple'
+ SagaWinbarSep = 'pink'
 
 [Telescope]
  TelescopeTitle = 'cyan - r'
