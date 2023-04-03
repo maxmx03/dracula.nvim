@@ -191,6 +191,7 @@
  '@namespace' = 'fg'
  '@symbol' = 'purple'
  '@text' = 'yellow'
+ '@text.html' = 'fg'
  '@text.strong' = 'orange - b'
  '@text.emphasis' = 'green - i'
  '@text.strike' = 'yellow - s'
