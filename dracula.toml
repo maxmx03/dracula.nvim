@@ -371,7 +371,7 @@
  NvimTreeFolderIcon = 'link:Directory'
  NvimTreeIndentMarker = 'link:Directory'
  NvimTreeNormal = 'link:NormalFloat'
- NvimTreeWinSeparator = 'link:WinSeparator'
+ NvimTreeWinSeparator = 'float_bg float_bg'
  NvimTreeVertSplit = 'link:VertSplit'
  NvimTreeFolderName = 'fg'
  NvimTreeOpenedFolderName = 'purple - b'
