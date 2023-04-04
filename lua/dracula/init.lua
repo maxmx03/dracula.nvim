@@ -15,6 +15,36 @@ function M:apply_transparency()
 	end
 end
 
+function M:apply_user_highlight(groups)
+	if not groups then
+		return
+	end
+
+	local function get_hl(group_name)
+		local group = vim.api.nvim_get_hl(0, { name = group_name })
+
+		if type(group) == "table" then
+			if type(group.link) == "string" then
+				return get_hl(group.link)
+			end
+
+			return group
+		end
+
+		return nil
+	end
+
+	for group_name, val in pairs(groups) do
+		local group_val = get_hl(group_name)
+
+		if type(group_val) == "table" then
+			local value = vim.tbl_extend("force", group_val, val)
+
+			vim.api.nvim_set_hl(0, group_name, value)
+		end
+	end
+end
+
 function M.load_default()
 	if vim.g.colors_name then
 		vim.cmd("hi clear")
@@ -43,6 +73,7 @@ M.setup = function(user_config)
 
 	theme.set_highlights(M.colors)
 	M:apply_transparency()
+	M:apply_user_highlight(M.user_config.override)
 	M:call_user_callback(M.user_config.callback)
 end
 

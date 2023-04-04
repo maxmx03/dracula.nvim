@@ -140,8 +140,8 @@
  TabLineFill = '- bg'
 
 [TreeSitter]
- '@comment' = 'comment'
- '@comment.documentation' = 'comment'
+ '@comment' = 'comment - i'
+ '@comment.documentation' = 'comment - i'
  '@error' = 'link:Error'
  '@operator' = 'pink'
  '@punctuation.delimiter' = 'fg'
