@@ -35,6 +35,28 @@ vim.cmd 'colorscheme dracula'
 
 ![example1](https://user-images.githubusercontent.com/50273941/228698201-4a8a57fd-51e6-473a-aecd-4771cd07ad6f.png)
 
+#### How to config styles
+
+```lua
+local dracula = require 'dracula'
+
+dracula.setup {
+ override = {
+     ['@type'] = { italic = true, bold = false },
+     ['@function'] = { italic = false, bold = false },
+     ['@comment'] = { italic = true },
+     ['@keyword'] = { italic = false },
+     ['@constant'] = { italic = false, bold = false },
+     ['@variable'] = { italic = true },
+     ['@field'] = { italic = true },
+     ['@parameter'] = { italic = true },
+     -- read :h nvim_set_hl for more info
+ }
+}
+
+vim.cmd 'colorscheme dracula'
+```
+
 #### How to customize Dracula colors
 
 In the previous example, we used the nvim_set_hl function 
@@ -55,8 +77,6 @@ vim.cmd 'colorscheme dracula'
 ```
 
 ![example2](https://user-images.githubusercontent.com/50273941/228698426-6acd98f2-bc11-45a7-b217-744389265730.png)
-
-#### Customize colors
 
 #### How to find a Highlight group
 
