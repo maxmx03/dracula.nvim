@@ -18,6 +18,21 @@ dracula.setup {
 vim.cmd 'colorscheme dracula'
 ```
 
+or
+
+```lua
+local dracula = require 'dracula'
+local colors = require 'dracula.palettes'
+
+dracula.setup {
+ override = {
+  CursorLineNr = { fg = colors.yellow }
+ }
+}
+
+vim.cmd 'colorscheme dracula'
+```
+
 ![example1](https://user-images.githubusercontent.com/50273941/228698201-4a8a57fd-51e6-473a-aecd-4771cd07ad6f.png)
 
 #### How to customize Dracula colors

@@ -57,8 +57,15 @@ Set it to false to use the original, more vibrant colors.
 
 - Type: callback(colors: table)
 
+`override`
+
+- Type: table
+
 ```lua
-require('dracula').setup({
+local dracula = require('dracula')
+local colors = require('dracula.palettes')
+
+dracula.setup({
     soft = false,
     transparent = false
     colors = function (colors)
@@ -66,6 +73,9 @@ require('dracula').setup({
         error = colors.purple,
       }
     end,
+    override = {
+     ['@function'] = { fg = colors.cyan, italic = true, bold = false }
+    },
     callback = function (colors)
      vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = colors.yellow })
     end
