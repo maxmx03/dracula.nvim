@@ -276,9 +276,9 @@ theme.set_highlights = function(c)
   hl(0, "LspDiagnosticsUnderlineInformation", { fg = 'NONE', bg = 'NONE', underline=true, })
   hl(0, "LspDiagnosticsUnderlineInfo", { fg = 'NONE', bg = 'NONE', underline=true, })
   hl(0, "LspDiagnosticsUnderlineHint", { fg = 'NONE', bg = 'NONE', underline=true, })
-  hl(0, "LspReferenceRead", { fg = 'NONE', bg = c.float_bg })
-  hl(0, "LspReferenceText", { fg = 'NONE', bg = c.float_bg })
-  hl(0, "LspReferenceWrite", { fg = 'NONE', bg = c.float_bg })
+  hl(0, "LspReferenceRead", { fg = 'NONE', bg = c.selection })
+  hl(0, "LspReferenceText", { fg = 'NONE', bg = c.selection })
+  hl(0, "LspReferenceWrite", { fg = 'NONE', bg = c.selection })
 
   -- LspSaga
   hl(0, "SagaNormal", { link = 'NormalFloat' })

@@ -314,9 +314,9 @@
  LspDiagnosticsUnderlineInformation = '- - u'
  LspDiagnosticsUnderlineInfo = '- - u'
  LspDiagnosticsUnderlineHint = '- - u'
- LspReferenceRead = '- float_bg'
- LspReferenceText = '- float_bg'
- LspReferenceWrite = '- float_bg'
+ LspReferenceRead = '- selection'
+ LspReferenceText = '- selection'
+ LspReferenceWrite = '- selection'
 
 [LspSaga]
  SagaNormal = 'link:NormalFloat'
