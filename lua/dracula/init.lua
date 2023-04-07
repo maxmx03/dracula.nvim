@@ -1,47 +1,17 @@
 require("dracula.autocmd")
+local utils = require("dracula.utils")
 local theme = require("dracula.theme")
 local Config = require("dracula.config")
 local M = Config:new()
 
 function M:apply_transparency()
 	if self.transparent then
-		local hl = vim.api.nvim_set_hl
-		local c = self.colors
-
-		hl(0, "Normal", { fg = c.fg, bg = "NONE" })
-		hl(0, "SignColumn", { fg = "NONE", bg = "NONE" })
-		hl(0, "CursorLineNr", { fg = c.pink, bg = "NONE" })
-		hl(0, "LineNr", { fg = c.comment, bg = "NONE" })
-	end
-end
-
-function M:apply_user_highlight(groups)
-	if not groups then
-		return
-	end
-
-	local function get_hl(group_name)
-		local group = vim.api.nvim_get_hl(0, { name = group_name })
-
-		if type(group) == "table" then
-			if type(group.link) == "string" then
-				return get_hl(group.link)
-			end
-
-			return group
-		end
-
-		return nil
-	end
-
-	for group_name, val in pairs(groups) do
-		local group_val = get_hl(group_name)
-
-		if type(group_val) == "table" then
-			local value = vim.tbl_extend("force", group_val, val)
-
-			vim.api.nvim_set_hl(0, group_name, value)
-		end
+		return {
+			Normal = { bg = "NONE" },
+			SignColumn = { bg = "NONE" },
+			CursorLineNr = { bg = "NONE" },
+			LineNr = { bg = "NONE" },
+		}
 	end
 end
 
@@ -72,8 +42,8 @@ M.setup = function(user_config)
 	M:set_user_colors()
 
 	theme.set_highlights(M.colors)
-	M:apply_transparency()
-	M:apply_user_highlight(M.user_config.override)
+	utils.update_highlight_groups(M.user_config.override)
+	utils.update_highlight_groups(M:apply_transparency())
 	M:call_user_callback(M.user_config.callback)
 end
 

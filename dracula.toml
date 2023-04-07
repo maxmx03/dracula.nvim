@@ -92,7 +92,7 @@
  Title = 'cyan - b'
  ErrorMsg = 'error blended_error'
  Search = 'link:Visual'
- IncSearch = 'red blended_red'
+ IncSearch = 'orange bg b'
  Substitute = 'link:IncSearch'
  MoreMsg = 'cyan - b'
  Question = 'cyan - b'
@@ -361,10 +361,11 @@
  SagaWinbarSep = 'pink'
 
 [Telescope]
- TelescopeTitle = 'cyan - r'
+ TelescopeTitle = 'cyan blended_cyan'
  TelescopeNormal = 'link:NormalFloat'
- TelescopeSelection = 'cyan selection'
- TelescopeMatching = 'info - b'
+ TelescopeSelection = 'fg selection'
+ TelescopeSelectionCaret = 'pink selection'
+ TelescopeMatching = 'link:IncSearch'
  TelescopeBorder = 'link:WinSeparator'
 
 [NvimTree]

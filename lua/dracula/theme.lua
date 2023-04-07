@@ -54,7 +54,7 @@ theme.set_highlights = function(c)
   hl(0, "Title", { fg = c.cyan, bg = 'NONE', bold=true, })
   hl(0, "ErrorMsg", { fg = c.error, bg = c.blended_error })
   hl(0, "Search", { link = 'Visual' })
-  hl(0, "IncSearch", { fg = c.red, bg = c.blended_red })
+  hl(0, "IncSearch", { fg = c.orange, bg = c.bg, bold=true, })
   hl(0, "Substitute", { link = 'IncSearch' })
   hl(0, "MoreMsg", { fg = c.cyan, bg = 'NONE', bold=true, })
   hl(0, "Question", { fg = c.cyan, bg = 'NONE', bold=true, })
@@ -323,10 +323,11 @@ theme.set_highlights = function(c)
   hl(0, "SagaWinbarSep", { fg = c.pink, bg = 'NONE' })
 
   -- Telescope
-  hl(0, "TelescopeTitle", { fg = c.cyan, bg = 'NONE', reverse=true, })
+  hl(0, "TelescopeTitle", { fg = c.cyan, bg = c.blended_cyan })
   hl(0, "TelescopeNormal", { link = 'NormalFloat' })
-  hl(0, "TelescopeSelection", { fg = c.cyan, bg = c.selection })
-  hl(0, "TelescopeMatching", { fg = c.info, bg = 'NONE', bold=true, })
+  hl(0, "TelescopeSelection", { fg = c.fg, bg = c.selection })
+  hl(0, "TelescopeSelectionCaret", { fg = c.pink, bg = c.selection })
+  hl(0, "TelescopeMatching", { link = 'IncSearch' })
   hl(0, "TelescopeBorder", { link = 'WinSeparator' })
 
   -- NvimTree
