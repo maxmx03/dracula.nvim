@@ -42,6 +42,11 @@ M.setup = function(user_config)
 	M:set_user_colors()
 
 	theme.set_highlights(M.colors)
+
+	if type(M.user_config.override) == "function" then
+		M.user_config.override = M.user_config.override(M.colors)
+	end
+
 	utils.update_highlight_groups(M.user_config.override)
 	utils.update_highlight_groups(M:apply_transparency())
 	M:call_user_callback(M.user_config.callback)

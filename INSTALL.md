@@ -59,7 +59,7 @@ Set it to false to use the original, more vibrant colors.
 
 `override`
 
-- Type: table
+- Type: table or callback(colors: table)
 
 ```lua
 local dracula = require('dracula')
