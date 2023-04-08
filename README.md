@@ -4,6 +4,10 @@
 
 ![Screenshot](https://user-images.githubusercontent.com/50273941/227779719-6e003e4a-f8e8-40bc-8a9f-ebfd7ea13fe6.png)
 
+## Preview
+
+To see a preview of the dracula.nvim, please refer to the [PREVIEW.md](https://github.com/maxmx03/dracula.nvim/blob/master/PREVIEW.md) file.
+
 ## Install
 
 All instructions can be found at [INSTALL.md](https://github.com/maxmx03/dracula.nvim/blob/master/INSTALL.md).
