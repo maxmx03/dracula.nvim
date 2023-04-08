@@ -6,7 +6,7 @@
 
 ## Preview
 
-To see a preview of the dracula.nvim, please refer to the [PREVIEW.md](https://github.com/maxmx03/dracula.nvim/blob/master/PREVIEW.md) file.
+To preview the dracula.nvim colorscheme, click [here](https://github.com/maxmx03/dracula.nvim/blob/master/PREVIEW.md).
 
 ## Install
 
