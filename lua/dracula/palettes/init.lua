@@ -1,7 +1,7 @@
 local colors = {
   fg = "#f8f8f2",
   bg = "#282a36",
-  float_bg = "#23252f",
+  float_bg = "#21222c",
   currentline = "#44475a",
   selection = "#44475a",
   comment = "#6272a4",
