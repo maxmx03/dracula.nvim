@@ -92,7 +92,7 @@
  Title = 'cyan - b'
  ErrorMsg = 'error blended_error'
  Search = 'link:Visual'
- IncSearch = 'orange bg b'
+ IncSearch = 'cyan blended_cyan b'
  Substitute = 'link:IncSearch'
  MoreMsg = 'cyan - b'
  Question = 'cyan - b'
