@@ -16,7 +16,9 @@ function M:apply_transparency()
 end
 
 function M.load_default()
-	vim.cmd("hi clear")
+	if vim.g.colors_name then
+		vim.cmd("hi clear")
+	end
 
 	vim.o.background = "dark"
 	if vim.fn.exists("syntax_on") then
@@ -28,28 +30,26 @@ function M.load_default()
 end
 
 M.setup = function(user_config)
-	if vim.g.colors_name ~= "dracula" then
-		M.load_default()
+	M.load_default()
 
-		if vim.tbl_isempty(M.user_config) then
-			M.user_config = user_config or {}
-		end
-
-		M:set_soft(M.user_config.soft)
-		M:set_transparent(M.user_config.transparent)
-		M:set_colors()
-		M:set_user_colors()
-
-		theme.set_highlights(M.colors)
-
-		if type(M.user_config.override) == "function" then
-			M.user_config.override = M.user_config.override(M.colors)
-		end
-
-		utils.update_highlight_groups(M.user_config.override)
-		utils.update_highlight_groups(M:apply_transparency())
-		M:call_user_callback(M.user_config.callback)
+	if vim.tbl_isempty(M.user_config) then
+		M.user_config = user_config or {}
 	end
+
+	M:set_soft(M.user_config.soft)
+	M:set_transparent(M.user_config.transparent)
+	M:set_colors()
+	M:set_user_colors()
+
+	theme.set_highlights(M.colors)
+
+	if type(M.user_config.override) == "function" then
+		M.user_config.override = M.user_config.override(M.colors)
+	end
+
+	utils.update_highlight_groups(M.user_config.override)
+	utils.update_highlight_groups(M:apply_transparency())
+	M:call_user_callback(M.user_config.callback)
 end
 
 return M
