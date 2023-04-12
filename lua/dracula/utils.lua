@@ -1,13 +1,9 @@
 local M = {}
 
 function M.get_hl(group_name)
-	local group = vim.api.nvim_get_hl(0, { name = group_name })
+	local group = vim.api.nvim_get_hl(0, { name = group_name, link = false })
 
 	if type(group) == "table" then
-		if type(group.link) == "string" then
-			return M.get_hl(group.link)
-		end
-
 		return group
 	end
 

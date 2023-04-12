@@ -67,7 +67,7 @@
  VertSplit = 'link:WinSeparator'
  CursorLine = '- currentline'
  CursorColumn = 'link:CursorLine'
- ColorColumn = 'link:CursorColumn'
+ ColorColumn = '- float_bg'
  NormalFloat = 'fg float_bg'
  Visual = '- selection'
  VisualNOS = 'link:Visual'
