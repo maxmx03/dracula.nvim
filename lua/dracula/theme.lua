@@ -471,11 +471,11 @@ theme.set_highlights = function(c)
   hl(0, "NotifyINFOTitle", { fg = c.info, bg = 'NONE' })
   hl(0, "NotifyDEBUGTitle", { fg = c.comment, bg = 'NONE' })
   hl(0, "NotifyTRACETitle", { fg = c.other, bg = 'NONE' })
-  hl(0, "NotifyERRORBody", { fg = c.fg, bg = c.bg })
-  hl(0, "NotifyWARNBody", { fg = c.fg, bg = c.bg })
-  hl(0, "NotifyINFOBody", { fg = c.fg, bg = c.bg })
-  hl(0, "NotifyDEBUGBody", { fg = c.fg, bg = c.bg })
-  hl(0, "NotifyTRACEBody", { fg = c.fg, bg = c.bg })
+  hl(0, "NotifyERRORBody", { link = 'NormalFloat' })
+  hl(0, "NotifyWARNBody", { link = 'NormalFloat' })
+  hl(0, "NotifyINFOBody", { link = 'NormalFloat' })
+  hl(0, "NotifyDEBUGBody", { link = 'NormalFloat' })
+  hl(0, "NotifyTRACEBody", { link = 'NormalFloat' })
 
   -- Neorg
   hl(0, "@neorg.headings.1.title", { fg = c.orange, bg = 'NONE' })
@@ -522,6 +522,10 @@ theme.set_highlights = function(c)
   -- BufferLine
   hl(0, "BufferLineIndicatorSelected", { fg = c.purple, bg = 'NONE' })
   hl(0, "BufferLineSeparator", { fg = c.bg, bg = 'NONE' })
+
+  -- SymbolsOutline
+  hl(0, "FocusedSymbol", { fg = c.cyan, bg = 'NONE' })
+  hl(0, "SymbolsOutlineConnector", { fg = c.comment, bg = 'NONE' })
 end
 
 return theme

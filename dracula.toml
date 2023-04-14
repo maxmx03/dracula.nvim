@@ -510,11 +510,11 @@
  NotifyINFOTitle = 'info'
  NotifyDEBUGTitle = 'comment'
  NotifyTRACETitle = 'other'
- NotifyERRORBody = 'fg bg'
- NotifyWARNBody = 'fg bg'
- NotifyINFOBody = 'fg bg'
- NotifyDEBUGBody = 'fg bg'
- NotifyTRACEBody = 'fg bg'
+ NotifyERRORBody = 'link:NormalFloat'
+ NotifyWARNBody = 'link:NormalFloat'
+ NotifyINFOBody = 'link:NormalFloat'
+ NotifyDEBUGBody = 'link:NormalFloat'
+ NotifyTRACEBody = 'link:NormalFloat'
 
 [Neorg]
  '@neorg.headings.1.title' = 'orange'
@@ -561,3 +561,7 @@
 [BufferLine]
  BufferLineIndicatorSelected = 'purple'
  BufferLineSeparator = 'bg'
+
+[SymbolsOutline]
+ FocusedSymbol = 'cyan'
+ SymbolsOutlineConnector = 'comment'
