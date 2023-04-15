@@ -448,7 +448,7 @@
  CmpItemKindModule = 'link:@namespace'
  CmpItemKindProperty = 'link:@property'
  CmpItemKindUnit = 'link:@number'
- CmpItemKindValue = 'fg'
+ CmpItemKindValue = 'link:@string'
  CmpItemKindEnum = 'link:@type'
  CmpItemKindKeyword = 'link:@keyword'
  CmpItemKindSnippet = 'link:@keyword'
