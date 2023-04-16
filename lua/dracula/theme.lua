@@ -526,6 +526,55 @@ theme.set_highlights = function(c)
   -- SymbolsOutline
   hl(0, "FocusedSymbol", { fg = c.cyan, bg = 'NONE' })
   hl(0, "SymbolsOutlineConnector", { fg = c.comment, bg = 'NONE' })
+
+  -- MiniCursor
+  hl(0, "MiniCursorword", { fg = 'NONE', bg = c.selection })
+
+  -- MiniCompletion
+  hl(0, "MiniCompletionActiveParameter", { link = '@paramter' })
+
+  -- MiniJump
+  hl(0, "MiniJump2dSpot", { fg = c.pink, bg = c.blended_pink })
+  hl(0, "MiniJump2dSpotUnique", { fg = c.purple, bg = c.blended_purple })
+
+  -- MiniIndent
+  hl(0, "MiniIndentscopeSymbol", { fg = c.blended_pink, bg = 'NONE' })
+  hl(0, "MiniIndentscopeSymbolOff", { fg = 'NONE', bg = 'NONE' })
+
+  -- MiniMap
+  hl(0, "MiniMapNormal", { link = 'Pmenu' })
+  hl(0, "MiniMapSymbolCount", { fg = c.purple, bg = 'NONE' })
+  hl(0, "MiniMapSymbolLine", { link = 'PmenuThumb' })
+  hl(0, "MiniMapSymbolView", { fg = c.fg, bg = 'NONE' })
+
+  -- MiniStatusLine
+  hl(0, "MiniStatuslineModeNormal", { fg = c.bg, bg = c.purple })
+  hl(0, "MiniStatuslineModeInsert", { fg = c.bg, bg = c.green })
+  hl(0, "MiniStatuslineModeVisual", { fg = c.bg, bg = c.yellow })
+  hl(0, "MiniStatuslineModeReplace", { fg = c.bg, bg = c.red })
+  hl(0, "MiniStatuslineModeCommand", { fg = c.purple, bg = c.blended_purple })
+  hl(0, "MiniStatuslineDevinfo", { fg = c.fg, bg = c.comment })
+  hl(0, "MiniStatuslineFileinfo", { fg = c.fg, bg = c.comment })
+
+  -- MiniTabLine
+  hl(0, "MiniTablineCurrent", { fg = c.fg, bg = c.bg })
+  hl(0, "MiniTablineVisible", { fg = c.fg, bg = c.bg })
+  hl(0, "MiniTablineHidden", { fg = c.comment, bg = c.bg })
+  hl(0, "MiniTablineModifiedCurrent", { link = 'MiniTabLineCurrent' })
+  hl(0, "MiniTablineModifiedVisible", { link = 'MiniTablineVisible' })
+  hl(0, "MiniTablineModifiedHidden", { link = 'MiniTablineHidden' })
+  hl(0, "MiniTablineFill", { link = 'NormalFloat' })
+  hl(0, "MiniTablineTabpagesection", { link = 'NormalFloat' })
+
+  -- MiniStarter
+  hl(0, "MiniStarterCurrent", { link = 'CursorLine' })
+  hl(0, "MiniStarterHeader", { fg = c.red, bg = 'NONE' })
+  hl(0, "MiniStarterFooter", { fg = c.comment, bg = 'NONE' })
+  hl(0, "MiniStarterItem", { fg = c.fg, bg = 'NONE' })
+  hl(0, "MiniStarterItemBullet", { fg = c.cyan, bg = 'NONE' })
+  hl(0, "MiniStarterItemPrefix", { fg = c.cyan, bg = c.blended_cyan, bold=true, })
+  hl(0, "MiniStarterSection", { link = 'Title' })
+  hl(0, "MiniStarterQuery", { fg = c.red, bg = c.blended_red, bold=true, })
 end
 
 return theme
