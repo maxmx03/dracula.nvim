@@ -581,10 +581,10 @@ MiniIndentscopeSymbol = 'blended_pink'
 MiniIndentscopeSymbolOff = '- -'
 
 [MiniMap]
-MiniMapNormal = 'link:Pmenu'
+MiniMapNormal = 'comment'
 MiniMapSymbolCount = 'purple'
-MiniMapSymbolLine = 'link:PmenuThumb'
-MiniMapSymbolView = 'fg'
+MiniMapSymbolLine = 'pink'
+MiniMapSymbolView = 'float_bg'
 
 [MiniStatusLine]
 MiniStatuslineModeNormal = 'bg purple'
