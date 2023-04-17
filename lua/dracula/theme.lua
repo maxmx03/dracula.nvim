@@ -542,7 +542,7 @@ theme.set_highlights = function(c)
   hl(0, "MiniIndentscopeSymbolOff", { fg = 'NONE', bg = 'NONE' })
 
   -- MiniMap
-  hl(0, "MiniMapNormal", { fg = c.comment, bg = 'NONE' })
+  hl(0, "MiniMapNormal", { fg = c.comment, bg = c.float_bg })
   hl(0, "MiniMapSymbolCount", { fg = c.purple, bg = 'NONE' })
   hl(0, "MiniMapSymbolLine", { fg = c.pink, bg = 'NONE' })
   hl(0, "MiniMapSymbolView", { fg = c.float_bg, bg = 'NONE' })

@@ -581,7 +581,7 @@ MiniIndentscopeSymbol = 'blended_pink'
 MiniIndentscopeSymbolOff = '- -'
 
 [MiniMap]
-MiniMapNormal = 'comment'
+MiniMapNormal = 'comment float_bg'
 MiniMapSymbolCount = 'purple'
 MiniMapSymbolLine = 'pink'
 MiniMapSymbolView = 'float_bg'
