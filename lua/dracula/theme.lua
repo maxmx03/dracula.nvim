@@ -557,8 +557,8 @@ theme.set_highlights = function(c)
   hl(0, "MiniStatuslineFileinfo", { fg = c.fg, bg = c.comment })
 
   -- MiniTabLine
-  hl(0, "MiniTablineCurrent", { fg = c.fg, bg = c.bg })
-  hl(0, "MiniTablineVisible", { fg = c.fg, bg = c.bg })
+  hl(0, "MiniTablineCurrent", { fg = c.fg, bg = c.comment })
+  hl(0, "MiniTablineVisible", { fg = c.fg, bg = c.comment })
   hl(0, "MiniTablineHidden", { fg = c.comment, bg = c.bg })
   hl(0, "MiniTablineModifiedCurrent", { link = 'MiniTabLineCurrent' })
   hl(0, "MiniTablineModifiedVisible", { link = 'MiniTablineVisible' })

@@ -596,8 +596,8 @@ MiniStatuslineDevinfo = 'fg comment'
 MiniStatuslineFileinfo = 'fg comment'
 
 [MiniTabLine]
-MiniTablineCurrent = 'fg bg'
-MiniTablineVisible = 'fg bg'
+MiniTablineCurrent = 'fg comment'
+MiniTablineVisible = 'fg comment'
 MiniTablineHidden = 'comment bg'
 MiniTablineModifiedCurrent = 'link:MiniTabLineCurrent'
 MiniTablineModifiedVisible = 'link:MiniTablineVisible'
