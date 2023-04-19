@@ -14,7 +14,7 @@ function M:apply_transparency()
 
   if self.transparent then
     if self.transparent == "full" then
-      groups = vim.tbl_extend("keep", groups, { NormalFloat = "NONE" })
+      groups = vim.tbl_extend("keep", groups, { NormalFloat = { bg = "NONE" } })
     end
 
     return groups

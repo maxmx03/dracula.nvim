@@ -58,7 +58,7 @@ end
 
 function M:set_transparent(transparent)
   if transparent then
-    self.transparent = true
+    self.transparent = transparent
     return
   end
 
