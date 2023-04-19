@@ -70,7 +70,7 @@ function M:set_saturation(saturation)
   end
 
   if saturation.enabled then
-    self.soft.enabled = true
+    self.saturation.enabled = true
 
     if type(saturation.amount) == "number" then
       self.saturation.amount = saturation.amount
