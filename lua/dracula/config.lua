@@ -5,10 +5,11 @@ local M = {}
 
 function M:new()
   local config = {
-    soft = {
+    saturation = {
       enabled = false,
       amount = 10,
     },
+    soft = false,
     transparent = false,
     dracula_pro = false,
     colors = colors,
@@ -22,9 +23,17 @@ function M:new()
 end
 
 function M:set_colors()
-  if self.soft.enabled then
+  if not self.soft then
+    return
+  end
+
+  self.colors = require("dracula.palettes.soft")
+end
+
+function M:change_colors_saturation()
+  if self.saturation.enabled then
     for i, color in pairs(self.colors) do
-      local new_color = utils.reduce_saturation(color, self.soft.amount)
+      local new_color = utils.reduce_saturation(color, self.saturation.amount)
 
       self.colors[i] = new_color
     end
@@ -47,18 +56,27 @@ function M:set_user_colors()
 end
 
 function M:set_soft(soft)
-  if not soft then
+  if soft then
+    self.soft = true
     return
   end
 
-  if soft.enabled then
+  self.soft = false
+end
+
+function M:set_saturation(saturation)
+  if not saturation then
+    return
+  end
+
+  if saturation.enabled then
     self.soft.enabled = true
 
-    if type(soft.amount) == "number" then
-      self.soft.amount = soft.amount
+    if type(saturation.amount) == "number" then
+      self.saturation.amount = saturation.amount
     end
   else
-    self.soft.enabled = false
+    self.saturation.enabled = false
   end
 end
 

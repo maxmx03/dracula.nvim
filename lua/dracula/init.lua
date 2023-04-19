@@ -66,10 +66,12 @@ M.setup = function(user_config)
   end
 
   M:set_soft(M.user_config.soft)
+  M:set_colors()
+  M:set_saturation(M.user_config.saturation)
   M:set_transparent(M.user_config.transparent)
   M:set_draculapro(M.user_config.dracula_pro)
   M:set_user_colors()
-  M:set_colors()
+  M:change_colors_saturation()
 
   theme.set_highlights(M.colors)
 
