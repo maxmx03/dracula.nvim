@@ -23,11 +23,10 @@ end
 
 function M:set_colors()
   if self.soft.enabled then
-    for i, color in ipairs(self.colors) do
-      if string.match(color, "^#([A-Fa-f0-9]+)$") then
-        local new_color = utils.reduce_saturation(color, self.soft.amount)
-        self.colors[i] = new_color
-      end
+    for i, color in pairs(self.colors) do
+      local new_color = utils.reduce_saturation(color, self.soft.amount)
+
+      self.colors[i] = new_color
     end
   end
 end
@@ -48,12 +47,19 @@ function M:set_user_colors()
 end
 
 function M:set_soft(soft)
-  if soft and soft.enabled then
-    self.soft.enabled = true
+  if not soft then
     return
   end
 
-  self.soft.enabled = false
+  if soft.enabled then
+    self.soft.enabled = true
+
+    if type(soft.amount) == "number" then
+      self.soft.amount = soft.amount
+    end
+  else
+    self.soft.enabled = false
+  end
 end
 
 function M:set_transparent(transparent)
