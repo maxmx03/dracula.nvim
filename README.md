@@ -12,9 +12,9 @@ To preview the dracula.nvim colorscheme, click [here](https://github.com/maxmx03
 
 All instructions can be found at [INSTALL.md](https://github.com/maxmx03/dracula.nvim/blob/master/INSTALL.md).
 
-## How to customize
+## How to config
 
-All instructions can be found at [CUSTOMIZE.md](https://github.com/maxmx03/dracula.nvim/blob/master/CUSTOMIZE.md).
+All instructions can be found at [CONFIG.md](https://github.com/maxmx03/dracula.nvim/blob/master/CONFIG.md).
 
 ## Dracula Pro
 
