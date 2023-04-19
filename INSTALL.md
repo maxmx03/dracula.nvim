@@ -37,8 +37,8 @@ The dracula.nvim theme can be configured using the following options:
 
 `soft`
 
-- Type: boolean
-- Default: false
+- Type: Table
+- Default: { enabled = false, amount = 10 }
 
 Set this option to true to enable the soft version of the Dracula color palette, which has reduced color saturation.
 Set it to false to use the original, more vibrant colors.
