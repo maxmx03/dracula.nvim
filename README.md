@@ -18,7 +18,7 @@ All instructions can be found at [CONFIG.md](https://github.com/maxmx03/dracula.
 
 ## Dracula Pro
 
-For dracula pro users, create a new repo based on this [template](https://github.com/maxmx03/draculapro-template), and keep it private
+For users of Dracula Pro, plesae create a new private repository using this [template](https://github.com/maxmx03/draculapro-template)
 
 ## Contributions
 

@@ -1,15 +1,15 @@
-#### Configuration
+#### Configuration Instructions for Dracula.nvim
 
 The dracula.nvim theme can be configured using the following options:
 
-| Name        | type             | values                           | Description                                                                            |
-| ----------- | ---------------- | -------------------------------- | -------------------------------------------------------------------------------------- |
-| soft        | boolean          | true, false                      | enable soft version of dracula theme                                                   |
-| transparent | boolean, string  | true, false, "full"              | change background to transparent                                                       |
-| saturation  | table            | { enabled = false, amount = 10 } | change colorscheme saturation colors                                                   |
-| dracula_pro | plugin           | require('draculapro')            | give support for [dracula pro](https://draculatheme.com/pro) theme inside dracula.nvim |
-| override    | table / function | {}                               | update or create highlight groups                                                      |
-| callback    | function         | function                         | alternative to override, for customize colorscheme                                     |
+| Name        | type             | values                           | Description                                                    |
+| ----------- | ---------------- | -------------------------------- | -------------------------------------------------------------- |
+| soft        | boolean          | true, false                      | Enables the soft version of the Draculatheme                   |
+| transparent | boolean, string  | true, false, "full"              | Changes the background to transparent                          |
+| saturation  | table            | { enabled = false, amount = 10 } | Changes the saturation of the colorscheme                      |
+| dracula_pro | plugin           | require('draculapro')            | Provides support for the Dracula Pro theme                     |
+| override    | table / function | {}                               | Updates of creates highlight groups                            |
+| callback    | function         | function                         | An alternative to `override` used to customize the colorscheme |
 
 #### How to customize [telescope](https://github.com/nvim-telescope/telescope.nvim)
 
