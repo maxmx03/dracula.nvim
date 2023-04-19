@@ -18,8 +18,9 @@ function M:apply_transparency()
         NormalFloat = { bg = "NONE" },
         WinSeparator = { bg = "NONE" },
         NvimTreeWinSeparator = { link = "WinSeparator" },
-        NvimTreeEndOfBuffer = { fg = 'NONE' },
-        NeoTreeEndOfBuffer = { fg = 'NONE' },
+        StatusLine = { bg = "NONE" },
+        StatusLineNC = { bg = "NONE" },
+        NvimTreeStatusLine = { bg = "NONE" },
       }
 
       groups = vim.tbl_extend("keep", groups, groups2)
