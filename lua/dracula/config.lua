@@ -48,7 +48,7 @@ function M:set_user_colors()
 end
 
 function M:set_soft(soft)
-  if soft then
+  if soft and soft.enabled then
     self.soft.enabled = true
     return
   end

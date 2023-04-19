@@ -56,7 +56,7 @@ M.setup = function(user_config)
     M.user_config = user_config or {}
   end
 
-  M:set_soft(M.user_config.soft.enabled)
+  M:set_soft(M.user_config.soft)
   M:set_transparent(M.user_config.transparent)
   M:set_draculapro(M.user_config.dracula_pro)
   M:set_colors()
