@@ -14,7 +14,13 @@ function M:apply_transparency()
 
   if self.transparent then
     if self.transparent == "full" then
-      groups = vim.tbl_extend("keep", groups, { NormalFloat = { bg = "NONE" } })
+      local groups2 = {
+        NormalFloat = { bg = "NONE" },
+        WinSeparator = { bg = "NONE" },
+        NvimTreeWinSeparator = { link = "WinSeparator" },
+      }
+
+      groups = vim.tbl_extend("keep", groups, groups2)
     end
 
     return groups
