@@ -31,15 +31,24 @@ function M:apply_transparency()
 end
 
 function M:support_draculapro()
-  local c = self.colors
-
   if not self.dracula_pro then
     return
   end
 
+  local c = self.colors
+  local colors = {
+    pro = c.purple,
+    blade = c.green,
+    buffy = c.pink,
+    morbius = c.orange,
+    lincoln = c.yellow,
+    van_helsing = c.cyan,
+  }
+  local accent_color = colors[self.dracula_pro.theme]
+
   return {
-    Directory = { fg = c.comment },
-    TelescopeTitle = { fg = c.fg, bg = c.comment },
+    Directory = { fg = accent_color },
+    TelescopeTitle = { fg = accent_color, reverse = true },
     CursorLineNr = { fg = c.fg },
   }
 end

@@ -11,7 +11,7 @@ function M:new()
     },
     soft = false,
     transparent = false,
-    dracula_pro = false,
+    dracula_pro = nil,
     colors = colors,
     user_config = {},
   }
@@ -97,11 +97,8 @@ end
 
 function M:set_draculapro(dracula_pro)
   if dracula_pro then
-    self.dracula_pro = true
-    return
+    self.dracula_pro = dracula_pro
   end
-
-  self.dracula_pro = false
 end
 
 return M
