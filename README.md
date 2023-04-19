@@ -6,15 +6,15 @@
 
 ## Preview
 
-To preview the dracula.nvim colorscheme, click [here](https://github.com/maxmx03/dracula.nvim/blob/master/PREVIEW.md).
+To preview the dracula.nvim colorscheme, click [here](https://github.com/maxmx03/dracula.nvim/blob/draculapro/PREVIEW.md).
 
 ## Install
 
-All instructions can be found at [INSTALL.md](https://github.com/maxmx03/dracula.nvim/blob/master/INSTALL.md).
+All instructions can be found at [INSTALL.md](https://github.com/maxmx03/dracula.nvim/blob/draculapro/INSTALL.md).
 
 ## How to config
 
-All instructions can be found at [CONFIG.md](https://github.com/maxmx03/dracula.nvim/blob/master/CONFIG.md).
+All instructions can be found at [CONFIG.md](https://github.com/maxmx03/dracula.nvim/blob/draculapro/CONFIG.md).
 
 ## Dracula Pro
 
@@ -22,7 +22,7 @@ For dracula pro users, create a new repo based on this [template](https://github
 
 ## Contributions
 
-All instructions can be found at [CONTRIBUTING.md](https://github.com/maxmx03/dracula.nvim/blob/master/CONTRIBUTING.md)
+All instructions can be found at [CONTRIBUTING.md](https://github.com/maxmx03/dracula.nvim/blob/draculapro/CONTRIBUTING.md)
 
 ## Maintainers
 
