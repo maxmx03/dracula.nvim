@@ -35,9 +35,14 @@ dracula.setup {
     amount = 10,
  },
  override = custom,
- callback = function (c)
-    vim.api.nvim_set_hl(0, 'CmpItemKindBorder', { link = 'WinSeparator' })
- end
+ -- callback = function (c)
+ --   vim.api.nvim_set_hl(0, TelescopeResultsBorder, { fg = c.bgdark, bg = c.bgdark })
+ --   vim.api.nvim_set_hl(0, TelescopeResultsNormal, { bg = c.bgdark })
+ --   vim.api.nvim_set_hl(0, TelescopePreviewNormal, { bg = c.bg })
+ --   vim.api.nvim_set_hl(0, TelescopePromptBorder, { fg = c.bgdark, bg = c.bgdark })
+ --   vim.api.nvim_set_hl(0, TelescopeTitle, { fg = c.fg, bg = c.comment })
+ --   vim.api.nvim_set_hl(0, TelescopePromptPrefix, { fg = c.purple })
+ -- end
 }
 
 vim.cmd.colorscheme 'dracula'
