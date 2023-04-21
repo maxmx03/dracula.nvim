@@ -1,5 +1,5 @@
-local colors = require("dracula.palettes")
-local utils = require("dracula.utils")
+local colors = require 'dracula.palettes'
+local utils = require 'dracula.utils'
 
 local M = {}
 
@@ -27,7 +27,7 @@ function M:set_colors()
     return
   end
 
-  self.colors = require("dracula.palettes.soft")
+  self.colors = require 'dracula.palettes.soft'
 end
 
 function M:change_colors_saturation()
@@ -46,12 +46,12 @@ function M:set_user_colors()
       return
     end
 
-    if type(self.user_config.colors) == "table" then
-      self.colors = vim.tbl_extend("force", self.colors, self.user_config.colors)
+    if type(self.user_config.colors) == 'table' then
+      self.colors = vim.tbl_extend('force', self.colors, self.user_config.colors)
       return
     end
 
-    self.colors = vim.tbl_extend("force", self.colors, self.user_config.colors(self.colors))
+    self.colors = vim.tbl_extend('force', self.colors, self.user_config.colors(self.colors))
   end
 end
 
@@ -72,7 +72,7 @@ function M:set_saturation(saturation)
   if saturation.enabled then
     self.saturation.enabled = true
 
-    if type(saturation.amount) == "number" then
+    if type(saturation.amount) == 'number' then
       self.saturation.amount = saturation.amount
     end
   else
@@ -90,7 +90,7 @@ function M:set_transparent(transparent)
 end
 
 function M:call_user_callback(cb)
-  if type(cb) == "function" then
+  if type(cb) == 'function' then
     cb(self.colors)
   end
 end

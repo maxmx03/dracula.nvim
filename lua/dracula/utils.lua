@@ -3,7 +3,7 @@ local M = {}
 function M.get_hl(group_name)
   local group = vim.api.nvim_get_hl(0, { name = group_name, link = false })
 
-  if type(group) == "table" then
+  if type(group) == 'table' then
     return group
   end
 
@@ -18,8 +18,8 @@ function M.update_highlight_groups(groups)
   for group_name, val in pairs(groups) do
     local group_val = M.get_hl(group_name)
 
-    if type(group_val) == "table" then
-      local value = vim.tbl_extend("force", group_val, val)
+    if type(group_val) == 'table' then
+      local value = vim.tbl_extend('force', group_val, val)
 
       vim.api.nvim_set_hl(0, group_name, value)
     end
@@ -90,7 +90,7 @@ end
 
 function M.reduce_saturation(color, amount)
   -- remove "#" prefix if present
-  color = color:gsub("^#", "")
+  color = color:gsub('^#', '')
 
   -- split the color into its red, green, and blue components
   local r = tonumber(color:sub(1, 2), 16)
@@ -107,7 +107,7 @@ function M.reduce_saturation(color, amount)
   r, g, b = hsl_to_rgb(h, s, l)
 
   -- convert the RGB color back to hexadecimal
-  return string.format("#%02x%02x%02x", r, g, b)
+  return string.format('#%02x%02x%02x', r, g, b)
 end
 
 return M

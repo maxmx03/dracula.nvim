@@ -1,29 +1,29 @@
-require("dracula.autocmd")
-local utils = require("dracula.utils")
-local theme = require("dracula.theme")
-local Config = require("dracula.config")
+require 'dracula.autocmd'
+local utils = require 'dracula.utils'
+local theme = require 'dracula.theme'
+local Config = require 'dracula.config'
 local M = Config:new()
 
 function M:apply_transparency()
   local groups = {
-    Normal = { bg = "NONE" },
-    SignColumn = { bg = "NONE" },
-    CursorLineNr = { bg = "NONE" },
-    LineNr = { bg = "NONE" },
+    Normal = { bg = 'NONE' },
+    SignColumn = { bg = 'NONE' },
+    CursorLineNr = { bg = 'NONE' },
+    LineNr = { bg = 'NONE' },
   }
 
   if self.transparent then
-    if self.transparent == "full" then
+    if self.transparent == 'full' then
       local groups2 = {
-        NormalFloat = { bg = "NONE" },
-        WinSeparator = { bg = "NONE" },
-        NvimTreeWinSeparator = { link = "WinSeparator" },
-        StatusLine = { bg = "NONE" },
-        StatusLineNC = { bg = "NONE" },
-        NvimTreeStatusLine = { bg = "NONE" },
+        NormalFloat = { bg = 'NONE' },
+        WinSeparator = { bg = 'NONE' },
+        NvimTreeWinSeparator = { link = 'WinSeparator' },
+        StatusLine = { bg = 'NONE' },
+        StatusLineNC = { bg = 'NONE' },
+        NvimTreeStatusLine = { bg = 'NONE' },
       }
 
-      groups = vim.tbl_extend("keep", groups, groups2)
+      groups = vim.tbl_extend('keep', groups, groups2)
     end
 
     return groups
@@ -55,16 +55,16 @@ end
 
 function M.load_default()
   if vim.g.colors_name then
-    vim.cmd("hi clear")
+    vim.cmd 'hi clear'
   end
 
-  vim.o.background = "dark"
-  if vim.fn.exists("syntax_on") then
-    vim.cmd("syntax reset")
+  vim.o.background = 'dark'
+  if vim.fn.exists 'syntax_on' then
+    vim.cmd 'syntax reset'
   end
 
   vim.o.termguicolors = true
-  vim.g.colors_name = "dracula"
+  vim.g.colors_name = 'dracula'
 end
 
 M.setup = function(user_config)
@@ -84,7 +84,7 @@ M.setup = function(user_config)
 
   theme.set_highlights(M.colors)
 
-  if type(M.user_config.override) == "function" then
+  if type(M.user_config.override) == 'function' then
     M.user_config.override = M.user_config.override(M.colors)
   end
 
