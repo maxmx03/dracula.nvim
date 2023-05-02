@@ -80,7 +80,7 @@ dracula.setup {
    CmpItemKindEvent = { reverse = true },
    CmpItemKindOperator = { reverse = true },
    CmpItemKindTypeParameter = { reverse = true },
-   CmpItemKindBorder = { fg = c.float_bg, bg = c.float_bg },
+   CmpItemKindBorder = { fg = c.bgdark, bg = c.bgdark },
  },
 }
 ```
