@@ -49,6 +49,8 @@ function M:support_draculapro()
   return {
     Directory = { fg = accent_color },
     TelescopeTitle = { fg = accent_color, reverse = true },
+    BufferLineBufferSelected = { fg = accent_color },
+    BufferLineIndicatorSelected = { fg = accent_color },
     CursorLineNr = { fg = c.fg },
   }
 end

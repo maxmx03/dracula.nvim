@@ -559,8 +559,11 @@ LazyH1 = 'purple blended_purple'
 LazyButtonActive = 'link:LazyH1'
 
 [BufferLine]
+BufferLineSeparator = 'bgdark bgdark'
+BufferLineSeparatorSelected = 'bgdark bg'
+BufferLineBufferSelected = 'purple - b'
+BufferLineFill = '- bgdark'
 BufferLineIndicatorSelected = 'purple'
-BufferLineSeparator = 'bg'
 
 [SymbolsOutline]
 FocusedSymbol = 'cyan'
