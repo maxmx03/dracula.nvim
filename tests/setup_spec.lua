@@ -37,8 +37,6 @@ describe('dracula.setup', function()
 
   test('plugins', function()
     local treesitter = nvim_get_hl '@variable'
-    print(vim.inspect(treesitter), 'treesitter')
-    assert.equals(colors.base0, treesitter.fg)
     assert.True(colors.base0 == treesitter.fg)
   end)
 end)

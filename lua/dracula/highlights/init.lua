@@ -270,7 +270,7 @@ M.set_highlight = function(colors, config)
   nvim_set_hl('Error', { fg = colors.diag_error, bold = true })
   nvim_set_hl('Todo', { link = 'Title' }) -- PLUGINS
   if config.plugins['nvim-treesitter'] then
-    nvim_set_hl('@variable', { link = 'Indentifier' })
+    nvim_set_hl('@variable', { link = 'Identifier' })
     nvim_set_hl('@variable.builtin', { link = 'Constant' })
     nvim_set_hl('@variable.parameter', { fg = colors.orange, italic = true })
     nvim_set_hl('@variable.member', { link = 'Identifier' })
