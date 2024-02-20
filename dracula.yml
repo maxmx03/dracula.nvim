@@ -1,0 +1,506 @@
+symbol_map:
+  text: &symbol_text
+    link: String
+  method: &symbol_method
+    link: Function
+  function: &symbol_function
+    link: Function
+  field: &symbol_field
+    link: Identifier
+  variable: &symbol_variable
+    link: Identifier
+  class: &symbol_class
+    link: Type
+  interface: &symbol_interface
+    link: Type
+  module: &symbol_module
+    link: Type
+  property: &symbol_property
+    link: Identifier
+  unit: &symbol_unity
+    link: Number
+  enum: &symbol_enum
+    link: Type
+  keyword: &symbol_keyword
+    link: Statement
+  snippet: &symbol_snippet
+    link: Tag
+  color: &symbol_color
+    fg: orange
+  file: &symbol_file
+    fg: Identifier
+  reference: &symbol_reference
+    link: Underlined
+  folder: &symbol_folder
+    link: Directory
+  enumMember: &symbol_enum_member
+    link: Constant
+  constant: &symbol_constant
+    link: Constant
+  struct: &symbol_struct
+    link: Identifier
+  event: &symbol_event
+    link: Function
+  operator: &symbol_operator
+    link: Operator
+  typeParameter: &symbol_type_parameter
+    link: Type
+
+name: dracula
+author: Max Del Canto
+repo: github.com/maxmx03/dracula.nvim
+contact: "github.com/maxmx03"
+license: "MIT License"
+config:
+  transparent: false
+  on_colors: ~
+  on_highlights: ~
+  plugins:
+palette:
+  base0: "#f8f8f2" # foreground
+  base01: "#6272a4" # comment
+  base02: "#21222c" # background highlight
+  base03: "#282a36" # background
+  base04: "#21222c" # background shade
+  yellow: "#f1fa8c"
+  cyan: "#8be9fd"
+  green: "#50fa7a"
+  red: "#ff5555"
+  orange: "#ffb86c"
+  pink: "#ff79c6"
+  purple: "#bd93f9"
+  diag_info: "#8be9fd"
+  diag_hint: "#8be9fd"
+  diag_success: "#50fa7b"
+  diag_warning: "#ffb86c"
+  diag_error: "#ff5555"
+  git_added: "#50fa7b"
+  git_modified: "#ffb86c"
+  git_removed: "#ff5555"
+  shade_orange: "#483F3E"
+  shade_red: "#48303B"
+  shade_cyan: "#374754"
+  shade_green: "#2E4940"
+  shade_yellow: "#464943"
+  shade_purple: "#3E3A53"
+  shade_pink: "#5E3E5A"
+  shade_add: "#2E4940"
+  shade_change: "#483F3E"
+  shade_warning: "#483F3E"
+  shade_error: "#48303B"
+  shade_info: "#374754"
+  shade_hint: "#374754"
+  shade_other: "#3E3A53"
+highlights:
+  editor:
+    - name: ColorColumn
+      bg: base04
+    - name: Conceal
+      fg: base02
+    - name: CurSearch
+      fg: cyan
+    - name: Cursor
+      fg: base03
+      bg: cyan
+    - name: lCursor
+      link: Cursor
+    - name: CursorIM
+      link: Cursor
+    - name: CursorColumn
+      link: ColorColumn
+    - name: CursorLine
+      bg: base02
+    - name: Directory
+      fg: purple
+    - name: DiffAdd
+      fg: git_added
+    - name: DiffChange
+      fg: git_modified
+    - name: DiffDelete
+      fg: git_removed
+      reverse: true
+      gui: reverse
+    - name: DiffText
+      fg: cyan
+      reverse: true
+      gui: reverse
+    - name: EndOfBuffer
+      fg: base03
+    - name: TermCursor
+      link: Cursor
+    - name: TermCursorNC
+      fg: base0
+      reverse: true
+      gui: reverse
+    - name: ErrorMsg
+      fg: diag_error
+    - name: WinSeparator
+      fg: base01
+      bg: base04
+    - name: Folded
+      fg: base0
+      bg: base02
+    - name: FoldColumn
+      fg: base0
+      bg: base04
+    - name: SignColumn
+      link: Normal
+    - name: IncSearch
+      fg: cyan
+      bg: base04
+      bold: true
+      gui: bold
+      transparent: true
+    - name: Substitute
+      link: IncSearch
+    - name: LineNr
+      fg: base01
+      bg: base03
+      transparent: true
+    - name: LineNrAbove
+      link: LineNr
+    - name: LineNrBelow
+      link: LineNr
+    - name: CursorLineNr
+      fg: purple
+      bg: base03
+      transparent: true
+    - name: CursorLineFold
+      link: FoldColumn
+    - name: CursorLineSign
+      link: SignColumn
+    - name: MatchParen
+      fg: cyan
+    - name: ModeMsg
+      fg: purple
+    - name: MsgArea
+      link: Normal
+    - name: MsgSeparator
+      link: Normal
+    - name: MoreMsg
+      link: ModeMsg
+    - name: NonText
+      fg: base01
+    - name: Normal
+      fg: base0
+      bg: base03
+      transparent: true
+    - name: NormalFloat
+      fg: base0
+      bg: base04
+    - name: FloatBorder
+      link: WinSeparator
+    - name: FloatTitle
+      link: Title
+    - name: NormalNC
+      link: Normal
+    - name: Pmenu
+      fg: base0
+      bg: base04
+    - name: PmenuSel
+      fg: cyan
+      reverse: true
+      gui: reverse
+    - name: PmenuKind
+      link: Pmenu
+    - name: PmenuKindSel
+      link: PmenuSel
+    - name: PmenuExtra
+      link: Pmenu
+    - name: PmenuExtraSel
+      link: PmenuSel
+    - name: PmenuSbar
+      bg: base04
+    - name: PmenuThumb
+      bg: cyan
+    - name: Question
+      fg: diag_info
+    - name: QuickFixLine
+      fg: base0
+      bg: base03
+    - name: Search
+      bg: base02
+    - name: SpecialKey
+      link: NonText
+    - name: SpellBad
+      sp: diag_error
+      strikethrough: true
+      underline: true
+      gui: strikethrough,underline
+    - name: SpellCap
+      fg: diag_hint
+    - name: SpellLocal
+      link: SpellCap
+    - name: SpellRare
+      fg: diag_warning
+    - name: StatusLine
+      fg: base0
+      bg: base04
+    - name: StatusLineNC
+      fg: base01
+      bg: base04
+    - name: TabLine
+      fg: base01
+      bg: base04
+    - name: TabLineFill
+      fg: base0
+      bg: base04
+    - name: TabLineSel
+      fg: base0
+      bg: base03
+    - name: Title
+      fg: purple
+      bold: true
+      gui: bold
+    - name: Visual
+      bg: base02
+    - name: VisualNOS
+      link: Visual
+    - name: warningMsg
+      fg: diag_warning
+    - name: Whitespace
+      fg: base01
+    - name: WildMenu
+      fg: base02
+    - name: WinBar
+      link: Pmenu
+    - name: WinBarNC
+      link: WinBar
+  syntax:
+    - name: Comment
+      fg: base01
+    - name: Constant
+      fg: purple
+    - name: String
+      fg: yellow
+    - name: Character
+      link: String
+    - name: Number
+      link: Constant
+    - name: Boolean
+      link: Constant
+    - name: Float
+      link: Constant
+    - name: Identifier
+      fg: base0
+    - name: Function
+      fg: green
+    - name: Statement
+      fg: pink
+    - name: Conditional
+      link: Statement
+    - name: Repeat
+      link: Statement
+    - name: Label
+      link: Statement
+    - name: Operator
+      link: Statement
+    - name: Keyword
+      link: Statement
+    - name: Exception
+      link: Statement
+    - name: PreProc
+      link: Statement
+    - name: Include
+      link: Statement
+    - name: Define
+      link: Statement
+    - name: Macro
+      link: Statement
+    - name: PreCondit
+      link: Statement
+    - name: Type
+      fg: cyan
+    - name: StorageClass
+      link: Statement
+    - name: Structure
+      link: Type
+    - name: Typedef
+      link: Statement
+    - name: Special
+      fg: red
+    - name: SpecialChar
+      link: Constant
+    - name: Tag
+      fg: pink
+    - name: Delimiter
+      fg: base0
+    - name: SpecialComment
+      link: Statement
+    - name: Debug
+      link: Statement
+    - name: Underlined
+      fg: cyan
+      underline: true
+      gui: underline
+    - name: Ignore
+    - name: Error
+      fg: diag_error
+      bold: true
+      gui: bold
+    - name: Todo
+      link: Title
+  plugins:
+    - nvim-treesitter:
+        - name: "@variable"
+          link: Indentifier
+        - name: "@variable.builtin"
+          link: Constant
+        - name: "@variable.parameter"
+          fg: orange
+          italic: true
+          gui: italic
+        - name: "@variable.member"
+          link: Identifier
+        - name: "@constant"
+          link: Constant
+        - name: "@constant.builtin"
+          link: Constant
+        - name: "@constant.macro"
+          link: Constant
+        - name: "@module"
+          link: Identifier
+        - name: "@module.builtin"
+          link: Constant
+        - name: "@label"
+          link: Label
+        - name: "@string"
+          link: String
+        - name: "@string.documentation"
+          link: Statement
+        - name: "@string.regexp"
+          link: Special
+        - name: "@string.escape"
+          link: Statement
+        - name: "@string.special"
+          link: String
+        - name: "@string.special.symbol"
+          link: Identifier
+        - name: "@string.special.url"
+          link: Underlined
+        - name: "@character"
+          link: String
+        - name: "@character.special"
+          link: String
+        - name: "@character.printf"
+          link: Special
+        - name: "@type"
+          link: Type
+        - name: "@type.builtin"
+          link: Type
+        - name: "@type.defition"
+          link: Type
+        - name: "@type.qualifier"
+          fg: pink
+        - name: "@function"
+          link: Function
+        - name: "@function.builtin"
+          link: Type
+        - name: "@function.call"
+          link: Function
+        - name: "@function.macro"
+          link: Function
+        - name: "@function.method"
+          link: Function
+        - name: "@function.method.call"
+          link: Function
+        - name: "@constructor"
+          link: Type
+        - name: "@operator"
+          link: Operator
+        - name: "@keyword"
+          link: Statement
+        - name: "@keyword.coroutine"
+          link: Statement
+        - name: "@keyword.function"
+          link: Statement
+        - name: "@keyword.operator"
+          link: Statement
+        - name: "@keyword.import"
+          link: Statement
+        - name: "@keyword.repeat"
+          link: Statement
+        - name: "@keyword.return"
+          link: Statement
+        - name: "@keyword.debug"
+          link: Statement
+        - name: "@keyword.exception"
+          link: Statement
+        - name: "@keyword.conditional"
+          link: Statement
+        - name: "@keyword.conditional.ternary"
+          link: Statement
+        - name: "@keyword.directive"
+          link: Statement
+        - name: "@keyword.directive.define"
+          link: Statement
+    - nvim-cmp:
+        - name: CmpItemKindText
+          <<: *symbol_text
+        - name: CmpItemKindMethod
+          <<: *symbol_method
+        - name: CmpItemKindFunction
+          <<: *symbol_function
+        - name: CmpItemKindField
+          <<: *symbol_field
+        - name: CmpItemKindVariable
+          <<: *symbol_variable
+        - name: CmpItemKindClass
+          <<: *symbol_class
+        - name: CmpItemKindInterface
+          <<: *symbol_interface
+        - name: CmpItemKindModule
+          <<: *symbol_module
+        - name: CmpItemKindProperty
+          <<: *symbol_property
+        - name: CmpItemKindUnity
+          <<: *symbol_unity
+        - name: CmpItemKindEnum
+          <<: *symbol_enum
+        - name: CmpItemKindKeyword
+          <<: *symbol_keyword
+        - name: CmpItemKindSnippet
+          <<: *symbol_snippet
+        - name: CmpItemKindColor
+          <<: *symbol_color
+        - name: CmpItemKindFile
+          <<: *symbol_file
+        - name: CmpItemKindReference
+          <<: *symbol_reference
+        - name: CmpItemKindFolder
+          <<: *symbol_folder
+        - name: CmpItemKindEnumMember
+          <<: *symbol_enum_member
+        - name: CmpItemKindConstant
+          <<: *symbol_constant
+        - name: CmpItemKindStruct
+          <<: *symbol_struct
+        - name: CmpItemKindEvent
+          <<: *symbol_event
+        - name: CmpItemKindOperator
+          <<: *symbol_operator
+        - name: CmpItemKindTypeParameter
+          <<: *symbol_type_parameter
+    - indent-blankline.nvim:
+        - name: IblIndent
+          fg: shade_purple
+          nocombine: true
+        - name: IblScope
+          fg: purple
+          nocombine: true
+    - bufferline.nvim:
+        - name: BufferLineSeparator
+          fg: base04
+          bg: base04
+        - name: BufferLineSeparatorSelected
+          fg: base04
+          bg: base03
+        - name: BufferLineBufferSelected
+          fg: purple
+          bold: true
+          gui: bold
+        - name: BufferLineFill
+          fg: base0
+          bg: base04
+        - name: BufferLineIndicatorSelected
+          fg: purple
