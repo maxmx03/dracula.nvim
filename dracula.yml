@@ -90,7 +90,6 @@ palette:
   shade_error: "#48303B"
   shade_info: "#374754"
   shade_hint: "#374754"
-  shade_other: "#3E3A53"
 highlights:
   editor:
     - name: ColorColumn
@@ -343,7 +342,7 @@ highlights:
   plugins:
     - nvim-treesitter:
         - name: "@variable"
-          link: Indentifier
+          link: Identifier
         - name: "@variable.builtin"
           link: Constant
         - name: "@variable.parameter"
@@ -434,6 +433,76 @@ highlights:
           link: Statement
         - name: "@keyword.directive.define"
           link: Statement
+        - name: "@punctuation.delimiter"
+          link: Delimiter
+        - name: "@punctuation.bracket"
+          link: Delimiter
+        - name: "@punctuation.special"
+          fg: pink
+        - name: "@comment"
+          link: Comment
+        - name: "@comment.documentation"
+          link: Comment
+        - name: "@comment.error"
+          fg: diag_error
+          bg: shade_error
+        - name: "@comment.warning"
+          fg: diag_warning
+          bg: shade_warning
+        - name: "@comment.todo"
+          fg: purple
+          bg: shade_purple
+        - name: "@comment.note"
+          fg: diag_hint
+          bg: shade_hint
+        - name: "@markup.strong"
+          fg: orange
+          bold: true
+          gui: bold
+        - name: "@markup.italic"
+          fg: yellow
+          italic: true
+          gui: italic
+        - name: "@markup.strikethrough"
+          fg: base01
+        - name: "@markup.underline"
+          link: Underlined
+        - name: "@markup.heading"
+          link: Title
+        - name: "@markup.quote"
+          link: Comment
+        - name: "@markup.math"
+          link: Constant
+        - name: "@markup.environment"
+          link: Comment
+        - name: "@markup.link"
+          link: "@markup.strong"
+        - name: "@markup.link.label"
+          link: Underlined
+        - name: "@markup.link.url"
+          fg: cyan
+        - name: "@markup.raw"
+          fg: green
+        - name: "@markup.raw.block"
+          link: Comment
+        - name: "@markup.list"
+          fg: purple
+        - name: "@markup.list.checked"
+          fg: git_added
+        - name: "@markup.list.unchecked"
+          fg: git_modified
+        - name: "@diff.plus"
+          fg: git_added
+        - name: "@diff.minus"
+          fg: git_removed
+        - name: "@diff.delta"
+          fg: git_modified
+        - name: "@tag"
+          fg: pink
+        - name: "@tag.attribute"
+          fg: green
+        - name: "@tag.delimiter"
+          link: Delimiter
     - nvim-cmp:
         - name: CmpItemKindText
           <<: *symbol_text

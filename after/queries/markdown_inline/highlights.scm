@@ -1,2 +1,2 @@
 ; extends
-((strong_emphasis) @text.strong (#set! "priority" 125))
+((strong_emphasis) @markup.strong (#set! "priority" 125))
