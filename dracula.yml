@@ -703,6 +703,7 @@ highlights:
           fg: purple
           bold: true
           gui: bold
+          transparent: true
         - name: BufferLineFill
           fg: base0
           bg: base04
@@ -711,6 +712,7 @@ highlights:
         - name: BufferLineBufferVisible
           fg: base0
           bg: base03
+          transparent: true
     - neo-tree.nvim:
         - name: NeoTreeNormal
           fg: base0
