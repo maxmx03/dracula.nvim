@@ -35,7 +35,7 @@
 return {
   base0 = '#F8F8F2',
   base01 = '#6272A4',
-  base02 = '#21222C',
+  base02 = '#44475A',
   base03 = '#282A36',
   base04 = '#21222C',
   cyan = '#8BE9FD',

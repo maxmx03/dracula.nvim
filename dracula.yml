@@ -111,7 +111,7 @@ config:
 palette:
   base0: "#f8f8f2" # foreground
   base01: "#6272a4" # comment
-  base02: "#21222c" # background highlight
+  base02: "#44475A" # background highlight
   base03: "#282a36" # background
   base04: "#21222c" # background shade
   yellow: "#f1fa8c"
