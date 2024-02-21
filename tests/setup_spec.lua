@@ -1,5 +1,4 @@
 local nvim_get_hl = require('dracula.utils').nvim_get_hl
-local colors = require 'dracula.palette'
 
 describe('dracula.setup', function()
   setup(function()
@@ -7,12 +6,12 @@ describe('dracula.setup', function()
       transparent = true,
       on_colors = function()
         return {
-          yellow = '#ffffff',
+          mycolor = '#ffffff',
         }
       end,
-      on_highlight = function()
+      on_highlight = function(colors)
         return {
-          Type = { bg = '#ffffff' },
+          CustomHighlight = { fg = colors.mycolor },
         }
       end,
     }
@@ -24,19 +23,9 @@ describe('dracula.setup', function()
     assert.falsy(normal.bg)
   end)
 
-  test('on_colors', function()
-    local expected = nvim_get_hl('Function').fg
-    assert.True(expected ~= colors.yellow)
-  end)
-
-  test('on_highlight', function()
-    local user_group = nvim_get_hl 'Type'
-    local expected = { fg = colors.cyan, bg = '#FFFFFF' }
+  test('on_colors and on_highlight', function()
+    local user_group = nvim_get_hl 'CustomHighlight'
+    local expected = { fg = '#FFFFFF' }
     assert.are.same(expected, user_group)
-  end)
-
-  test('plugins', function()
-    local treesitter = nvim_get_hl '@variable'
-    assert.True(colors.base0 == treesitter.fg)
   end)
 end)

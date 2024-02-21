@@ -103,6 +103,21 @@
 ---@field Ignore table
 ---@field Error table
 ---@field Todo table
+---@field DiagnosticError table
+---@field DiagnosticWarn table
+---@field DiagnosticInfo table
+---@field DiagnosticHint table
+---@field DiagnosticOk table
+---@field DiagnosticVirtualTextError table
+---@field DiagnosticVirtualTextWarn table
+---@field DiagnosticVirtualTextInfo table
+---@field DiagnosticVirtualTextHint table
+---@field DiagnosticVirtualTextOk table
+---@field DiagnosticUnderlineError table
+---@field DiagnosticUnderlineWarn table
+---@field DiagnosticUnderlineInfo table
+---@field DiagnosticUnderlineHint table
+---@field DiagnosticUnderlineOk table
 ---@field CmpItemKindText table
 ---@field CmpItemKindMethod table
 ---@field CmpItemKindFunction table
@@ -368,6 +383,21 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('@lsp.typemod.keyword.documentation', { fg = colors.pink })
     nvim_set_hl('@lsp.typemod.class.documentation', { fg = colors.cyan })
     nvim_set_hl('@lsp.typemod.property.readonly', { fg = colors.purple })
+    nvim_set_hl('DiagnosticError', { fg = colors.diag_error })
+    nvim_set_hl('DiagnosticWarn', { fg = colors.diag_warning })
+    nvim_set_hl('DiagnosticInfo', { fg = colors.diag_info })
+    nvim_set_hl('DiagnosticHint', { fg = colors.diag_hint })
+    nvim_set_hl('DiagnosticOk', { fg = colors.green })
+    nvim_set_hl('DiagnosticVirtualTextError', { fg = colors.diag_error, bg = colors.shade_error })
+    nvim_set_hl('DiagnosticVirtualTextWarn', { fg = colors.diag_warning, bg = colors.shade_warning })
+    nvim_set_hl('DiagnosticVirtualTextInfo', { fg = colors.diag_info, bg = colors.shade_info })
+    nvim_set_hl('DiagnosticVirtualTextHint', { fg = colors.diag_hint, bg = colors.shade_hint })
+    nvim_set_hl('DiagnosticVirtualTextOk', { fg = colors.green, bg = colors.shade_green })
+    nvim_set_hl('DiagnosticUnderlineError', { fg = colors.diag_error, underline = true })
+    nvim_set_hl('DiagnosticUnderlineWarn', { fg = colors.diag_warning, underline = true })
+    nvim_set_hl('DiagnosticUnderlineInfo', { fg = colors.diag_info, underline = true })
+    nvim_set_hl('DiagnosticUnderlineHint', { fg = colors.diag_hint, underline = true })
+    nvim_set_hl('DiagnosticUnderlineOk', { fg = colors.green, underline = true })
   end
 
   if config.plugins['nvim-cmp'] then

@@ -1,21 +1,82 @@
-# Dracula for [Neovim](https://neovim.io)
+# Dracula for Neovim
 
-> Created with [schemecraft](https://github.com/maxmx03/schemecraft)
+## Installation
 
-![Screenshot](https://user-images.githubusercontent.com/50273941/227779719-6e003e4a-f8e8-40bc-8a9f-ebfd7ea13fe6.png)
+```json
+{
+  "workspace": {
+    "library": ["~/.local/share/nvim/lazy/dracula"]
+  }
+}
+```
 
-## Maintainers
+```lua
+return {
+  {
+    'github.com/maxmx03/dracula.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function ()
+      ---@type dracula
+      require "dracula".setup({
+      transparent = false,
+      on_colors = function (colors, color)
+        ---@type dracula.colors
+        return {
+          -- override or create new colors
+          mycolor = "#ffffff",
+        }
+      end,
+      on_highlights = function (colors, color)
+        ---@type dracula.highlights
+        return {
+          ---@type vim.api.keyset.highlight
+          Normal = { fg = colors.mycolor }
+        }
+      end,
+      plugins = {
+        ["nvim-treesitter"] = true,
+        ["nvim-lspconfig"] = true,
+        ["nvim-cmp"] = true,
+        ["indent-blankline.nvim"] = true,
+        ["bufferline.nvim"] = true,
+      }
+      })
+      vim.cmd.colorscheme 'dracula'
+    end
+  }
+}
+```
 
-| [![Max](https://github.com/maxmx03.png?size=100)](https://github.com/maxmx03) |
-| ----------------------------------------------------------------------------- |
-| Max Miliano                                                                   |
+## Api
 
-## Designed by
+```lua
+local colors = require 'dracula.colors'
+local color = require 'dracula.color'
+local darken = color.darken
+local lighten = color.lighten
+local blend = color.blend
+local shade = color.shade
+local tint = color.tint
 
-[![Zeno Rocha](https://github.com/zenorocha.png?size=100)](https://github.com/zenorocha)
+-- example 1: get shades
+for i = 1, 10, 1 do
+    print(shade(colors.yellow, i))
+end
 
-Zeno Rocha: [learn more](https://draculatheme.com/about)
+for i = 1, 100, 10 do
+    print(darken(colors.yellow, i))
+end
 
-## License
+-- example 2: get tints
+for i = 1, 10, 1 do
+    print(tint(colors.yellow, i))
+end
 
-[MIT License](./LICENSE)
+for i = 1, 100, 10 do
+    print(lighten(colors.yellow, i))
+end
+
+-- example 3: blend color
+local new_color = blend(colors.yellow, colors.base03, 0.2)
+```

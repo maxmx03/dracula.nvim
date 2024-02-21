@@ -107,7 +107,7 @@ config:
   transparent: false
   on_colors: ~
   on_highlights: ~
-  plugins:
+  plugins: ~
 palette:
   base0: "#f8f8f2" # foreground
   base01: "#6272a4" # comment
@@ -588,6 +588,56 @@ highlights:
           <<: *class
         - name: "@lsp.typemod.property.readonly"
           <<: *constant
+        - name: DiagnosticError
+          fg: diag_error
+        - name: DiagnosticWarn
+          fg: diag_warning
+        - name: DiagnosticInfo
+          fg: diag_info
+        - name: DiagnosticHint
+          fg: diag_hint
+        - name: DiagnosticOk
+          fg: green
+        - name: DiagnosticVirtualTextError
+          fg: diag_error
+          bg: shade_error
+        - name: DiagnosticVirtualTextWarn
+          fg: diag_warning
+          bg: shade_warning
+        - name: DiagnosticVirtualTextInfo
+          fg: diag_info
+          bg: shade_info
+        - name: DiagnosticVirtualTextHint
+          fg: diag_hint
+          bg: shade_hint
+        - name: DiagnosticVirtualTextOk
+          fg: green
+          bg: shade_green
+        - name: DiagnosticUnderlineError
+          fg: diag_error
+          sp: diag_error
+          underline: true
+          gui: underline
+        - name: DiagnosticUnderlineWarn
+          fg: diag_warning
+          sp: diag_warning
+          underline: true
+          gui: underline
+        - name: DiagnosticUnderlineInfo
+          fg: diag_info
+          sp: diag_info
+          underline: true
+          gui: underline
+        - name: DiagnosticUnderlineHint
+          fg: diag_hint
+          sp: diag_hint
+          underline: true
+          gui: underline
+        - name: DiagnosticUnderlineOk
+          fg: green
+          sp: green
+          underline: true
+          gui: underline
     - nvim-cmp:
         - name: CmpItemKindText
           <<: *symbol_text
