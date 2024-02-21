@@ -46,6 +46,58 @@ symbol_map:
   typeParameter: &symbol_type_parameter
     link: Type
 
+specification:
+  string: &string
+    fg: yellow
+  stringRegExp: &stringRegExp
+    fg: red
+  comment: &comment
+    fg: base01
+  identifier: &identifier
+    fg: base0
+  constant: &constant
+    fg: purple
+  function: &function
+    fg: green
+  builtinFunction: &builtinFunction
+    fg: cyan
+  parameter: &parameter
+    fg: orange
+    italic: true
+    gui: italic
+  class: &class
+    fg: cyan
+  types: &types
+    fg: cyan
+    italic: true
+  delimiter: &delimiter
+    fg: base0
+  tag: &tag
+    fg: pink
+  tagAttribute: &tagAttribute
+    fg: green
+  keyword: &keyword
+    fg: pink
+  markupHeading: &markupHeading
+    fg: purple
+    bold: true
+    gui: true
+  markupBold: &markupBold
+    fg: orange
+    bold: true
+  markupItalic: &markupItalic
+    fg: yellow
+    italic: true
+    gui: italic
+  markupInlineCode: &markupInlineCode
+    fg: base01
+  markupBlockCode: &markupBlockCode
+    fg: base01
+  markupLinkUrl: &markupLinkUrl
+    fg: cyan
+    underline: true
+    gui: underline
+
 name: dracula
 author: Max Del Canto
 repo: github.com/maxmx03/dracula.nvim
@@ -190,7 +242,7 @@ highlights:
     - name: FloatBorder
       link: WinSeparator
     - name: FloatTitle
-      link: Title
+      <<: *markupHeading
     - name: NormalNC
       link: Normal
     - name: Pmenu
@@ -248,9 +300,7 @@ highlights:
       fg: base0
       bg: base03
     - name: Title
-      fg: purple
-      bold: true
-      gui: bold
+      <<: *markupHeading
     - name: Visual
       bg: base02
     - name: VisualNOS
@@ -267,67 +317,67 @@ highlights:
       link: WinBar
   syntax:
     - name: Comment
-      fg: base01
+      <<: *comment
     - name: Constant
-      fg: purple
+      <<: *constant
     - name: String
-      fg: yellow
+      <<: *string
     - name: Character
-      link: String
+      <<: *string
     - name: Number
-      link: Constant
+      <<: *constant
     - name: Boolean
-      link: Constant
+      <<: *constant
     - name: Float
-      link: Constant
+      <<: *constant
     - name: Identifier
-      fg: base0
+      <<: *identifier
     - name: Function
-      fg: green
+      <<: *function
     - name: Statement
-      fg: pink
+      <<: *keyword
     - name: Conditional
-      link: Statement
+      <<: *keyword
     - name: Repeat
-      link: Statement
+      <<: *keyword
     - name: Label
-      link: Statement
+      <<: *keyword
     - name: Operator
-      link: Statement
+      <<: *keyword
     - name: Keyword
-      link: Statement
+      <<: *keyword
     - name: Exception
-      link: Statement
+      <<: *keyword
     - name: PreProc
-      link: Statement
+      <<: *keyword
     - name: Include
-      link: Statement
+      <<: *keyword
     - name: Define
-      link: Statement
+      <<: *keyword
     - name: Macro
-      link: Statement
+      <<: *keyword
     - name: PreCondit
-      link: Statement
+      <<: *keyword
     - name: Type
-      fg: cyan
+      <<: *class
     - name: StorageClass
-      link: Statement
+      <<: *keyword
     - name: Structure
-      link: Type
+      <<: *class
     - name: Typedef
-      link: Statement
+      <<: *keyword
     - name: Special
-      fg: red
+      <<: *stringRegExp
     - name: SpecialChar
-      link: Constant
+      <<: *constant
     - name: Tag
-      fg: pink
+      <<: *tag
     - name: Delimiter
-      fg: base0
+      <<: *delimiter
     - name: SpecialComment
-      link: Statement
+      <<: *keyword
     - name: Debug
-      link: Statement
+      <<: *keyword
     - name: Underlined
       fg: cyan
       underline: true
@@ -338,111 +388,111 @@ highlights:
       bold: true
       gui: bold
     - name: Todo
-      link: Title
+      <<: *markupHeading
   plugins:
     - nvim-treesitter:
         - name: "@variable"
-          link: Identifier
+          <<: *identifier
         - name: "@variable.builtin"
-          link: Constant
+          <<: *constant
         - name: "@variable.parameter"
           fg: orange
           italic: true
           gui: italic
         - name: "@variable.member"
-          link: Identifier
+          <<: *identifier
         - name: "@constant"
-          link: Constant
+          <<: *constant
         - name: "@constant.builtin"
-          link: Constant
+          <<: *constant
         - name: "@constant.macro"
-          link: Constant
+          <<: *constant
         - name: "@module"
-          link: Identifier
+          <<: *identifier
         - name: "@module.builtin"
-          link: Constant
+          <<: *constant
         - name: "@label"
-          link: Label
+          <<: *keyword
         - name: "@string"
-          link: String
+          <<: *string
         - name: "@string.documentation"
-          link: Statement
+          <<: *keyword
         - name: "@string.regexp"
-          link: Special
+          <<: *stringRegExp
         - name: "@string.escape"
-          link: Statement
+          <<: *keyword
         - name: "@string.special"
-          link: String
+          <<: *string
         - name: "@string.special.symbol"
-          link: Identifier
+          <<: *identifier
         - name: "@string.special.url"
           link: Underlined
         - name: "@character"
-          link: String
+          <<: *string
         - name: "@character.special"
-          link: String
+          <<: *string
         - name: "@character.printf"
-          link: Special
+          <<: *stringRegExp
         - name: "@type"
-          link: Type
+          <<: *class
         - name: "@type.builtin"
-          link: Type
+          <<: *class
         - name: "@type.defition"
-          link: Type
+          <<: *class
         - name: "@type.qualifier"
-          fg: pink
+          <<: *keyword
         - name: "@function"
-          link: Function
+          <<: *function
         - name: "@function.builtin"
-          link: Type
+          <<: *builtinFunction
         - name: "@function.call"
-          link: Function
+          <<: *function
         - name: "@function.macro"
-          link: Function
+          <<: *function
         - name: "@function.method"
-          link: Function
+          <<: *function
         - name: "@function.method.call"
-          link: Function
+          <<: *function
         - name: "@constructor"
-          link: Type
+          <<: *class
         - name: "@operator"
-          link: Operator
+          <<: *keyword
         - name: "@keyword"
-          link: Statement
+          <<: *keyword
         - name: "@keyword.coroutine"
-          link: Statement
+          <<: *keyword
         - name: "@keyword.function"
-          link: Statement
+          <<: *keyword
         - name: "@keyword.operator"
-          link: Statement
+          <<: *keyword
         - name: "@keyword.import"
-          link: Statement
+          <<: *keyword
         - name: "@keyword.repeat"
-          link: Statement
+          <<: *keyword
         - name: "@keyword.return"
-          link: Statement
+          <<: *keyword
         - name: "@keyword.debug"
-          link: Statement
+          <<: *keyword
         - name: "@keyword.exception"
-          link: Statement
+          <<: *keyword
         - name: "@keyword.conditional"
-          link: Statement
+          <<: *keyword
         - name: "@keyword.conditional.ternary"
-          link: Statement
+          <<: *keyword
         - name: "@keyword.directive"
-          link: Statement
+          <<: *keyword
         - name: "@keyword.directive.define"
-          link: Statement
+          <<: *keyword
         - name: "@punctuation.delimiter"
-          link: Delimiter
+          <<: *delimiter
         - name: "@punctuation.bracket"
-          link: Delimiter
+          <<: *delimiter
         - name: "@punctuation.special"
-          fg: pink
+          <<: *keyword
         - name: "@comment"
-          link: Comment
+          <<: *comment
         - name: "@comment.documentation"
-          link: Comment
+          <<: *comment
         - name: "@comment.error"
           fg: diag_error
           bg: shade_error
@@ -456,35 +506,31 @@ highlights:
           fg: diag_hint
           bg: shade_hint
         - name: "@markup.strong"
-          fg: orange
-          bold: true
-          gui: bold
+          <<: *markupBold
         - name: "@markup.italic"
-          fg: yellow
-          italic: true
-          gui: italic
+          <<: *markupItalic
         - name: "@markup.strikethrough"
           fg: base01
         - name: "@markup.underline"
-          link: Underlined
+          <<: *markupLinkUrl
         - name: "@markup.heading"
-          link: Title
+          <<: *markupHeading
         - name: "@markup.quote"
-          link: Comment
+          <<: *markupInlineCode
         - name: "@markup.math"
-          link: Constant
+          <<: *constant
         - name: "@markup.environment"
-          link: Comment
+          <<: *comment
         - name: "@markup.link"
-          link: "@markup.strong"
+          <<: *markupBold
         - name: "@markup.link.label"
-          link: Underlined
+          <<: *markupLinkUrl
         - name: "@markup.link.url"
-          fg: cyan
+          <<: *markupLinkUrl
         - name: "@markup.raw"
-          fg: green
+          <<: *markupInlineCode
         - name: "@markup.raw.block"
-          link: Comment
+          <<: *markupBlockCode
         - name: "@markup.list"
           fg: purple
         - name: "@markup.list.checked"
@@ -498,11 +544,50 @@ highlights:
         - name: "@diff.delta"
           fg: git_modified
         - name: "@tag"
-          fg: pink
+          <<: *tag
         - name: "@tag.attribute"
-          fg: green
+          <<: *tagAttribute
         - name: "@tag.delimiter"
-          link: Delimiter
+          <<: *delimiter
+    - nvim-lspconfig:
+        - name: "@lsp.type.class"
+          <<: *class
+        - name: "@lsp.type.decorator"
+          <<: *function
+        - name: "@lsp.type.enum"
+          <<: *class
+        - name: "@lsp.type.enumMember"
+          <<: *constant
+        - name: "@lsp.type.interface"
+          <<: *class
+        - name: "@lsp.type.macro"
+          <<: *keyword
+        - name: "@lsp.type.namespace"
+          <<: *identifier
+        - name: "@lsp.type.parameter"
+          <<: *parameter
+        - name: "@lsp.type.property"
+          <<: *identifier
+        - name: "@lsp.type.struct"
+          <<: *class
+        - name: "@lsp.type.type"
+          <<: *class
+        - name: "@lsp.type.typeParameter"
+          <<: *types
+        - name: "@lsp.type.variable"
+          <<: *identifier
+        - name: "@lsp.typemod.variable.defaultLibrary"
+          <<: *constant
+        - name: "@lsp.typemod.variable.readonly"
+          <<: *constant
+        - name: "@lsp.typemod.variable.global"
+          <<: *constant
+        - name: "@lsp.typemod.keyword.documentation"
+          <<: *keyword
+        - name: "@lsp.typemod.class.documentation"
+          <<: *class
+        - name: "@lsp.typemod.property.readonly"
+          <<: *constant
     - nvim-cmp:
         - name: CmpItemKindText
           <<: *symbol_text

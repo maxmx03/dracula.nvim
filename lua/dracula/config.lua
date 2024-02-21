@@ -8,6 +8,7 @@ return {
   on_colors = nil,
   plugins = {
     ['nvim-treesitter'] = true,
+    ['nvim-lspconfig'] = true,
     ['nvim-cmp'] = true,
     ['indent-blankline.nvim'] = true,
     ['bufferline.nvim'] = true,
