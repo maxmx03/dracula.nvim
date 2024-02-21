@@ -707,4 +707,82 @@ highlights:
           fg: base0
           bg: base04
         - name: BufferLineIndicatorSelected
-          fg: purple
+          fg: base0
+        - name: BufferLineBufferVisible
+          fg: base0
+          bg: base03
+    - neo-tree.nvim:
+        - name: NeoTreeNormal
+          fg: base0
+          bg: base04
+        - name: NeoTreeNormalNC
+          link: NeoTreeNormal
+        - name: NeoTreeDotFile
+          fg: base01
+        - name: NeoTreeFileNameOpened
+          link: Directory
+        - name: NeoTreeFloatBorder
+          link: WinSeparator
+        - name: NeoTreeFloatTitle
+          link: Title
+        - name: NeoTreeGitAdded
+          fg: git_added
+        - name: NeoTreeGitConflict
+          fg: git_modified
+        - name: NeoTreeGitDeleted
+          fg: git_removed
+        - name: NeoTreeGitIgnored
+          fg: base0
+        - name: NeoTreeGitModified
+          fg: git_modified
+        - name: NeoTreeGitUnstaged
+          fg: git_modified
+        - name: NeoTreeGitUntracked
+          fg: git_modified
+        - name: NeoTreeGitStaged
+          fg: git_added
+    - nvim-tree.lua:
+        - name: NvimTreeSymlink
+          link: Underlined
+        - name: NvimTreeSymlinkIcon
+          link: Directory
+        - name: NvimTreeFolderName
+          fg: base0
+        - name: NvimTreeRootFolder
+          <<: *markupHeading
+        - name: NvimTreeFolderIcon
+          link: Directory
+        - name: NvimTreeEmptyFolderName
+          fg: base0
+        - name: NvimTreeExecFile
+          <<: *function
+        - name: NvimTreeOpenedFile
+          <<: *markupHeading
+        - name: NvimTreeModifiedFile
+          fg: git_modified
+        - name: NvimTreeSpecialFile
+          link: Special
+        - name: NvimTreeIndentMarker
+          fg: shade_purple
+        - name: NvimTreeGitDirty
+          fg: git_modified
+        - name: NvimTreeGitStaged
+          fg: git_added
+        - name: NvimTreeGitMerge
+          fg: git_modified
+        - name: NvimTreeGitRenamed
+          fg: git_modified
+        - name: NvimTreeGitNew
+          fg: git_added
+        - name: NvimTreeGitDeleted
+          fg: git_removed
+        - name: NvimTreeNormal
+          fg: base0
+          bg: base04
+        - name: NvimTreeNormalFloat
+          link: NvimTreeNormal
+        - name: NvimTreeEndOfBuffer
+          fg: base04
+        - name: NvimTreeWinSeparator
+          fg: base04
+          bg: base04

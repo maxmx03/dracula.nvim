@@ -1,12 +1,17 @@
-# Dracula for Neovim
+# dracula
+
+Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+labore culpa sint ad nisi Lorem pariatur.
 
 ## Installation
 
 ```json
 {
   "workspace": {
-    "library": ["~/.local/share/nvim/lazy/dracula"]
-  }
+    "library": [
+      "~/.local/share/nvim/lazy/dracula"
+    ],
+  },
 }
 ```
 
@@ -21,7 +26,7 @@ return {
       require "dracula".setup({
       transparent = false,
       on_colors = function (colors, color)
-        ---@type dracula.colors
+        ---@type dracula.palette
         return {
           -- override or create new colors
           mycolor = "#ffffff",
@@ -40,6 +45,8 @@ return {
         ["nvim-cmp"] = true,
         ["indent-blankline.nvim"] = true,
         ["bufferline.nvim"] = true,
+        ["neo-tree.nvim"] = true,
+        ["nvim-tree.lua"] = true,
       }
       })
       vim.cmd.colorscheme 'dracula'
