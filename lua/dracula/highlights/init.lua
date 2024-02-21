@@ -472,10 +472,10 @@ M.set_highlight = function(colors, config)
   if config.plugins['bufferline.nvim'] then
     nvim_set_hl('BufferLineSeparator', { fg = colors.base04, bg = colors.base04 })
     nvim_set_hl('BufferLineSeparatorSelected', { fg = colors.base04, bg = colors.base03 })
-    nvim_set_hl('BufferLineBufferSelected', { fg = colors.purple, bold = true }, config)
+    nvim_set_hl('BufferLineBufferSelected', { fg = colors.base0, bold = true }, config)
     nvim_set_hl('BufferLineFill', { fg = colors.base0, bg = colors.base04 })
     nvim_set_hl('BufferLineIndicatorSelected', { fg = colors.base0 })
-    nvim_set_hl('BufferLineBufferVisible', { fg = colors.base0, bg = colors.base03 }, config)
+    nvim_set_hl('BufferLineBufferVisible', { fg = colors.base01, bg = colors.base03 }, config)
   end
 
   if config.plugins['neo-tree.nvim'] then

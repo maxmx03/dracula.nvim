@@ -700,7 +700,7 @@ highlights:
           fg: base04
           bg: base03
         - name: BufferLineBufferSelected
-          fg: purple
+          fg: base0
           bold: true
           gui: bold
           transparent: true
@@ -710,7 +710,7 @@ highlights:
         - name: BufferLineIndicatorSelected
           fg: base0
         - name: BufferLineBufferVisible
-          fg: base0
+          fg: base01
           bg: base03
           transparent: true
     - neo-tree.nvim:
