@@ -365,7 +365,7 @@ highlights:
     - name: Structure
       <<: *class
     - name: Typedef
-      <<: *keyword
+      <<: *class
     - name: Special
       <<: *stringRegExp
     - name: SpecialChar
