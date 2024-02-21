@@ -365,7 +365,7 @@ highlights:
     - name: Structure
       <<: *class
     - name: Typedef
-      <<: *class
+      <<: *keyword
     - name: Special
       <<: *stringRegExp
     - name: SpecialChar
@@ -437,7 +437,7 @@ highlights:
           <<: *class
         - name: "@type.builtin"
           <<: *class
-        - name: "@type.defition"
+        - name: "@type.definition"
           <<: *class
         - name: "@type.qualifier"
           <<: *keyword
