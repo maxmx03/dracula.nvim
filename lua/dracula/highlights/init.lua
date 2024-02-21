@@ -184,6 +184,8 @@
 ---@field NvimTreeNormalFloat? table
 ---@field NvimTreeEndOfBuffer? table
 ---@field NvimTreeWinSeparator? table
+---@field WhichKey? table
+---@field WhichKeyGroup? table
 
 local M = {}
 
@@ -515,6 +517,11 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('NvimTreeNormalFloat', { link = 'NvimTreeNormal' })
     nvim_set_hl('NvimTreeEndOfBuffer', { fg = colors.base04 })
     nvim_set_hl('NvimTreeWinSeparator', { fg = colors.base04, bg = colors.base04 })
+  end
+
+  if config.plugins['which-key.nvim'] then
+    nvim_set_hl('WhichKey', { fg = colors.pink })
+    nvim_set_hl('WhichKeyGroup', { fg = colors.orange })
   end
   if config.on_highlight then
     local color = require 'dracula.color'

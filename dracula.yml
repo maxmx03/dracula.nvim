@@ -786,3 +786,8 @@ highlights:
         - name: NvimTreeWinSeparator
           fg: base04
           bg: base04
+    - which-key.nvim:
+        - name: WhichKey
+          <<: *keyword
+        - name: WhichKeyGroup
+          fg: orange

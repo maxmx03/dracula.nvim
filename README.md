@@ -47,6 +47,7 @@ return {
         ["bufferline.nvim"] = true,
         ["neo-tree.nvim"] = true,
         ["nvim-tree.lua"] = true,
+        ["which-key.nvim"] = true,
       }
       })
       vim.cmd.colorscheme 'dracula'
