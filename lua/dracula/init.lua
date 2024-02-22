@@ -27,7 +27,7 @@ M.load = function(theme)
   end
 
   local colors = {}
-  ok, colors = pcall(require, 'dracula.palette' .. theme)
+  ok, colors = pcall(require, 'dracula.palette.' .. theme)
   if not ok then
     colors = require 'dracula.palette'
   end
