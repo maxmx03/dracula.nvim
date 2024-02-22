@@ -793,3 +793,16 @@ highlights:
           <<: *keyword
         - name: WhichKeyGroup
           fg: orange
+    - dashboard-nvim:
+        - name: DashboardHeader
+          fg: red
+        - name: DashboardFooter
+          fg: base01
+        - name: DashboardDesc
+          link: Directory
+        - name: DashboardKey
+          <<: *keyword
+        - name: DashboardIcon
+          link: Directory
+        - name: DashboardShotCut
+          fg: base0

@@ -186,6 +186,12 @@
 ---@field NvimTreeWinSeparator? table
 ---@field WhichKey? table
 ---@field WhichKeyGroup? table
+---@field DashboardHeader? table
+---@field DashboardFooter? table
+---@field DashboardDesc? table
+---@field DashboardKey? table
+---@field DashboardIcon? table
+---@field DashboardShotCut? table
 
 local M = {}
 
@@ -522,6 +528,15 @@ M.set_highlight = function(colors, config)
   if config.plugins['which-key.nvim'] then
     nvim_set_hl('WhichKey', { fg = colors.pink })
     nvim_set_hl('WhichKeyGroup', { fg = colors.orange })
+  end
+
+  if config.plugins['dashboard-nvim'] then
+    nvim_set_hl('DashboardHeader', { fg = colors.red })
+    nvim_set_hl('DashboardFooter', { fg = colors.base01 })
+    nvim_set_hl('DashboardDesc', { link = 'Directory' })
+    nvim_set_hl('DashboardKey', { fg = colors.pink })
+    nvim_set_hl('DashboardIcon', { link = 'Directory' })
+    nvim_set_hl('DashboardShotCut', { fg = colors.base0 })
   end
   if config.on_highlight then
     local color = require 'dracula.color'

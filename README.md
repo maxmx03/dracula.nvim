@@ -48,6 +48,7 @@ return {
         ["neo-tree.nvim"] = true,
         ["nvim-tree.lua"] = true,
         ["which-key.nvim"] = true,
+        ["dashboard-nvim"] = true,
       }
       })
       vim.cmd.colorscheme 'dracula'
