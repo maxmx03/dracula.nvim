@@ -110,39 +110,40 @@ config:
   plugins: ~
 palette:
   base0: "#f8f8f2" # foreground
-  base01: "#6272a4" # comment
-  base02: "#44475A" # background highlight
+  base01: "#7b7f8b" # comment
+  base02: "#44475a" # background highlight
   base03: "#282a36" # background
-  base04: "#21222c" # background shade
-  yellow: "#f1fa8c"
-  cyan: "#8be9fd"
-  green: "#50fa7a"
-  red: "#ff5555"
+  base04: "#262626" # background shade
+  cyan: "#adf6f6"
+  green: "#62e884"
   orange: "#ffb86c"
-  pink: "#ff79c6"
-  purple: "#bd93f9"
+  pink: "#f286c4"
+  purple: "#bf9eee"
+  red: "#ee6666"
+  yellow: "#e7ee98"
   diag_info: "#8be9fd"
   diag_hint: "#8be9fd"
-  diag_ok: "#50fa7b"
+  diag_ok: "#62e884"
   diag_warning: "#ffb86c"
-  diag_error: "#ff5555"
-  git_added: "#50fa7b"
+  diag_error: "#ee6666"
+  git_added: "#62e884"
   git_modified: "#ffb86c"
-  git_removed: "#ff5555"
+  git_removed: "#ee6666"
   shade_orange: "#483F3E"
-  shade_red: "#48303B"
-  shade_cyan: "#374754"
-  shade_green: "#2E4940"
-  shade_yellow: "#464943"
-  shade_purple: "#3E3A53"
-  shade_pink: "#5E3E5A"
-  shade_add: "#2E4940"
+  shade_red: "#46333D"
+  shade_cyan: "#394552"
+  shade_green: "#314742"
+  shade_yellow: "#454745"
+  shade_purple: "#3F3B52"
+  shade_pink: "#5B415A"
+  shade_add: "#314742"
   shade_change: "#483F3E"
   shade_warning: "#483F3E"
-  shade_error: "#48303B"
-  shade_info: "#374754"
-  shade_hint: "#374754"
-  shade_ok: "#2E4940"
+  shade_error: "#46333D"
+  shade_info: "#394552"
+  shade_hint: "#394552"
+  shade_other: "#3F3B52"
+  shade_ok: "#314742"
 highlights:
   editor:
     - name: ColorColumn
