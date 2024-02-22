@@ -100,7 +100,7 @@ specification:
 
 name: dracula
 author: Max Del Canto
-repo: github.com/maxmx03/dracula.nvim
+repo: maxmx03/dracula.nvim
 contact: "github.com/maxmx03"
 license: "MIT License"
 config:
@@ -437,7 +437,7 @@ highlights:
         - name: "@type"
           <<: *class
         - name: "@type.builtin"
-          <<: *class
+          <<: *keyword
         - name: "@type.definition"
           <<: *class
         - name: "@type.qualifier"
@@ -456,6 +456,8 @@ highlights:
           <<: *function
         - name: "@constructor"
           <<: *class
+        - name: "@constructor.lua"
+          <<: *delimiter
         - name: "@operator"
           <<: *keyword
         - name: "@keyword"
@@ -550,6 +552,15 @@ highlights:
           <<: *tagAttribute
         - name: "@tag.delimiter"
           <<: *delimiter
+        - name: "@property.yaml"
+          fg: cyan
+        - name: "@property.json"
+          fg: cyan
+        - name: "@property.css"
+          fg: cyan
+        - name: "@property.scss"
+          fg: cyan
+
     - nvim-lspconfig:
         - name: "@lsp.type.class"
           <<: *class
@@ -791,9 +802,13 @@ highlights:
           bg: base04
     - which-key.nvim:
         - name: WhichKey
+          <<: *function
+        - name: WhichKeyDesc
+          <<: *parameter
+        - name: WhichKeySeparator
           <<: *keyword
         - name: WhichKeyGroup
-          fg: orange
+          fg: purple
     - dashboard-nvim:
         - name: DashboardHeader
           fg: red

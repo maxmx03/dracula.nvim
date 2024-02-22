@@ -185,6 +185,8 @@
 ---@field NvimTreeEndOfBuffer? table
 ---@field NvimTreeWinSeparator? table
 ---@field WhichKey? table
+---@field WhichKeyDesc? table
+---@field WhichKeySeparator? table
 ---@field WhichKeyGroup? table
 ---@field DashboardHeader? table
 ---@field DashboardFooter? table
@@ -350,7 +352,7 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('@character.special', { fg = colors.yellow })
     nvim_set_hl('@character.printf', { fg = colors.red })
     nvim_set_hl('@type', { fg = colors.cyan })
-    nvim_set_hl('@type.builtin', { fg = colors.cyan })
+    nvim_set_hl('@type.builtin', { fg = colors.pink })
     nvim_set_hl('@type.definition', { fg = colors.cyan })
     nvim_set_hl('@type.qualifier', { fg = colors.pink })
     nvim_set_hl('@function', { fg = colors.green })
@@ -360,6 +362,7 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('@function.method', { fg = colors.green })
     nvim_set_hl('@function.method.call', { fg = colors.green })
     nvim_set_hl('@constructor', { fg = colors.cyan })
+    nvim_set_hl('@constructor.lua', { fg = colors.base0 })
     nvim_set_hl('@operator', { fg = colors.pink })
     nvim_set_hl('@keyword', { fg = colors.pink })
     nvim_set_hl('@keyword.coroutine', { fg = colors.pink })
@@ -405,6 +408,10 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('@tag', { fg = colors.pink })
     nvim_set_hl('@tag.attribute', { fg = colors.green })
     nvim_set_hl('@tag.delimiter', { fg = colors.base0 })
+    nvim_set_hl('@property.yaml', { fg = colors.cyan })
+    nvim_set_hl('@property.json', { fg = colors.cyan })
+    nvim_set_hl('@property.css', { fg = colors.cyan })
+    nvim_set_hl('@property.scss', { fg = colors.cyan })
   end
 
   if config.plugins['nvim-lspconfig'] then
@@ -526,8 +533,10 @@ M.set_highlight = function(colors, config)
   end
 
   if config.plugins['which-key.nvim'] then
-    nvim_set_hl('WhichKey', { fg = colors.pink })
-    nvim_set_hl('WhichKeyGroup', { fg = colors.orange })
+    nvim_set_hl('WhichKey', { fg = colors.green })
+    nvim_set_hl('WhichKeyDesc', { fg = colors.orange, italic = true })
+    nvim_set_hl('WhichKeySeparator', { fg = colors.pink })
+    nvim_set_hl('WhichKeyGroup', { fg = colors.purple })
   end
 
   if config.plugins['dashboard-nvim'] then

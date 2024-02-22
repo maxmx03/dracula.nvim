@@ -18,7 +18,7 @@ labore culpa sint ad nisi Lorem pariatur.
 ```lua
 return {
   {
-    'github.com/maxmx03/dracula.nvim',
+    'maxmx03/dracula.nvim',
     lazy = false,
     priority = 1000,
     config = function ()
