@@ -917,7 +917,7 @@ highlights:
     - lazy.nvim:
         - name: LazyH1
           fg: purple
-          bg: shade_purple
+          bg: base04
         - name: LazyButton
           fg: base0
           bg: base02
