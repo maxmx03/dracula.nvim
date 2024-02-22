@@ -822,3 +822,104 @@ highlights:
           link: Directory
         - name: DashboardShotCut
           fg: base0
+    - gitsigns.nvim:
+        - name: GitSignsAdd
+          fg: git_added
+        - name: GitSignsChange
+          fg: git_modified
+        - name: GitSignsDelete
+          fg: git_removed
+    - neogit:
+        - name: NeogitCursorLine
+          link: CursorLine
+        - name: NeogitBranch
+          fg: purple
+        - name: NeogitRemote
+          fg: cyan
+        - name: NeogitHunkHeader
+          fg: purple
+          bg: shade_purple
+        - name: NeogitHunkHeaderHighlight
+          link: Title
+        - name: NeogitDiffContextHighlight
+          fg: base0
+          bg: base03
+        - name: NeogitDiffContext
+          fg: base0
+          bg: base04
+        - name: NeogitDiffDeleteHighlight
+          fg: git_removed
+          bg: shade_red
+        - name: NeogitDiffDelete
+          fg: git_removed
+        - name: NeogitDiffAddHighlight
+          fg: git_added
+          bg: shade_green
+        - name: NeogitDiffAdd
+          fg: git_added
+    - todo-comments.nvim:
+        - name: TodoFgTODO
+          fg: purple
+        - name: TodoFgWARN
+          fg: diag_warning
+        - name: TodoFgTEST
+          fg: diag_ok
+        - name: TodoFgPERF
+          fg: yellow
+        - name: TodoFgNOTE
+          fg: cyan
+        - name: TodoFgHACK
+          fg: pink
+        - name: TodoFgFIX
+          fg: diag_error
+        - name: TodoSignTODO
+          fg: purple
+        - name: TodoSignWARN
+          fg: diag_warning
+        - name: TodoSignTEST
+          fg: diag_ok
+        - name: TodoSignPERF
+          fg: yellow
+        - name: TodoSignNOTE
+          fg: cyan
+        - name: TodoSignHACK
+          fg: pink
+        - name: TodoSignFIX
+          fg: diag_error
+        - name: TodoBgTODO
+          fg: purple
+          reverse: true
+          gui: reverse
+        - name: TodoBgWARN
+          fg: diag_warning
+          reverse: true
+          gui: reverse
+        - name: TodoBgTEST
+          fg: diag_ok
+          reverse: true
+          gui: reverse
+        - name: TodoBgPERF
+          fg: yellow
+          reverse: true
+          gui: reverse
+        - name: TodoBgNOTE
+          fg: cyan
+          reverse: true
+          gui: reverse
+        - name: TodoBgHACK
+          fg: pink
+          reverse: true
+          gui: reverse
+        - name: TodoBgFIX
+          fg: diag_error
+          reverse: true
+          gui: reverse
+    - lazy.nvim:
+        - name: LazyButton
+          fg: base0
+          bg: base01
+        - name: LazyButtonActive
+          fg: base01
+          reverse: true
+        - name: LazyReasonStart
+          fg: cyan

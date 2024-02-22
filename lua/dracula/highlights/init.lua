@@ -194,6 +194,44 @@
 ---@field DashboardKey? table
 ---@field DashboardIcon? table
 ---@field DashboardShotCut? table
+---@field GitSignsAdd? table
+---@field GitSignsChange? table
+---@field GitSignsDelete? table
+---@field NeogitCursorLine? table
+---@field NeogitBranch? table
+---@field NeogitRemote? table
+---@field NeogitHunkHeader? table
+---@field NeogitHunkHeaderHighlight? table
+---@field NeogitDiffContextHighlight? table
+---@field NeogitDiffContext? table
+---@field NeogitDiffDeleteHighlight? table
+---@field NeogitDiffDelete? table
+---@field NeogitDiffAddHighlight? table
+---@field NeogitDiffAdd? table
+---@field TodoFgTODO? table
+---@field TodoFgWARN? table
+---@field TodoFgTEST? table
+---@field TodoFgPERF? table
+---@field TodoFgNOTE? table
+---@field TodoFgHACK? table
+---@field TodoFgFIX? table
+---@field TodoSignTODO? table
+---@field TodoSignWARN? table
+---@field TodoSignTEST? table
+---@field TodoSignPERF? table
+---@field TodoSignNOTE? table
+---@field TodoSignHACK? table
+---@field TodoSignFIX? table
+---@field TodoBgTODO? table
+---@field TodoBgWARN? table
+---@field TodoBgTEST? table
+---@field TodoBgPERF? table
+---@field TodoBgNOTE? table
+---@field TodoBgHACK? table
+---@field TodoBgFIX? table
+---@field LazyButton? table
+---@field LazyButtonActive? table
+---@field LazyReasonStart? table
 
 local M = {}
 
@@ -546,6 +584,56 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('DashboardKey', { fg = colors.pink })
     nvim_set_hl('DashboardIcon', { link = 'Directory' })
     nvim_set_hl('DashboardShotCut', { fg = colors.base0 })
+  end
+
+  if config.plugins['gitsigns.nvim'] then
+    nvim_set_hl('GitSignsAdd', { fg = colors.git_added })
+    nvim_set_hl('GitSignsChange', { fg = colors.git_modified })
+    nvim_set_hl('GitSignsDelete', { fg = colors.git_removed })
+  end
+
+  if config.plugins['neogit'] then
+    nvim_set_hl('NeogitCursorLine', { link = 'CursorLine' })
+    nvim_set_hl('NeogitBranch', { fg = colors.purple })
+    nvim_set_hl('NeogitRemote', { fg = colors.cyan })
+    nvim_set_hl('NeogitHunkHeader', { fg = colors.purple, bg = colors.shade_purple })
+    nvim_set_hl('NeogitHunkHeaderHighlight', { link = 'Title' })
+    nvim_set_hl('NeogitDiffContextHighlight', { fg = colors.base0, bg = colors.base03 })
+    nvim_set_hl('NeogitDiffContext', { fg = colors.base0, bg = colors.base04 })
+    nvim_set_hl('NeogitDiffDeleteHighlight', { fg = colors.git_removed, bg = colors.shade_red })
+    nvim_set_hl('NeogitDiffDelete', { fg = colors.git_removed })
+    nvim_set_hl('NeogitDiffAddHighlight', { fg = colors.git_added, bg = colors.shade_green })
+    nvim_set_hl('NeogitDiffAdd', { fg = colors.git_added })
+  end
+
+  if config.plugins['todo-comments.nvim'] then
+    nvim_set_hl('TodoFgTODO', { fg = colors.purple })
+    nvim_set_hl('TodoFgWARN', { fg = colors.diag_warning })
+    nvim_set_hl('TodoFgTEST', { fg = colors.diag_ok })
+    nvim_set_hl('TodoFgPERF', { fg = colors.yellow })
+    nvim_set_hl('TodoFgNOTE', { fg = colors.cyan })
+    nvim_set_hl('TodoFgHACK', { fg = colors.pink })
+    nvim_set_hl('TodoFgFIX', { fg = colors.diag_error })
+    nvim_set_hl('TodoSignTODO', { fg = colors.purple })
+    nvim_set_hl('TodoSignWARN', { fg = colors.diag_warning })
+    nvim_set_hl('TodoSignTEST', { fg = colors.diag_ok })
+    nvim_set_hl('TodoSignPERF', { fg = colors.yellow })
+    nvim_set_hl('TodoSignNOTE', { fg = colors.cyan })
+    nvim_set_hl('TodoSignHACK', { fg = colors.pink })
+    nvim_set_hl('TodoSignFIX', { fg = colors.diag_error })
+    nvim_set_hl('TodoBgTODO', { fg = colors.purple, reverse = true })
+    nvim_set_hl('TodoBgWARN', { fg = colors.diag_warning, reverse = true })
+    nvim_set_hl('TodoBgTEST', { fg = colors.diag_ok, reverse = true })
+    nvim_set_hl('TodoBgPERF', { fg = colors.yellow, reverse = true })
+    nvim_set_hl('TodoBgNOTE', { fg = colors.cyan, reverse = true })
+    nvim_set_hl('TodoBgHACK', { fg = colors.pink, reverse = true })
+    nvim_set_hl('TodoBgFIX', { fg = colors.diag_error, reverse = true })
+  end
+
+  if config.plugins['lazy.nvim'] then
+    nvim_set_hl('LazyButton', { fg = colors.base0, bg = colors.base01 })
+    nvim_set_hl('LazyButtonActive', { fg = colors.base01, reverse = true })
+    nvim_set_hl('LazyReasonStart', { fg = colors.cyan })
   end
   if config.on_highlight then
     local color = require 'dracula.color'

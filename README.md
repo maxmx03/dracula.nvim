@@ -49,6 +49,10 @@ return {
         ["nvim-tree.lua"] = true,
         ["which-key.nvim"] = true,
         ["dashboard-nvim"] = true,
+        ["gitsigns.nvim"] = true,
+        ["neogit"] = true,
+        ["todo-comments.nvim"] = true,
+        ["lazy.nvim"] = true,
       }
       })
       vim.cmd.colorscheme 'dracula'
