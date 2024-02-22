@@ -916,6 +916,9 @@ highlights:
           reverse: true
           gui: reverse
     - lazy.nvim:
+        - name: LazyH1
+          fg: purple
+          bg: shade_purple
         - name: LazyButton
           fg: base0
           bg: base02

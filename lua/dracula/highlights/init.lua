@@ -229,6 +229,7 @@
 ---@field TodoBgNOTE? table
 ---@field TodoBgHACK? table
 ---@field TodoBgFIX? table
+---@field LazyH1? table
 ---@field LazyButton? table
 ---@field LazyButtonActive? table
 ---@field LazyReasonStart? table
@@ -631,6 +632,7 @@ M.set_highlight = function(colors, config)
   end
 
   if config.plugins['lazy.nvim'] then
+    nvim_set_hl('LazyH1', { fg = colors.purple, bg = colors.shade_purple })
     nvim_set_hl('LazyButton', { fg = colors.base0, bg = colors.base02 })
     nvim_set_hl('LazyButtonActive', { bg = colors.base02, reverse = true })
     nvim_set_hl('LazyReasonStart', { fg = colors.cyan })
