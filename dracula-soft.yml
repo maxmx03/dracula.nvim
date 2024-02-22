@@ -98,7 +98,7 @@ specification:
     underline: true
     gui: underline
 
-name: dracula
+name: dracula-soft
 author: Max Del Canto
 repo: github.com/maxmx03/dracula.nvim
 contact: "github.com/maxmx03"

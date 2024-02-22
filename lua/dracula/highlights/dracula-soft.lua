@@ -539,7 +539,7 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('DashboardShotCut', { fg = colors.base0 })
   end
   if config.on_highlight then
-    local color = require 'dracula.color'
+    local color = require 'dracula-soft.color'
     local highlights = config.on_highlight(colors, color)
 
     for group_name, group_val in pairs(highlights) do
