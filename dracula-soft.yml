@@ -918,9 +918,9 @@ highlights:
     - lazy.nvim:
         - name: LazyButton
           fg: base0
-          bg: base01
+          bg: base02
         - name: LazyButtonActive
-          fg: base01
+          bg: base02
           reverse: true
         - name: LazyReasonStart
           fg: cyan
