@@ -1,19 +1,38 @@
-# dracula
+# Dracula
 
-Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
-labore culpa sint ad nisi Lorem pariatur.
+![schemecraft](https://github.com/maxmx03/schemecraft/assets/50273941/ee682aae-00cb-4282-ba24-3d9621a430a3)
 
 ## Installation
 
-```json
-{
-  "workspace": {
-    "library": [
-      "~/.local/share/nvim/lazy/dracula"
-    ],
+Enable dracula annotations (optional)
+
+```lua
+lspconfig.lua_ls.setup {
+  settings = {
+    Lua = {
+      runtime = {
+        version = 'LuaJIT',
+      },
+      workspace = {
+        checkThirdParty = false,
+        library = {
+          vim.env.VIMRUNTIME,
+          '~/.local/share/nvim/lazy/dracula.nvim',
+        },
+      },
+      hint = {
+        enable = true,
+      },
+      completion = {
+        callSnippet = 'Replace',
+      },
+    },
   },
+  capabilities = capabilities,
 }
 ```
+
+lazy.nvim
 
 ```lua
 return {
@@ -23,7 +42,9 @@ return {
     priority = 1000,
     config = function ()
       ---@type dracula
-      require "dracula".setup({
+      local dracula = require "dracula"
+
+      dracula.setup({
       transparent = false,
       on_colors = function (colors, color)
         ---@type dracula.palette
