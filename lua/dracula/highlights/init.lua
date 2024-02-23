@@ -260,7 +260,6 @@
 ---@field LazyReasonStart? table
 ---@field TelescopeSelection? table
 ---@field TelescopeSelectionCaret? table
----@field TelescopeMultiSelection? table
 ---@field TelescopeMultiIcon? table
 ---@field TelescopeNormal? table
 ---@field TelescopePreviewNormal? table
@@ -274,6 +273,8 @@
 ---@field TelescopePromptTitle? table
 ---@field TelescopeResultsTitle? table
 ---@field TelescopePreviewTitle? table
+---@field TelescopeMatching? table
+---@field TelescopePreviewMatch? table
 ---@field TelescopePromptCounter? table
 ---@field TelescopePromptPrefix? table
 
@@ -712,7 +713,6 @@ M.set_highlight = function(colors, config)
   if config.plugins['telescope.nvim'] then
     nvim_set_hl('TelescopeSelection', { link = 'CursorLine' })
     nvim_set_hl('TelescopeSelectionCaret', { fg = colors.purple })
-    nvim_set_hl('TelescopeMultiSelection', { fg = colors.purple, bg = colors.shade_purple }, config)
     nvim_set_hl('TelescopeMultiIcon', { fg = colors.purple })
     nvim_set_hl('TelescopeNormal', { fg = colors.base0, bg = colors.base04 }, config)
     nvim_set_hl('TelescopePreviewNormal', { link = 'TelescopeNormal' })
@@ -726,6 +726,8 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('TelescopePromptTitle', { link = 'TelescopeTitle' })
     nvim_set_hl('TelescopeResultsTitle', { link = 'TelescopeTitle' })
     nvim_set_hl('TelescopePreviewTitle', { link = 'TelescopeTitle' })
+    nvim_set_hl('TelescopeMatching', { fg = colors.purple, bg = colors.shade_purple })
+    nvim_set_hl('TelescopePreviewMatch', { link = 'TelescopeMatching' })
     nvim_set_hl('TelescopePromptCounter', { link = 'NonText' })
     nvim_set_hl('TelescopePromptPrefix', { fg = colors.purple })
   end

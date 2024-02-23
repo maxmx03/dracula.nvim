@@ -982,10 +982,6 @@ highlights:
           link: CursorLine
         - name: TelescopeSelectionCaret
           fg: purple
-        - name: TelescopeMultiSelection
-          fg: purple
-          bg: shade_purple
-          transparent: true
         - name: TelescopeMultiIcon
           fg: purple
         - name: TelescopeNormal
@@ -1017,6 +1013,11 @@ highlights:
           link: TelescopeTitle
         - name: TelescopePreviewTitle
           link: TelescopeTitle
+        - name: TelescopeMatching
+          fg: purple
+          bg: shade_purple
+        - name: TelescopePreviewMatch
+          link: TelescopeMatching
         - name: TelescopePromptCounter
           link: NonText
         - name: TelescopePromptPrefix
