@@ -14,6 +14,7 @@
 ---@field git_modified? string
 ---@field git_removed? string
 ---@field green? string
+---@field inlay_hint? string
 ---@field orange? string
 ---@field pink? string
 ---@field purple? string
@@ -49,6 +50,7 @@ return {
   git_modified = '#FFB86C',
   git_removed = '#FF5555',
   green = '#50FA7A',
+  inlay_hint = '#538C98',
   orange = '#FFB86C',
   pink = '#FF79C6',
   purple = '#BD93F9',

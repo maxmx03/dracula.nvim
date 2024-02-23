@@ -143,6 +143,7 @@ palette:
   shade_info: "#374754"
   shade_hint: "#374754"
   shade_ok: "#2E4940"
+  inlay_hint: "#538c98"
 highlights:
   editor:
     - name: ColorColumn
@@ -650,6 +651,14 @@ highlights:
           sp: diag_ok
           underline: true
           gui: underline
+        - name: LspReferenceText
+          link: Visual
+        - name: LspReferenceRead
+          link: Visual
+        - name: LspReferenceWrite
+          link: Visual
+        - name: LspInlayHint
+          fg: inlay_hint
     - nvim-navic:
         - name: NavicText
           fg: base0
@@ -1036,3 +1045,79 @@ highlights:
           fg: diag_ok
         - name: NoiceLspProgressTitle
           link: Title
+    - hop.nvim:
+        - name: HopNextKey
+          fg: red
+        - name: HopNextKey1
+          fg: cyan
+        - name: HopUnmatched
+          fg: base01
+    - mini.statusline:
+        - name: MiniStatuslineModeNormal
+          fg: base03
+          bg: purple
+        - name: MiniStatuslineModeInsert
+          fg: base03
+          bg: green
+        - name: MiniStatuslineModeVisual
+          fg: yellow
+          bg: base03
+        - name: MiniStatuslineModeReplace
+          fg: red
+          bg: base03
+        - name: MiniStatuslineModeCommand
+          fg: orange
+          bg: base03
+        - name: MinistatusLineFileName
+          fg: base0
+          bg: base04
+        - name: MiniStatuslineDevinfo
+          fg: base0
+          bg: base02
+        - name: MiniStatuslineFileinfo
+          fg: base0
+          bg: base02
+        - name: MiniStatuslineInactive
+          fg: base01
+          bg: base03
+    - mini.tabline:
+        - name: MiniTablineCurrent
+          fg: base0
+          bg: base03
+        - name: MiniTablineVisible
+          fg: base0
+          bg: base03
+        - name: MiniTablineHidden
+          fg: base01
+          bg: base03
+        - name: MiniTablineModifiedCurrent
+          link: MiniTabLineCurrent
+        - name: MiniTablineModifiedVisible
+          link: MiniTablineVisible
+        - name: MiniTablineModifiedHidden
+          link: MiniTablineHidden
+        - name: MiniTablineFill
+          fg: base0
+          bg: base04
+        - name: MiniTablineTabpagesection
+          fg: base0
+          bg: base04
+    - mini.starter:
+        - name: MiniStarterCurrent
+          link: CursorLine
+        - name: MiniStarterHeader
+          fg: red
+        - name: MiniStarterFooter
+          fg: base01
+        - name: MiniStarterItem
+          fg: base0
+        - name: MiniStarterItemBullet
+          fg: pink
+        - name: MiniStarterItemPrefix
+          fg: pink
+        - name: MiniStarterSection
+          link: Title
+        - name: MiniStarterQuery
+          fg: pink
+          bold: true
+          gui: bold

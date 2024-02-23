@@ -56,6 +56,10 @@ return {
         ["lazy.nvim"] = true,
         ["telescope.nvim"] = true,
         ["noice.nvim"] = true,
+        ["hop.nvim"] = true,
+        ["mini.statusline"] = true,
+        ["mini.tabline"] = true,
+        ["mini.starter"] = true,
       }
       })
       vim.cmd.colorscheme 'dracula'

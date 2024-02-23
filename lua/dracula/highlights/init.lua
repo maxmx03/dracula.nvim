@@ -118,6 +118,10 @@
 ---@field DiagnosticUnderlineInfo? table
 ---@field DiagnosticUnderlineHint? table
 ---@field DiagnosticUnderlineOk? table
+---@field LspReferenceText? table
+---@field LspReferenceRead? table
+---@field LspReferenceWrite? table
+---@field LspInlayHint? table
 ---@field NavicText? table
 ---@field NavicSeparator? table
 ---@field NavicIconsMethod? table
@@ -282,6 +286,34 @@
 ---@field NoiceLspProgressSpinner? table
 ---@field NoiceLspProgressClient? table
 ---@field NoiceLspProgressTitle? table
+---@field HopNextKey? table
+---@field HopNextKey1? table
+---@field HopUnmatched? table
+---@field MiniStatuslineModeNormal? table
+---@field MiniStatuslineModeInsert? table
+---@field MiniStatuslineModeVisual? table
+---@field MiniStatuslineModeReplace? table
+---@field MiniStatuslineModeCommand? table
+---@field MinistatusLineFileName? table
+---@field MiniStatuslineDevinfo? table
+---@field MiniStatuslineFileinfo? table
+---@field MiniStatuslineInactive? table
+---@field MiniTablineCurrent? table
+---@field MiniTablineVisible? table
+---@field MiniTablineHidden? table
+---@field MiniTablineModifiedCurrent? table
+---@field MiniTablineModifiedVisible? table
+---@field MiniTablineModifiedHidden? table
+---@field MiniTablineFill? table
+---@field MiniTablineTabpagesection? table
+---@field MiniStarterCurrent? table
+---@field MiniStarterHeader? table
+---@field MiniStarterFooter? table
+---@field MiniStarterItem? table
+---@field MiniStarterItemBullet? table
+---@field MiniStarterItemPrefix? table
+---@field MiniStarterSection? table
+---@field MiniStarterQuery? table
 
 local M = {}
 
@@ -537,6 +569,10 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('DiagnosticUnderlineInfo', { fg = colors.diag_info, underline = true })
     nvim_set_hl('DiagnosticUnderlineHint', { fg = colors.diag_hint, underline = true })
     nvim_set_hl('DiagnosticUnderlineOk', { fg = colors.diag_ok, underline = true })
+    nvim_set_hl('LspReferenceText', { link = 'Visual' })
+    nvim_set_hl('LspReferenceRead', { link = 'Visual' })
+    nvim_set_hl('LspReferenceWrite', { link = 'Visual' })
+    nvim_set_hl('LspInlayHint', { fg = colors.inlay_hint })
   end
 
   if config.plugins['nvim-navic'] then
@@ -743,6 +779,46 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('NoiceLspProgressSpinner', { fg = colors.diag_ok })
     nvim_set_hl('NoiceLspProgressClient', { fg = colors.diag_ok })
     nvim_set_hl('NoiceLspProgressTitle', { link = 'Title' })
+  end
+
+  if config.plugins['hop.nvim'] then
+    nvim_set_hl('HopNextKey', { fg = colors.red })
+    nvim_set_hl('HopNextKey1', { fg = colors.cyan })
+    nvim_set_hl('HopUnmatched', { fg = colors.base01 })
+  end
+
+  if config.plugins['mini.statusline'] then
+    nvim_set_hl('MiniStatuslineModeNormal', { fg = colors.base03, bg = colors.purple })
+    nvim_set_hl('MiniStatuslineModeInsert', { fg = colors.base03, bg = colors.green })
+    nvim_set_hl('MiniStatuslineModeVisual', { fg = colors.yellow, bg = colors.base03 })
+    nvim_set_hl('MiniStatuslineModeReplace', { fg = colors.red, bg = colors.base03 })
+    nvim_set_hl('MiniStatuslineModeCommand', { fg = colors.orange, bg = colors.base03 })
+    nvim_set_hl('MinistatusLineFileName', { fg = colors.base0, bg = colors.base04 })
+    nvim_set_hl('MiniStatuslineDevinfo', { fg = colors.base0, bg = colors.base02 })
+    nvim_set_hl('MiniStatuslineFileinfo', { fg = colors.base0, bg = colors.base02 })
+    nvim_set_hl('MiniStatuslineInactive', { fg = colors.base01, bg = colors.base03 })
+  end
+
+  if config.plugins['mini.tabline'] then
+    nvim_set_hl('MiniTablineCurrent', { fg = colors.base0, bg = colors.base03 })
+    nvim_set_hl('MiniTablineVisible', { fg = colors.base0, bg = colors.base03 })
+    nvim_set_hl('MiniTablineHidden', { fg = colors.base01, bg = colors.base03 })
+    nvim_set_hl('MiniTablineModifiedCurrent', { link = 'MiniTabLineCurrent' })
+    nvim_set_hl('MiniTablineModifiedVisible', { link = 'MiniTablineVisible' })
+    nvim_set_hl('MiniTablineModifiedHidden', { link = 'MiniTablineHidden' })
+    nvim_set_hl('MiniTablineFill', { fg = colors.base0, bg = colors.base04 })
+    nvim_set_hl('MiniTablineTabpagesection', { fg = colors.base0, bg = colors.base04 })
+  end
+
+  if config.plugins['mini.starter'] then
+    nvim_set_hl('MiniStarterCurrent', { link = 'CursorLine' })
+    nvim_set_hl('MiniStarterHeader', { fg = colors.red })
+    nvim_set_hl('MiniStarterFooter', { fg = colors.base01 })
+    nvim_set_hl('MiniStarterItem', { fg = colors.base0 })
+    nvim_set_hl('MiniStarterItemBullet', { fg = colors.pink })
+    nvim_set_hl('MiniStarterItemPrefix', { fg = colors.pink })
+    nvim_set_hl('MiniStarterSection', { link = 'Title' })
+    nvim_set_hl('MiniStarterQuery', { fg = colors.pink, bold = true })
   end
   if config.on_highlight then
     local color = require 'dracula.color'
