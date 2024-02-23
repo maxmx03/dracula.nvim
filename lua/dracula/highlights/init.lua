@@ -118,6 +118,31 @@
 ---@field DiagnosticUnderlineInfo? table
 ---@field DiagnosticUnderlineHint? table
 ---@field DiagnosticUnderlineOk? table
+---@field NavicText? table
+---@field NavicSeparator? table
+---@field NavicIconsMethod? table
+---@field NavicIconsFunction? table
+---@field NavicIconsField? table
+---@field NavicIconsVariable? table
+---@field NavicIconsClass? table
+---@field NavicIconsInterface? table
+---@field NavicIconsModule? table
+---@field NavicIconsNamespace? table
+---@field NavicIconsProperty? table
+---@field NavicIconsUnity? table
+---@field NavicIconsEnum? table
+---@field NavicIconsKeyword? table
+---@field NavicIconsSnippet? table
+---@field NavicIconsColor? table
+---@field NavicIconsFile? table
+---@field NavicIconsReference? table
+---@field NavicIconsFolder? table
+---@field NavicIconsEnumMember? table
+---@field NavicIconsConstant? table
+---@field NavicIconsStruct? table
+---@field NavicIconsEvent? table
+---@field NavicIconsOperator? table
+---@field NavicIconsTypeParameter? table
 ---@field CmpItemKindText? table
 ---@field CmpItemKindMethod? table
 ---@field CmpItemKindFunction? table
@@ -233,6 +258,24 @@
 ---@field LazyButton? table
 ---@field LazyButtonActive? table
 ---@field LazyReasonStart? table
+---@field TelescopeSelection? table
+---@field TelescopeSelectionCaret? table
+---@field TelescopeMultiSelection? table
+---@field TelescopeMultiIcon? table
+---@field TelescopeNormal? table
+---@field TelescopePreviewNormal? table
+---@field TelescopePromptNormal? table
+---@field TelescopeResultsNormal? table
+---@field TelescopeBorder? table
+---@field TelescopePromptBorder? table
+---@field TelescopeResultsBorder? table
+---@field TelescopePreviewBorder? table
+---@field TelescopeTitle? table
+---@field TelescopePromptTitle? table
+---@field TelescopeResultsTitle? table
+---@field TelescopePreviewTitle? table
+---@field TelescopePromptCounter? table
+---@field TelescopePromptPrefix? table
 
 local M = {}
 
@@ -267,7 +310,7 @@ M.set_highlight = function(colors, config)
   -- EDITOR :h highlight-groups
   nvim_set_hl('ColorColumn', { bg = colors.base04 })
   nvim_set_hl('Conceal', { fg = colors.base02 })
-  nvim_set_hl('CurSearch', { fg = colors.cyan })
+  nvim_set_hl('CurSearch', { fg = colors.cyan, bg = colors.shade_cyan })
   nvim_set_hl('Cursor', { fg = colors.base03, bg = colors.cyan })
   nvim_set_hl('lCursor', { link = 'Cursor' })
   nvim_set_hl('CursorIM', { link = 'Cursor' })
@@ -286,7 +329,7 @@ M.set_highlight = function(colors, config)
   nvim_set_hl('Folded', { fg = colors.base0, bg = colors.base02 })
   nvim_set_hl('FoldColumn', { fg = colors.base0, bg = colors.base04 })
   nvim_set_hl('SignColumn', { link = 'Normal' })
-  nvim_set_hl('IncSearch', { fg = colors.cyan, bg = colors.base04, bold = true }, config)
+  nvim_set_hl('IncSearch', { fg = colors.cyan, bg = colors.shade_cyan, bold = true }, config)
   nvim_set_hl('Substitute', { link = 'IncSearch' })
   nvim_set_hl('LineNr', { fg = colors.base01, bg = colors.base03 }, config)
   nvim_set_hl('LineNrAbove', { link = 'LineNr' })
@@ -490,6 +533,34 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('DiagnosticUnderlineOk', { fg = colors.diag_ok, underline = true })
   end
 
+  if config.plugins['nvim-navic'] then
+    nvim_set_hl('NavicText', { fg = colors.base0 })
+    nvim_set_hl('NavicSeparator', { link = 'Statement' })
+    nvim_set_hl('NavicIconsMethod', { link = 'Function' })
+    nvim_set_hl('NavicIconsFunction', { link = 'Function' })
+    nvim_set_hl('NavicIconsField', { link = 'Identifier' })
+    nvim_set_hl('NavicIconsVariable', { link = 'Identifier' })
+    nvim_set_hl('NavicIconsClass', { link = 'Type' })
+    nvim_set_hl('NavicIconsInterface', { link = 'Type' })
+    nvim_set_hl('NavicIconsModule', { link = 'Type' })
+    nvim_set_hl('NavicIconsNamespace', { link = 'Type' })
+    nvim_set_hl('NavicIconsProperty', { link = 'Identifier' })
+    nvim_set_hl('NavicIconsUnity', { link = 'Number' })
+    nvim_set_hl('NavicIconsEnum', { link = 'Type' })
+    nvim_set_hl('NavicIconsKeyword', { link = 'Statement' })
+    nvim_set_hl('NavicIconsSnippet', { link = 'Tag' })
+    nvim_set_hl('NavicIconsColor', { fg = colors.orange })
+    nvim_set_hl('NavicIconsFile', { fg = colors.Identifier })
+    nvim_set_hl('NavicIconsReference', { link = 'Underlined' })
+    nvim_set_hl('NavicIconsFolder', { link = 'Directory' })
+    nvim_set_hl('NavicIconsEnumMember', { link = 'Constant' })
+    nvim_set_hl('NavicIconsConstant', { link = 'Constant' })
+    nvim_set_hl('NavicIconsStruct', { link = 'Identifier' })
+    nvim_set_hl('NavicIconsEvent', { link = 'Function' })
+    nvim_set_hl('NavicIconsOperator', { link = 'Operator' })
+    nvim_set_hl('NavicIconsTypeParameter', { link = 'Type' })
+  end
+
   if config.plugins['nvim-cmp'] then
     nvim_set_hl('CmpItemKindText', { link = 'String' })
     nvim_set_hl('CmpItemKindMethod', { link = 'Function' })
@@ -540,7 +611,7 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('NeoTreeGitAdded', { fg = colors.git_added })
     nvim_set_hl('NeoTreeGitConflict', { fg = colors.git_modified })
     nvim_set_hl('NeoTreeGitDeleted', { fg = colors.git_removed })
-    nvim_set_hl('NeoTreeGitIgnored', { fg = colors.base0 })
+    nvim_set_hl('NeoTreeGitIgnored', { fg = colors.base01 })
     nvim_set_hl('NeoTreeGitModified', { fg = colors.git_modified })
     nvim_set_hl('NeoTreeGitUnstaged', { fg = colors.git_modified })
     nvim_set_hl('NeoTreeGitUntracked', { fg = colors.git_modified })
@@ -636,6 +707,27 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('LazyButton', { fg = colors.base0, bg = colors.base02 })
     nvim_set_hl('LazyButtonActive', { bg = colors.base02, reverse = true })
     nvim_set_hl('LazyReasonStart', { fg = colors.cyan })
+  end
+
+  if config.plugins['telescope.nvim'] then
+    nvim_set_hl('TelescopeSelection', { link = 'CursorLine' })
+    nvim_set_hl('TelescopeSelectionCaret', { fg = colors.purple })
+    nvim_set_hl('TelescopeMultiSelection', { fg = colors.purple, bg = colors.shade_purple }, config)
+    nvim_set_hl('TelescopeMultiIcon', { fg = colors.purple })
+    nvim_set_hl('TelescopeNormal', { fg = colors.base04 }, config)
+    nvim_set_hl('TelescopePreviewNormal', { link = 'TelescopeNormal' })
+    nvim_set_hl('TelescopePromptNormal', { link = 'TelescopeNormal' })
+    nvim_set_hl('TelescopeResultsNormal', { link = 'TelescopeNormal' })
+    nvim_set_hl('TelescopeBorder', { fg = colors.purple, bg = colors.base04 }, config)
+    nvim_set_hl('TelescopePromptBorder', { link = 'TelescopeBorder' })
+    nvim_set_hl('TelescopeResultsBorder', { link = 'TelescopeBorder' })
+    nvim_set_hl('TelescopePreviewBorder', { link = 'TelescopeBorder' })
+    nvim_set_hl('TelescopeTitle', { fg = colors.purple, bg = colors.shade_purple })
+    nvim_set_hl('TelescopePromptTitle', { link = 'TelescopeTitle' })
+    nvim_set_hl('TelescopeResultsTitle', { link = 'TelescopeTitle' })
+    nvim_set_hl('TelescopePreviewTitle', { link = 'TelescopeTitle' })
+    nvim_set_hl('TelescopePromptCounter', { link = 'NonText' })
+    nvim_set_hl('TelescopePromptPrefix', { fg = colors.purple })
   end
   if config.on_highlight then
     local color = require 'dracula.color'

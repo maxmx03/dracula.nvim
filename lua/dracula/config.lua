@@ -9,6 +9,7 @@ return {
   plugins = {
     ['nvim-treesitter'] = true,
     ['nvim-lspconfig'] = true,
+    ['nvim-navic'] = true,
     ['nvim-cmp'] = true,
     ['indent-blankline.nvim'] = true,
     ['bufferline.nvim'] = true,
@@ -20,5 +21,6 @@ return {
     ['neogit'] = true,
     ['todo-comments.nvim'] = true,
     ['lazy.nvim'] = true,
+    ['telescope.nvim'] = true,
   },
 }

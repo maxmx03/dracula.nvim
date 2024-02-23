@@ -152,6 +152,7 @@ highlights:
       fg: base02
     - name: CurSearch
       fg: cyan
+      bg: shade_cyan
     - name: Cursor
       fg: base03
       bg: cyan
@@ -200,7 +201,7 @@ highlights:
       link: Normal
     - name: IncSearch
       fg: cyan
-      bg: base04
+      bg: shade_cyan
       bold: true
       gui: bold
       transparent: true
@@ -561,7 +562,6 @@ highlights:
           fg: cyan
         - name: "@property.scss"
           fg: cyan
-
     - nvim-lspconfig:
         - name: "@lsp.type.class"
           <<: *class
@@ -651,6 +651,57 @@ highlights:
           sp: diag_ok
           underline: true
           gui: underline
+    - nvim-navic:
+        - name: NavicText
+          fg: base0
+        - name: NavicSeparator
+          <<: *symbol_keyword
+        - name: NavicIconsMethod
+          <<: *symbol_function
+        - name: NavicIconsFunction
+          <<: *symbol_function
+        - name: NavicIconsField
+          <<: *symbol_field
+        - name: NavicIconsVariable
+          <<: *symbol_variable
+        - name: NavicIconsClass
+          <<: *symbol_class
+        - name: NavicIconsInterface
+          <<: *symbol_interface
+        - name: NavicIconsModule
+          <<: *symbol_module
+        - name: NavicIconsNamespace
+          <<: *symbol_module
+        - name: NavicIconsProperty
+          <<: *symbol_property
+        - name: NavicIconsUnity
+          <<: *symbol_unity
+        - name: NavicIconsEnum
+          <<: *symbol_enum
+        - name: NavicIconsKeyword
+          <<: *symbol_keyword
+        - name: NavicIconsSnippet
+          <<: *symbol_snippet
+        - name: NavicIconsColor
+          <<: *symbol_color
+        - name: NavicIconsFile
+          <<: *symbol_file
+        - name: NavicIconsReference
+          <<: *symbol_reference
+        - name: NavicIconsFolder
+          <<: *symbol_folder
+        - name: NavicIconsEnumMember
+          <<: *symbol_enum_member
+        - name: NavicIconsConstant
+          <<: *symbol_constant
+        - name: NavicIconsStruct
+          <<: *symbol_struct
+        - name: NavicIconsEvent
+          <<: *symbol_event
+        - name: NavicIconsOperator
+          <<: *symbol_operator
+        - name: NavicIconsTypeParameter
+          <<: *symbol_type_parameter
     - nvim-cmp:
         - name: CmpItemKindText
           <<: *symbol_text
@@ -747,7 +798,7 @@ highlights:
         - name: NeoTreeGitDeleted
           fg: git_removed
         - name: NeoTreeGitIgnored
-          fg: base0
+          fg: base01
         - name: NeoTreeGitModified
           fg: git_modified
         - name: NeoTreeGitUnstaged
@@ -927,3 +978,46 @@ highlights:
           reverse: true
         - name: LazyReasonStart
           fg: cyan
+    - telescope.nvim:
+        - name: TelescopeSelection
+          link: CursorLine
+        - name: TelescopeSelectionCaret
+          fg: purple
+        - name: TelescopeMultiSelection
+          fg: purple
+          bg: shade_purple
+          transparent: true
+        - name: TelescopeMultiIcon
+          fg: purple
+        - name: TelescopeNormal
+          fg: base04
+          transparent: true
+        - name: TelescopePreviewNormal
+          link: TelescopeNormal
+        - name: TelescopePromptNormal
+          link: TelescopeNormal
+        - name: TelescopeResultsNormal
+          link: TelescopeNormal
+        - name: TelescopeBorder
+          fg: purple
+          bg: base04
+          transparent: true
+        - name: TelescopePromptBorder
+          link: TelescopeBorder
+        - name: TelescopeResultsBorder
+          link: TelescopeBorder
+        - name: TelescopePreviewBorder
+          link: TelescopeBorder
+        - name: TelescopeTitle
+          fg: purple
+          bg: shade_purple
+        - name: TelescopePromptTitle
+          link: TelescopeTitle
+        - name: TelescopeResultsTitle
+          link: TelescopeTitle
+        - name: TelescopePreviewTitle
+          link: TelescopeTitle
+        - name: TelescopePromptCounter
+          link: NonText
+        - name: TelescopePromptPrefix
+          fg: purple
