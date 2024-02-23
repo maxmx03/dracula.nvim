@@ -990,7 +990,8 @@ highlights:
         - name: TelescopeMultiIcon
           fg: purple
         - name: TelescopeNormal
-          fg: base04
+          fg: base0
+          bg: base04
           transparent: true
         - name: TelescopePreviewNormal
           link: TelescopeNormal
