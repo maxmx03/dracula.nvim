@@ -60,6 +60,7 @@ return {
         ["mini.statusline"] = true,
         ["mini.tabline"] = true,
         ["mini.starter"] = true,
+        ["mini.cursorword"] = true,
       }
       })
       vim.cmd.colorscheme 'dracula'

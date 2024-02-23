@@ -1121,3 +1121,6 @@ highlights:
           fg: pink
           bold: true
           gui: bold
+    - mini.cursorword:
+        - name: MiniCursorword
+          link: Visual

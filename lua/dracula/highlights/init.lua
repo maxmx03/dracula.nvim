@@ -314,6 +314,7 @@
 ---@field MiniStarterItemPrefix? table
 ---@field MiniStarterSection? table
 ---@field MiniStarterQuery? table
+---@field MiniCursorword? table
 
 local M = {}
 
@@ -819,6 +820,10 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('MiniStarterItemPrefix', { fg = colors.pink })
     nvim_set_hl('MiniStarterSection', { link = 'Title' })
     nvim_set_hl('MiniStarterQuery', { fg = colors.pink, bold = true })
+  end
+
+  if config.plugins['mini.cursorword'] then
+    nvim_set_hl('MiniCursorword', { link = 'Visual' })
   end
   if config.on_highlight then
     local color = require 'dracula.color'
