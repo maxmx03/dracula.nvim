@@ -1023,3 +1023,17 @@ highlights:
           link: NonText
         - name: TelescopePromptPrefix
           fg: purple
+    - noice.nvim:
+        - name: NoiceFormatProgressTodo
+          fg: diag_ok
+          bg: shade_ok
+        - name: NoiceFormatProgressDone
+          fg: diag_ok
+          reverse: true
+          gui: reverse
+        - name: NoiceLspProgressSpinner
+          fg: diag_ok
+        - name: NoiceLspProgressClient
+          fg: diag_ok
+        - name: NoiceLspProgressTitle
+          link: Title

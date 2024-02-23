@@ -22,5 +22,6 @@ return {
     ['todo-comments.nvim'] = true,
     ['lazy.nvim'] = true,
     ['telescope.nvim'] = true,
+    ['noice.nvim'] = true,
   },
 }

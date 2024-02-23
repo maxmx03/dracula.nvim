@@ -277,6 +277,11 @@
 ---@field TelescopePreviewMatch? table
 ---@field TelescopePromptCounter? table
 ---@field TelescopePromptPrefix? table
+---@field NoiceFormatProgressTodo? table
+---@field NoiceFormatProgressDone? table
+---@field NoiceLspProgressSpinner? table
+---@field NoiceLspProgressClient? table
+---@field NoiceLspProgressTitle? table
 
 local M = {}
 
@@ -730,6 +735,14 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('TelescopePreviewMatch', { link = 'TelescopeMatching' })
     nvim_set_hl('TelescopePromptCounter', { link = 'NonText' })
     nvim_set_hl('TelescopePromptPrefix', { fg = colors.purple })
+  end
+
+  if config.plugins['noice.nvim'] then
+    nvim_set_hl('NoiceFormatProgressTodo', { fg = colors.diag_ok, bg = colors.shade_ok })
+    nvim_set_hl('NoiceFormatProgressDone', { fg = colors.diag_ok, reverse = true })
+    nvim_set_hl('NoiceLspProgressSpinner', { fg = colors.diag_ok })
+    nvim_set_hl('NoiceLspProgressClient', { fg = colors.diag_ok })
+    nvim_set_hl('NoiceLspProgressTitle', { link = 'Title' })
   end
   if config.on_highlight then
     local color = require 'dracula.color'
