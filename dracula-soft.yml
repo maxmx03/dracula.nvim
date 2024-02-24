@@ -28,7 +28,7 @@ symbol_map:
   color: &symbol_color
     fg: orange
   file: &symbol_file
-    fg: Identifier
+    link: Identifier
   reference: &symbol_reference
     link: Underlined
   folder: &symbol_folder
