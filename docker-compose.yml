@@ -1,0 +1,5 @@
+services:
+  dracula:
+    build: .
+    volumes:
+      - .:/dracula

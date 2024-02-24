@@ -1,41 +1,142 @@
-# Dracula for [Neovim](https://neovim.io)
+# Dracula
 
-> Created with [colorgen](https://github.com/ChristianChiarulli/colorgen-nvim)
+> Created with [schemecraft](https://github.com/maxmx03/schemecraft)
 
 ![Screenshot](https://user-images.githubusercontent.com/50273941/227779719-6e003e4a-f8e8-40bc-8a9f-ebfd7ea13fe6.png)
 
-## Preview
+## Installation
 
-To preview the dracula.nvim colorscheme, click [here](https://github.com/maxmx03/dracula.nvim/blob/master/PREVIEW.md).
+To install Dracula, you need a plugin manager. \
+In the example, bellow we are going to use lazy.nvim for neovim \
+and vim-plug for vim.
 
-## Install
+### Neovim
 
-All instructions can be found at [INSTALL.md](https://github.com/maxmx03/dracula.nvim/blob/master/INSTALL.md).
+Annotations can be enabled. \
+Below is an example of how to enable them.
 
-## How to config
+```lua
+lspconfig.lua_ls.setup {
+  settings = {
+    Lua = {
+      runtime = {
+        version = 'LuaJIT',
+      },
+      workspace = {
+        checkThirdParty = false,
+        library = {
+          vim.env.VIMRUNTIME,
+          '~/.local/share/nvim/lazy/dracula',
+        },
+      },
+      hint = {
+        enable = true,
+      },
+      completion = {
+        callSnippet = 'Replace',
+      },
+    },
+  },
+  capabilities = capabilities,
+}
+```
 
-All instructions can be found at [CONFIG.md](https://github.com/maxmx03/dracula.nvim/blob/master/CONFIG.md).
+```lua
+return {
+  {
+    'maxmx03/dracula.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function ()
+      ---@type dracula
+      local dracula = require "dracula"
 
-## Dracula Pro
+      dracula.setup({
+      transparent = false,
+      on_colors = function (colors, color)
+        ---@type dracula.palette
+        return {
+          -- override or create new colors
+          mycolor = "#ffffff",
+        }
+      end,
+      on_highlights = function (colors, color)
+        ---@type dracula.highlights
+        return {
+          ---@type vim.api.keyset.highlight
+          Normal = { fg = colors.mycolor }
+        }
+      end,
+      plugins = {
+        ["nvim-treesitter"] = true,
+        ["nvim-lspconfig"] = true,
+        ["nvim-navic"] = true,
+        ["nvim-cmp"] = true,
+        ["indent-blankline.nvim"] = true,
+        ["bufferline.nvim"] = true,
+        ["neo-tree.nvim"] = true,
+        ["nvim-tree.lua"] = true,
+        ["which-key.nvim"] = true,
+        ["dashboard-nvim"] = true,
+        ["gitsigns.nvim"] = true,
+        ["neogit"] = true,
+        ["todo-comments.nvim"] = true,
+        ["lazy.nvim"] = true,
+        ["telescope.nvim"] = true,
+        ["noice.nvim"] = true,
+        ["hop.nvim"] = true,
+        ["mini.statusline"] = true,
+        ["mini.tabline"] = true,
+        ["mini.starter"] = true,
+        ["mini.cursorword"] = true,
+      }
+      })
+      vim.cmd.colorscheme 'dracula'
+      vim.cmd.colorscheme 'dracula-soft'
+    end
+  }
+}
+```
 
-For users of Dracula Pro, plesae create a new private repository using this [template](https://github.com/maxmx03/draculapro-template)
+### Vim
 
-## Contributions
+```vim
+Plug 'maxmx03/dracula.nvim', { 'branch': 'vim' }
+colorscheme dracula
+colorscheme dracula-soft
+```
 
-All instructions can be found at [CONTRIBUTING.md](https://github.com/maxmx03/dracula.nvim/blob/master/CONTRIBUTING.md)
+## Api
 
-## Maintainers
+The Dracula provides methods for working with colors. Here are some examples:
 
-| [![Max](https://github.com/maxmx03.png?size=100)](https://github.com/maxmx03) |
-| ----------------------------------------------------------------------------- |
-| Max Miliano                                                                   |
+```lua
+local colors = require 'dracula.colors'
+local color = require 'dracula.color'
+local darken = color.darken
+local lighten = color.lighten
+local blend = color.blend
+local shade = color.shade
+local tint = color.tint
 
-## Designed by
+-- example 1: get shades
+for i = 1, 10, 1 do
+    print(shade(colors.yellow, i))
+end
 
- [![Zeno Rocha](https://github.com/zenorocha.png?size=100)](https://github.com/zenorocha)
+for i = 1, 100, 10 do
+    print(darken(colors.yellow, i))
+end
 
-Zeno Rocha: [learn more](https://draculatheme.com/about)
+-- example 2: get tints
+for i = 1, 10, 1 do
+    print(tint(colors.yellow, i))
+end
 
-## License
+for i = 1, 100, 10 do
+    print(lighten(colors.yellow, i))
+end
 
-[MIT License](./LICENSE)
+-- example 3: blend color
+local new_color = blend(colors.yellow, colors.base03, 0.2)
+```
