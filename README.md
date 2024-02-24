@@ -10,6 +10,7 @@ In the example, bellow we are going to use vim-plug.
 ```vim
 Plug 'maxmx03/dracula.nvim', { 'branch': 'vim' }
 
+colorscheme dracula
 colorscheme dracula-soft
 ```
 
