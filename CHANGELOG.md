@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/maxmx03/dracula.nvim/compare/v1.0.0...v1.1.0) (2024-02-24)
+
+
+### Features
+
+* color annotation ([511f7e7](https://github.com/maxmx03/dracula.nvim/commit/511f7e77809e8c2948227e54fbf7470f4e055be6))
+
+
+### Bug Fixes
+
+* symbol_file color ([03dff88](https://github.com/maxmx03/dracula.nvim/commit/03dff88b0c1327fa0a8920bae55bb706724279b8))
+* symbol_unit color ([264d83a](https://github.com/maxmx03/dracula.nvim/commit/264d83aa1e6b56f4616ce651c745049c78b9dbb8))
+
 ## 1.0.0 (2024-02-24)
 
 
