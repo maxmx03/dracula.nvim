@@ -65,7 +65,6 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
     ]
 endif
 
-
 hi ColorColumn guifg=NONE guibg=#21222c gui=NONE cterm=NONE
 hi Conceal guifg=#44475A guibg=NONE gui=NONE cterm=NONE
 hi CurSearch guifg=#8be9fd guibg=#374754 gui=NONE cterm=NONE
