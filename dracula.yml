@@ -81,7 +81,6 @@ specification:
   markupHeading: &markupHeading
     fg: purple
     bold: true
-    gui: true
   markupBold: &markupBold
     fg: orange
     bold: true

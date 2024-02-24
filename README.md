@@ -4,7 +4,14 @@
 
 ## Installation
 
-Enable dracula annotations (optional)
+To install Dracula, you need a plugin manager. \
+In the example, bellow we are going to use lazy.nvim for neovim \
+and vim-plug for vim.
+
+### Neovim
+
+Annotations can be enabled. \
+Below is an example of how to enable them.
 
 ```lua
 lspconfig.lua_ls.setup {
@@ -17,7 +24,7 @@ lspconfig.lua_ls.setup {
         checkThirdParty = false,
         library = {
           vim.env.VIMRUNTIME,
-          '~/.local/share/nvim/lazy/dracula.nvim',
+          '~/.local/share/nvim/lazy/dracula',
         },
       },
       hint = {
@@ -31,8 +38,6 @@ lspconfig.lua_ls.setup {
   capabilities = capabilities,
 }
 ```
-
-lazy.nvim
 
 ```lua
 return {
@@ -90,7 +95,16 @@ return {
 }
 ```
 
+### Vim
+
+```vim
+Plug 'maxmx03/dracula.nvim', { 'branch': 'vim' }
+colorscheme dracula
+```
+
 ## Api
+
+The Dracula provides methods for working with colors. Here are some examples:
 
 ```lua
 local colors = require 'dracula.colors'
