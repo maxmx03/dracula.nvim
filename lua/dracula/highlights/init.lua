@@ -133,7 +133,7 @@
 ---@field NavicIconsModule? table
 ---@field NavicIconsNamespace? table
 ---@field NavicIconsProperty? table
----@field NavicIconsUnity? table
+---@field NavicIconsUnit? table
 ---@field NavicIconsEnum? table
 ---@field NavicIconsKeyword? table
 ---@field NavicIconsSnippet? table
@@ -156,7 +156,7 @@
 ---@field CmpItemKindInterface? table
 ---@field CmpItemKindModule? table
 ---@field CmpItemKindProperty? table
----@field CmpItemKindUnity? table
+---@field CmpItemKindUnit? table
 ---@field CmpItemKindEnum? table
 ---@field CmpItemKindKeyword? table
 ---@field CmpItemKindSnippet? table
@@ -588,7 +588,7 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('NavicIconsModule', { link = 'Type' })
     nvim_set_hl('NavicIconsNamespace', { link = 'Type' })
     nvim_set_hl('NavicIconsProperty', { link = 'Identifier' })
-    nvim_set_hl('NavicIconsUnity', { link = 'Number' })
+    nvim_set_hl('NavicIconsUnit', { link = 'Number' })
     nvim_set_hl('NavicIconsEnum', { link = 'Type' })
     nvim_set_hl('NavicIconsKeyword', { link = 'Statement' })
     nvim_set_hl('NavicIconsSnippet', { link = 'Tag' })
@@ -614,7 +614,7 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('CmpItemKindInterface', { link = 'Type' })
     nvim_set_hl('CmpItemKindModule', { link = 'Type' })
     nvim_set_hl('CmpItemKindProperty', { link = 'Identifier' })
-    nvim_set_hl('CmpItemKindUnity', { link = 'Number' })
+    nvim_set_hl('CmpItemKindUnit', { link = 'Number' })
     nvim_set_hl('CmpItemKindEnum', { link = 'Type' })
     nvim_set_hl('CmpItemKindKeyword', { link = 'Statement' })
     nvim_set_hl('CmpItemKindSnippet', { link = 'Tag' })

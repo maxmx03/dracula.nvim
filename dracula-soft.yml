@@ -17,7 +17,7 @@ symbol_map:
     link: Type
   property: &symbol_property
     link: Identifier
-  unit: &symbol_unity
+  unit: &symbol_unit
     link: Number
   enum: &symbol_enum
     link: Type
@@ -683,8 +683,8 @@ highlights:
           <<: *symbol_module
         - name: NavicIconsProperty
           <<: *symbol_property
-        - name: NavicIconsUnity
-          <<: *symbol_unity
+        - name: NavicIconsUnit
+          <<: *symbol_unit
         - name: NavicIconsEnum
           <<: *symbol_enum
         - name: NavicIconsKeyword
@@ -730,8 +730,8 @@ highlights:
           <<: *symbol_module
         - name: CmpItemKindProperty
           <<: *symbol_property
-        - name: CmpItemKindUnity
-          <<: *symbol_unity
+        - name: CmpItemKindUnit
+          <<: *symbol_unit
         - name: CmpItemKindEnum
           <<: *symbol_enum
         - name: CmpItemKindKeyword
