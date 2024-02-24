@@ -1,16 +1,22 @@
-# Dracula
+# Dracula-Soft
 
 ![schemecraft](https://github.com/maxmx03/schemecraft/assets/50273941/ee682aae-00cb-4282-ba24-3d9621a430a3)
 
 ## Installation
 
-vim-plug
+To install Dracula-Soft, you need a plugin manager. \
+In the example, bellow we are going to use vim-plug.
 
 ```vim
 Plug 'maxmx03/dracula.nvim', { 'branch': 'vim' }
+
+colorscheme dracula-soft
 ```
 
 ## Plugins
+
+Bellow are the Dracula-Soft supported plugins. \
+Enable the plugins you want.
 
 ```vim
 g:dracula.plugins["nvim-treesitter"] = false
