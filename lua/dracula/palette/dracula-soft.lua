@@ -14,6 +14,7 @@
 ---@field git_modified? string
 ---@field git_removed? string
 ---@field green? string
+---@field inlay_hint? string
 ---@field orange? string
 ---@field pink? string
 ---@field purple? string
@@ -42,14 +43,15 @@ return {
   base04 = '#262626',
   cyan = '#ADF6F6',
   diag_error = '#EE6666',
-  diag_hint = '#8BE9FD',
-  diag_info = '#8BE9FD',
+  diag_hint = '#ADF6F6',
+  diag_info = '#ADF6F6',
   diag_ok = '#62E884',
   diag_warning = '#FFB86C',
   git_added = '#62E884',
   git_modified = '#FFB86C',
   git_removed = '#EE6666',
   green = '#62E884',
+  inlay_hint = '#689494',
   orange = '#FFB86C',
   pink = '#F286C4',
   purple = '#BF9EEE',

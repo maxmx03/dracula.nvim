@@ -118,6 +118,35 @@
 ---@field DiagnosticUnderlineInfo? table
 ---@field DiagnosticUnderlineHint? table
 ---@field DiagnosticUnderlineOk? table
+---@field LspReferenceText? table
+---@field LspReferenceRead? table
+---@field LspReferenceWrite? table
+---@field LspInlayHint? table
+---@field NavicText? table
+---@field NavicSeparator? table
+---@field NavicIconsMethod? table
+---@field NavicIconsFunction? table
+---@field NavicIconsField? table
+---@field NavicIconsVariable? table
+---@field NavicIconsClass? table
+---@field NavicIconsInterface? table
+---@field NavicIconsModule? table
+---@field NavicIconsNamespace? table
+---@field NavicIconsProperty? table
+---@field NavicIconsUnity? table
+---@field NavicIconsEnum? table
+---@field NavicIconsKeyword? table
+---@field NavicIconsSnippet? table
+---@field NavicIconsColor? table
+---@field NavicIconsFile? table
+---@field NavicIconsReference? table
+---@field NavicIconsFolder? table
+---@field NavicIconsEnumMember? table
+---@field NavicIconsConstant? table
+---@field NavicIconsStruct? table
+---@field NavicIconsEvent? table
+---@field NavicIconsOperator? table
+---@field NavicIconsTypeParameter? table
 ---@field CmpItemKindText? table
 ---@field CmpItemKindMethod? table
 ---@field CmpItemKindFunction? table
@@ -185,6 +214,8 @@
 ---@field NvimTreeEndOfBuffer? table
 ---@field NvimTreeWinSeparator? table
 ---@field WhichKey? table
+---@field WhichKeyDesc? table
+---@field WhichKeySeparator? table
 ---@field WhichKeyGroup? table
 ---@field DashboardHeader? table
 ---@field DashboardFooter? table
@@ -192,6 +223,98 @@
 ---@field DashboardKey? table
 ---@field DashboardIcon? table
 ---@field DashboardShotCut? table
+---@field GitSignsAdd? table
+---@field GitSignsChange? table
+---@field GitSignsDelete? table
+---@field NeogitCursorLine? table
+---@field NeogitBranch? table
+---@field NeogitRemote? table
+---@field NeogitHunkHeader? table
+---@field NeogitHunkHeaderHighlight? table
+---@field NeogitDiffContextHighlight? table
+---@field NeogitDiffContext? table
+---@field NeogitDiffDeleteHighlight? table
+---@field NeogitDiffDelete? table
+---@field NeogitDiffAddHighlight? table
+---@field NeogitDiffAdd? table
+---@field TodoFgTODO? table
+---@field TodoFgWARN? table
+---@field TodoFgTEST? table
+---@field TodoFgPERF? table
+---@field TodoFgNOTE? table
+---@field TodoFgHACK? table
+---@field TodoFgFIX? table
+---@field TodoSignTODO? table
+---@field TodoSignWARN? table
+---@field TodoSignTEST? table
+---@field TodoSignPERF? table
+---@field TodoSignNOTE? table
+---@field TodoSignHACK? table
+---@field TodoSignFIX? table
+---@field TodoBgTODO? table
+---@field TodoBgWARN? table
+---@field TodoBgTEST? table
+---@field TodoBgPERF? table
+---@field TodoBgNOTE? table
+---@field TodoBgHACK? table
+---@field TodoBgFIX? table
+---@field LazyH1? table
+---@field LazyButton? table
+---@field LazyButtonActive? table
+---@field LazyReasonStart? table
+---@field TelescopeSelection? table
+---@field TelescopeSelectionCaret? table
+---@field TelescopeMultiIcon? table
+---@field TelescopeNormal? table
+---@field TelescopePreviewNormal? table
+---@field TelescopePromptNormal? table
+---@field TelescopeResultsNormal? table
+---@field TelescopeBorder? table
+---@field TelescopePromptBorder? table
+---@field TelescopeResultsBorder? table
+---@field TelescopePreviewBorder? table
+---@field TelescopeTitle? table
+---@field TelescopePromptTitle? table
+---@field TelescopeResultsTitle? table
+---@field TelescopePreviewTitle? table
+---@field TelescopeMatching? table
+---@field TelescopePreviewMatch? table
+---@field TelescopePromptCounter? table
+---@field TelescopePromptPrefix? table
+---@field NoiceFormatProgressTodo? table
+---@field NoiceFormatProgressDone? table
+---@field NoiceLspProgressSpinner? table
+---@field NoiceLspProgressClient? table
+---@field NoiceLspProgressTitle? table
+---@field HopNextKey? table
+---@field HopNextKey1? table
+---@field HopUnmatched? table
+---@field MiniStatuslineModeNormal? table
+---@field MiniStatuslineModeInsert? table
+---@field MiniStatuslineModeVisual? table
+---@field MiniStatuslineModeReplace? table
+---@field MiniStatuslineModeCommand? table
+---@field MinistatusLineFileName? table
+---@field MiniStatuslineDevinfo? table
+---@field MiniStatuslineFileinfo? table
+---@field MiniStatuslineInactive? table
+---@field MiniTablineCurrent? table
+---@field MiniTablineVisible? table
+---@field MiniTablineHidden? table
+---@field MiniTablineModifiedCurrent? table
+---@field MiniTablineModifiedVisible? table
+---@field MiniTablineModifiedHidden? table
+---@field MiniTablineFill? table
+---@field MiniTablineTabpagesection? table
+---@field MiniStarterCurrent? table
+---@field MiniStarterHeader? table
+---@field MiniStarterFooter? table
+---@field MiniStarterItem? table
+---@field MiniStarterItemBullet? table
+---@field MiniStarterItemPrefix? table
+---@field MiniStarterSection? table
+---@field MiniStarterQuery? table
+---@field MiniCursorword? table
 
 local M = {}
 
@@ -226,7 +349,7 @@ M.set_highlight = function(colors, config)
   -- EDITOR :h highlight-groups
   nvim_set_hl('ColorColumn', { bg = colors.base04 })
   nvim_set_hl('Conceal', { fg = colors.base02 })
-  nvim_set_hl('CurSearch', { fg = colors.cyan })
+  nvim_set_hl('CurSearch', { fg = colors.cyan, bg = colors.shade_cyan })
   nvim_set_hl('Cursor', { fg = colors.base03, bg = colors.cyan })
   nvim_set_hl('lCursor', { link = 'Cursor' })
   nvim_set_hl('CursorIM', { link = 'Cursor' })
@@ -245,7 +368,7 @@ M.set_highlight = function(colors, config)
   nvim_set_hl('Folded', { fg = colors.base0, bg = colors.base02 })
   nvim_set_hl('FoldColumn', { fg = colors.base0, bg = colors.base04 })
   nvim_set_hl('SignColumn', { link = 'Normal' })
-  nvim_set_hl('IncSearch', { fg = colors.cyan, bg = colors.base04, bold = true }, config)
+  nvim_set_hl('IncSearch', { fg = colors.cyan, bg = colors.shade_cyan, bold = true }, config)
   nvim_set_hl('Substitute', { link = 'IncSearch' })
   nvim_set_hl('LineNr', { fg = colors.base01, bg = colors.base03 }, config)
   nvim_set_hl('LineNrAbove', { link = 'LineNr' })
@@ -350,7 +473,7 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('@character.special', { fg = colors.yellow })
     nvim_set_hl('@character.printf', { fg = colors.red })
     nvim_set_hl('@type', { fg = colors.cyan })
-    nvim_set_hl('@type.builtin', { fg = colors.cyan })
+    nvim_set_hl('@type.builtin', { fg = colors.pink })
     nvim_set_hl('@type.definition', { fg = colors.cyan })
     nvim_set_hl('@type.qualifier', { fg = colors.pink })
     nvim_set_hl('@function', { fg = colors.green })
@@ -360,6 +483,7 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('@function.method', { fg = colors.green })
     nvim_set_hl('@function.method.call', { fg = colors.green })
     nvim_set_hl('@constructor', { fg = colors.cyan })
+    nvim_set_hl('@constructor.lua', { fg = colors.base0 })
     nvim_set_hl('@operator', { fg = colors.pink })
     nvim_set_hl('@keyword', { fg = colors.pink })
     nvim_set_hl('@keyword.coroutine', { fg = colors.pink })
@@ -405,6 +529,10 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('@tag', { fg = colors.pink })
     nvim_set_hl('@tag.attribute', { fg = colors.green })
     nvim_set_hl('@tag.delimiter', { fg = colors.base0 })
+    nvim_set_hl('@property.yaml', { fg = colors.cyan })
+    nvim_set_hl('@property.json', { fg = colors.cyan })
+    nvim_set_hl('@property.css', { fg = colors.cyan })
+    nvim_set_hl('@property.scss', { fg = colors.cyan })
   end
 
   if config.plugins['nvim-lspconfig'] then
@@ -442,6 +570,38 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('DiagnosticUnderlineInfo', { fg = colors.diag_info, underline = true })
     nvim_set_hl('DiagnosticUnderlineHint', { fg = colors.diag_hint, underline = true })
     nvim_set_hl('DiagnosticUnderlineOk', { fg = colors.diag_ok, underline = true })
+    nvim_set_hl('LspReferenceText', { link = 'Visual' })
+    nvim_set_hl('LspReferenceRead', { link = 'Visual' })
+    nvim_set_hl('LspReferenceWrite', { link = 'Visual' })
+    nvim_set_hl('LspInlayHint', { fg = colors.inlay_hint })
+  end
+
+  if config.plugins['nvim-navic'] then
+    nvim_set_hl('NavicText', { fg = colors.base0 })
+    nvim_set_hl('NavicSeparator', { link = 'Statement' })
+    nvim_set_hl('NavicIconsMethod', { link = 'Function' })
+    nvim_set_hl('NavicIconsFunction', { link = 'Function' })
+    nvim_set_hl('NavicIconsField', { link = 'Identifier' })
+    nvim_set_hl('NavicIconsVariable', { link = 'Identifier' })
+    nvim_set_hl('NavicIconsClass', { link = 'Type' })
+    nvim_set_hl('NavicIconsInterface', { link = 'Type' })
+    nvim_set_hl('NavicIconsModule', { link = 'Type' })
+    nvim_set_hl('NavicIconsNamespace', { link = 'Type' })
+    nvim_set_hl('NavicIconsProperty', { link = 'Identifier' })
+    nvim_set_hl('NavicIconsUnity', { link = 'Number' })
+    nvim_set_hl('NavicIconsEnum', { link = 'Type' })
+    nvim_set_hl('NavicIconsKeyword', { link = 'Statement' })
+    nvim_set_hl('NavicIconsSnippet', { link = 'Tag' })
+    nvim_set_hl('NavicIconsColor', { fg = colors.orange })
+    nvim_set_hl('NavicIconsFile', { fg = colors.Identifier })
+    nvim_set_hl('NavicIconsReference', { link = 'Underlined' })
+    nvim_set_hl('NavicIconsFolder', { link = 'Directory' })
+    nvim_set_hl('NavicIconsEnumMember', { link = 'Constant' })
+    nvim_set_hl('NavicIconsConstant', { link = 'Constant' })
+    nvim_set_hl('NavicIconsStruct', { link = 'Identifier' })
+    nvim_set_hl('NavicIconsEvent', { link = 'Function' })
+    nvim_set_hl('NavicIconsOperator', { link = 'Operator' })
+    nvim_set_hl('NavicIconsTypeParameter', { link = 'Type' })
   end
 
   if config.plugins['nvim-cmp'] then
@@ -494,7 +654,7 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('NeoTreeGitAdded', { fg = colors.git_added })
     nvim_set_hl('NeoTreeGitConflict', { fg = colors.git_modified })
     nvim_set_hl('NeoTreeGitDeleted', { fg = colors.git_removed })
-    nvim_set_hl('NeoTreeGitIgnored', { fg = colors.base0 })
+    nvim_set_hl('NeoTreeGitIgnored', { fg = colors.base01 })
     nvim_set_hl('NeoTreeGitModified', { fg = colors.git_modified })
     nvim_set_hl('NeoTreeGitUnstaged', { fg = colors.git_modified })
     nvim_set_hl('NeoTreeGitUntracked', { fg = colors.git_modified })
@@ -526,8 +686,10 @@ M.set_highlight = function(colors, config)
   end
 
   if config.plugins['which-key.nvim'] then
-    nvim_set_hl('WhichKey', { fg = colors.pink })
-    nvim_set_hl('WhichKeyGroup', { fg = colors.orange })
+    nvim_set_hl('WhichKey', { fg = colors.green })
+    nvim_set_hl('WhichKeyDesc', { fg = colors.orange, italic = true })
+    nvim_set_hl('WhichKeySeparator', { fg = colors.pink })
+    nvim_set_hl('WhichKeyGroup', { fg = colors.purple })
   end
 
   if config.plugins['dashboard-nvim'] then
@@ -537,6 +699,131 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('DashboardKey', { fg = colors.pink })
     nvim_set_hl('DashboardIcon', { link = 'Directory' })
     nvim_set_hl('DashboardShotCut', { fg = colors.base0 })
+  end
+
+  if config.plugins['gitsigns.nvim'] then
+    nvim_set_hl('GitSignsAdd', { fg = colors.git_added })
+    nvim_set_hl('GitSignsChange', { fg = colors.git_modified })
+    nvim_set_hl('GitSignsDelete', { fg = colors.git_removed })
+  end
+
+  if config.plugins['neogit'] then
+    nvim_set_hl('NeogitCursorLine', { link = 'CursorLine' })
+    nvim_set_hl('NeogitBranch', { fg = colors.purple })
+    nvim_set_hl('NeogitRemote', { fg = colors.cyan })
+    nvim_set_hl('NeogitHunkHeader', { fg = colors.purple, bg = colors.shade_purple })
+    nvim_set_hl('NeogitHunkHeaderHighlight', { link = 'Title' })
+    nvim_set_hl('NeogitDiffContextHighlight', { fg = colors.base0, bg = colors.base03 })
+    nvim_set_hl('NeogitDiffContext', { fg = colors.base0, bg = colors.base04 })
+    nvim_set_hl('NeogitDiffDeleteHighlight', { fg = colors.git_removed, bg = colors.shade_red })
+    nvim_set_hl('NeogitDiffDelete', { fg = colors.git_removed })
+    nvim_set_hl('NeogitDiffAddHighlight', { fg = colors.git_added, bg = colors.shade_green })
+    nvim_set_hl('NeogitDiffAdd', { fg = colors.git_added })
+  end
+
+  if config.plugins['todo-comments.nvim'] then
+    nvim_set_hl('TodoFgTODO', { fg = colors.purple })
+    nvim_set_hl('TodoFgWARN', { fg = colors.diag_warning })
+    nvim_set_hl('TodoFgTEST', { fg = colors.diag_ok })
+    nvim_set_hl('TodoFgPERF', { fg = colors.yellow })
+    nvim_set_hl('TodoFgNOTE', { fg = colors.cyan })
+    nvim_set_hl('TodoFgHACK', { fg = colors.pink })
+    nvim_set_hl('TodoFgFIX', { fg = colors.diag_error })
+    nvim_set_hl('TodoSignTODO', { fg = colors.purple })
+    nvim_set_hl('TodoSignWARN', { fg = colors.diag_warning })
+    nvim_set_hl('TodoSignTEST', { fg = colors.diag_ok })
+    nvim_set_hl('TodoSignPERF', { fg = colors.yellow })
+    nvim_set_hl('TodoSignNOTE', { fg = colors.cyan })
+    nvim_set_hl('TodoSignHACK', { fg = colors.pink })
+    nvim_set_hl('TodoSignFIX', { fg = colors.diag_error })
+    nvim_set_hl('TodoBgTODO', { fg = colors.purple, reverse = true })
+    nvim_set_hl('TodoBgWARN', { fg = colors.diag_warning, reverse = true })
+    nvim_set_hl('TodoBgTEST', { fg = colors.diag_ok, reverse = true })
+    nvim_set_hl('TodoBgPERF', { fg = colors.yellow, reverse = true })
+    nvim_set_hl('TodoBgNOTE', { fg = colors.cyan, reverse = true })
+    nvim_set_hl('TodoBgHACK', { fg = colors.pink, reverse = true })
+    nvim_set_hl('TodoBgFIX', { fg = colors.diag_error, reverse = true })
+  end
+
+  if config.plugins['lazy.nvim'] then
+    nvim_set_hl('LazyH1', { fg = colors.purple, bg = colors.base04 })
+    nvim_set_hl('LazyButton', { fg = colors.base0, bg = colors.base02 })
+    nvim_set_hl('LazyButtonActive', { bg = colors.base02, reverse = true })
+    nvim_set_hl('LazyReasonStart', { fg = colors.cyan })
+  end
+
+  if config.plugins['telescope.nvim'] then
+    nvim_set_hl('TelescopeSelection', { link = 'CursorLine' })
+    nvim_set_hl('TelescopeSelectionCaret', { fg = colors.purple })
+    nvim_set_hl('TelescopeMultiIcon', { fg = colors.purple })
+    nvim_set_hl('TelescopeNormal', { fg = colors.base0, bg = colors.base04 }, config)
+    nvim_set_hl('TelescopePreviewNormal', { link = 'TelescopeNormal' })
+    nvim_set_hl('TelescopePromptNormal', { link = 'TelescopeNormal' })
+    nvim_set_hl('TelescopeResultsNormal', { link = 'TelescopeNormal' })
+    nvim_set_hl('TelescopeBorder', { fg = colors.purple, bg = colors.base04 }, config)
+    nvim_set_hl('TelescopePromptBorder', { link = 'TelescopeBorder' })
+    nvim_set_hl('TelescopeResultsBorder', { link = 'TelescopeBorder' })
+    nvim_set_hl('TelescopePreviewBorder', { link = 'TelescopeBorder' })
+    nvim_set_hl('TelescopeTitle', { fg = colors.purple, bg = colors.shade_purple })
+    nvim_set_hl('TelescopePromptTitle', { link = 'TelescopeTitle' })
+    nvim_set_hl('TelescopeResultsTitle', { link = 'TelescopeTitle' })
+    nvim_set_hl('TelescopePreviewTitle', { link = 'TelescopeTitle' })
+    nvim_set_hl('TelescopeMatching', { fg = colors.purple, bg = colors.shade_purple })
+    nvim_set_hl('TelescopePreviewMatch', { link = 'TelescopeMatching' })
+    nvim_set_hl('TelescopePromptCounter', { link = 'NonText' })
+    nvim_set_hl('TelescopePromptPrefix', { fg = colors.purple })
+  end
+
+  if config.plugins['noice.nvim'] then
+    nvim_set_hl('NoiceFormatProgressTodo', { fg = colors.diag_ok, bg = colors.shade_ok })
+    nvim_set_hl('NoiceFormatProgressDone', { fg = colors.diag_ok, reverse = true })
+    nvim_set_hl('NoiceLspProgressSpinner', { fg = colors.diag_ok })
+    nvim_set_hl('NoiceLspProgressClient', { fg = colors.diag_ok })
+    nvim_set_hl('NoiceLspProgressTitle', { link = 'Title' })
+  end
+
+  if config.plugins['hop.nvim'] then
+    nvim_set_hl('HopNextKey', { fg = colors.red })
+    nvim_set_hl('HopNextKey1', { fg = colors.cyan })
+    nvim_set_hl('HopUnmatched', { fg = colors.base01 })
+  end
+
+  if config.plugins['mini.statusline'] then
+    nvim_set_hl('MiniStatuslineModeNormal', { fg = colors.base03, bg = colors.purple })
+    nvim_set_hl('MiniStatuslineModeInsert', { fg = colors.base03, bg = colors.green })
+    nvim_set_hl('MiniStatuslineModeVisual', { fg = colors.yellow, bg = colors.base03 })
+    nvim_set_hl('MiniStatuslineModeReplace', { fg = colors.red, bg = colors.base03 })
+    nvim_set_hl('MiniStatuslineModeCommand', { fg = colors.orange, bg = colors.base03 })
+    nvim_set_hl('MinistatusLineFileName', { fg = colors.base0, bg = colors.base04 })
+    nvim_set_hl('MiniStatuslineDevinfo', { fg = colors.base0, bg = colors.base02 })
+    nvim_set_hl('MiniStatuslineFileinfo', { fg = colors.base0, bg = colors.base02 })
+    nvim_set_hl('MiniStatuslineInactive', { fg = colors.base01, bg = colors.base03 })
+  end
+
+  if config.plugins['mini.tabline'] then
+    nvim_set_hl('MiniTablineCurrent', { fg = colors.base0, bg = colors.base03 })
+    nvim_set_hl('MiniTablineVisible', { fg = colors.base0, bg = colors.base03 })
+    nvim_set_hl('MiniTablineHidden', { fg = colors.base01, bg = colors.base03 })
+    nvim_set_hl('MiniTablineModifiedCurrent', { link = 'MiniTabLineCurrent' })
+    nvim_set_hl('MiniTablineModifiedVisible', { link = 'MiniTablineVisible' })
+    nvim_set_hl('MiniTablineModifiedHidden', { link = 'MiniTablineHidden' })
+    nvim_set_hl('MiniTablineFill', { fg = colors.base0, bg = colors.base04 })
+    nvim_set_hl('MiniTablineTabpagesection', { fg = colors.base0, bg = colors.base04 })
+  end
+
+  if config.plugins['mini.starter'] then
+    nvim_set_hl('MiniStarterCurrent', { link = 'CursorLine' })
+    nvim_set_hl('MiniStarterHeader', { fg = colors.red })
+    nvim_set_hl('MiniStarterFooter', { fg = colors.base01 })
+    nvim_set_hl('MiniStarterItem', { fg = colors.base0 })
+    nvim_set_hl('MiniStarterItemBullet', { fg = colors.pink })
+    nvim_set_hl('MiniStarterItemPrefix', { fg = colors.pink })
+    nvim_set_hl('MiniStarterSection', { link = 'Title' })
+    nvim_set_hl('MiniStarterQuery', { fg = colors.pink, bold = true })
+  end
+
+  if config.plugins['mini.cursorword'] then
+    nvim_set_hl('MiniCursorword', { link = 'Visual' })
   end
   if config.on_highlight then
     local color = require 'dracula-soft.color'

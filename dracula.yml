@@ -102,6 +102,7 @@ author: Max Del Canto
 repo: maxmx03/dracula.nvim
 contact: "github.com/maxmx03"
 license: "MIT License"
+version: "NVIM v0.9.4"
 config:
   transparent: false
   on_colors: ~
