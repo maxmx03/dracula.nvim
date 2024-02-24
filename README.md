@@ -1,6 +1,6 @@
-# Dracula-Soft
+# Dracula
 
-![schemecraft](https://github.com/maxmx03/schemecraft/assets/50273941/ee682aae-00cb-4282-ba24-3d9621a430a3)
+![Screenshot](https://user-images.githubusercontent.com/50273941/227779719-6e003e4a-f8e8-40bc-8a9f-ebfd7ea13fe6.png)
 
 ## Installation
 
