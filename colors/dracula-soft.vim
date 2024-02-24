@@ -43,6 +43,7 @@ g:dracula.plugins["mini.statusline"] = false
 g:dracula.plugins["mini.tabline"] = false
 g:dracula.plugins["mini.starter"] = false
 g:dracula.plugins["mini.cursorword"] = false
+
 if (has('termguicolors') && &termguicolors) || has('gui_running')
   g:terminal_ansi_colors = [
     "#F8F8F2",
@@ -61,26 +62,6 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
     "#EE6666",
     "#62E884",
     "#689494",
-    "#FFB86C",
-    "#F286C4",
-    "#BF9EEE",
-    "#EE6666",
-    "#314742",
-    "#483F3E",
-    "#394552",
-    "#46333D",
-    "#314742",
-    "#394552",
-    "#394552",
-    "#314742",
-    "#483F3E",
-    "#3F3B52",
-    "#5B415A",
-    "#3F3B52",
-    "#46333D",
-    "#483F3E",
-    "#454745",
-    "#E7EE98",
     ]
 endif
 
