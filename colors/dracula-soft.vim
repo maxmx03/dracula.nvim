@@ -22,27 +22,27 @@ g:colors_name = 'dracula-soft'
 g:dracula = {
   plugins: {},
 }
-g:dracula.plugins["nvim-treesitter"] = true,
-g:dracula.plugins["nvim-lspconfig"] = true,
-g:dracula.plugins["nvim-navic"] = true,
-g:dracula.plugins["nvim-cmp"] = true,
-g:dracula.plugins["indent-blankline.nvim"] = true,
-g:dracula.plugins["bufferline.nvim"] = true,
-g:dracula.plugins["neo-tree.nvim"] = true,
-g:dracula.plugins["nvim-tree.lua"] = true,
-g:dracula.plugins["which-key.nvim"] = true,
-g:dracula.plugins["dashboard-nvim"] = true,
-g:dracula.plugins["gitsigns.nvim"] = true,
-g:dracula.plugins["neogit"] = true,
-g:dracula.plugins["todo-comments.nvim"] = true,
-g:dracula.plugins["lazy.nvim"] = true,
-g:dracula.plugins["telescope.nvim"] = true,
-g:dracula.plugins["noice.nvim"] = true,
-g:dracula.plugins["hop.nvim"] = true,
-g:dracula.plugins["mini.statusline"] = true,
-g:dracula.plugins["mini.tabline"] = true,
-g:dracula.plugins["mini.starter"] = true,
-g:dracula.plugins["mini.cursorword"] = true,
+g:dracula.plugins["nvim-treesitter"] = false
+g:dracula.plugins["nvim-lspconfig"] = false
+g:dracula.plugins["nvim-navic"] = false
+g:dracula.plugins["nvim-cmp"] = false
+g:dracula.plugins["indent-blankline.nvim"] = false
+g:dracula.plugins["bufferline.nvim"] = false
+g:dracula.plugins["neo-tree.nvim"] = false
+g:dracula.plugins["nvim-tree.lua"] = false
+g:dracula.plugins["which-key.nvim"] = false
+g:dracula.plugins["dashboard-nvim"] = false
+g:dracula.plugins["gitsigns.nvim"] = false
+g:dracula.plugins["neogit"] = false
+g:dracula.plugins["todo-comments.nvim"] = false
+g:dracula.plugins["lazy.nvim"] = false
+g:dracula.plugins["telescope.nvim"] = false
+g:dracula.plugins["noice.nvim"] = false
+g:dracula.plugins["hop.nvim"] = false
+g:dracula.plugins["mini.statusline"] = false
+g:dracula.plugins["mini.tabline"] = false
+g:dracula.plugins["mini.starter"] = false
+g:dracula.plugins["mini.cursorword"] = false
 if (has('termguicolors') && &termguicolors) || has('gui_running')
   g:terminal_ansi_colors = [
     "#F8F8F2",
@@ -123,7 +123,7 @@ hi NonText guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
 hi Normal guifg=#f8f8f2 guibg=#282a36 gui=NONE cterm=NONE
 hi NormalFloat guifg=#f8f8f2 guibg=#262626 gui=NONE cterm=NONE
 hi! link FloatBorder WinSeparator
-hi FloatTitle guifg=#bf9eee guibg=NONE gui=true cterm=true
+hi FloatTitle guifg=#bf9eee guibg=NONE gui=bold cterm=bold
 hi! link NormalNC Normal
 hi Pmenu guifg=#f8f8f2 guibg=#262626 gui=NONE cterm=NONE
 hi PmenuSel guifg=#adf6f6 guibg=NONE gui=reverse cterm=reverse
@@ -146,7 +146,7 @@ hi StatusLineNC guifg=#7b7f8b guibg=#262626 gui=NONE cterm=NONE
 hi TabLine guifg=#7b7f8b guibg=#262626 gui=NONE cterm=NONE
 hi TabLineFill guifg=#f8f8f2 guibg=#262626 gui=NONE cterm=NONE
 hi TabLineSel guifg=#f8f8f2 guibg=#282a36 gui=NONE cterm=NONE
-hi Title guifg=#bf9eee guibg=NONE gui=true cterm=true
+hi Title guifg=#bf9eee guibg=NONE gui=bold cterm=bold
 hi Visual guifg=NONE guibg=#44475a gui=NONE cterm=NONE
 hi! link VisualNOS Visual
 hi warningMsg guifg=#ffb86c guibg=NONE gui=NONE cterm=NONE
@@ -188,111 +188,11 @@ hi Debug guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
 hi Underlined guifg=#adf6f6 guibg=NONE gui=underline cterm=underline
 hi Ignore guifg=NONE guibg=NONE gui=NONE cterm=NONE
 hi Error guifg=#ee6666 guibg=NONE gui=bold cterm=bold
-hi Todo guifg=#bf9eee guibg=NONE gui=true cterm=true
+hi Todo guifg=#bf9eee guibg=NONE gui=bold cterm=bold
 if g:dracula-soft.plugins["nvim-treesitter"]
-  hi @variable guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi @variable.builtin guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @variable.parameter guifg=#ffb86c guibg=NONE gui=italic cterm=italic
-  hi @variable.member guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi @constant guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @constant.builtin guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @constant.macro guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @module guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi @module.builtin guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @label guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @string guifg=#e7ee98 guibg=NONE gui=NONE cterm=NONE
-  hi @string.documentation guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @string.regexp guifg=#ee6666 guibg=NONE gui=NONE cterm=NONE
-  hi @string.escape guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @string.special guifg=#e7ee98 guibg=NONE gui=NONE cterm=NONE
-  hi @string.special.symbol guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi! link @string.special.url Underlined
-  hi @character guifg=#e7ee98 guibg=NONE gui=NONE cterm=NONE
-  hi @character.special guifg=#e7ee98 guibg=NONE gui=NONE cterm=NONE
-  hi @character.printf guifg=#ee6666 guibg=NONE gui=NONE cterm=NONE
-  hi @type guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @type.builtin guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @type.definition guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @type.qualifier guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @function guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
-  hi @function.builtin guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @function.call guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
-  hi @function.macro guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
-  hi @function.method guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
-  hi @function.method.call guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
-  hi @constructor guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @constructor.lua guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi @operator guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.coroutine guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.function guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.operator guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.import guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.repeat guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.return guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.debug guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.exception guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.conditional guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.conditional.ternary guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.directive guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.directive.define guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @punctuation.delimiter guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi @punctuation.bracket guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi @punctuation.special guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @comment guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
-  hi @comment.documentation guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
-  hi @comment.error guifg=#ee6666 guibg=#46333D gui=NONE cterm=NONE
-  hi @comment.warning guifg=#ffb86c guibg=#483F3E gui=NONE cterm=NONE
-  hi @comment.todo guifg=#bf9eee guibg=#3F3B52 gui=NONE cterm=NONE
-  hi @comment.note guifg=#adf6f6 guibg=#394552 gui=NONE cterm=NONE
-  hi @markup.strong guifg=#ffb86c guibg=NONE gui=NONE cterm=NONE
-  hi @markup.italic guifg=#e7ee98 guibg=NONE gui=italic cterm=italic
-  hi @markup.strikethrough guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
-  hi @markup.underline guifg=#adf6f6 guibg=NONE gui=underline cterm=underline
-  hi @markup.heading guifg=#bf9eee guibg=NONE gui=true cterm=true
-  hi @markup.quote guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
-  hi @markup.math guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @markup.environment guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
-  hi @markup.link guifg=#ffb86c guibg=NONE gui=NONE cterm=NONE
-  hi @markup.link.label guifg=#adf6f6 guibg=NONE gui=underline cterm=underline
-  hi @markup.link.url guifg=#adf6f6 guibg=NONE gui=underline cterm=underline
-  hi @markup.raw guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
-  hi @markup.raw.block guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
-  hi @markup.list guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @markup.list.checked guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
-  hi @markup.list.unchecked guifg=#ffb86c guibg=NONE gui=NONE cterm=NONE
-  hi @diff.plus guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
-  hi @diff.minus guifg=#ee6666 guibg=NONE gui=NONE cterm=NONE
-  hi @diff.delta guifg=#ffb86c guibg=NONE gui=NONE cterm=NONE
-  hi @tag guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @tag.attribute guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
-  hi @tag.delimiter guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi @property.yaml guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @property.json guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @property.css guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @property.scss guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
 endif
 
 if g:dracula-soft.plugins["nvim-lspconfig"]
-  hi @lsp.type.class guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.decorator guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.enum guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.enumMember guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.interface guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.macro guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.namespace guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.parameter guifg=#ffb86c guibg=NONE gui=italic cterm=italic
-  hi @lsp.type.property guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.struct guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.type guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.typeParameter guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.variable guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.typemod.variable.defaultLibrary guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.typemod.variable.readonly guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.typemod.variable.global guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.typemod.keyword.documentation guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.typemod.class.documentation guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.typemod.property.readonly guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
   hi DiagnosticError guifg=#ee6666 guibg=NONE gui=NONE cterm=NONE
   hi DiagnosticWarn guifg=#ffb86c guibg=NONE gui=NONE cterm=NONE
   hi DiagnosticInfo guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
@@ -403,11 +303,11 @@ if g:dracula-soft.plugins["nvim-tree.lua"]
   hi! link NvimTreeSymlink Underlined
   hi! link NvimTreeSymlinkIcon Directory
   hi NvimTreeFolderName guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi NvimTreeRootFolder guifg=#bf9eee guibg=NONE gui=true cterm=true
+  hi NvimTreeRootFolder guifg=#bf9eee guibg=NONE gui=bold cterm=bold
   hi! link NvimTreeFolderIcon Directory
   hi NvimTreeEmptyFolderName guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
   hi NvimTreeExecFile guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
-  hi NvimTreeOpenedFile guifg=#bf9eee guibg=NONE gui=true cterm=true
+  hi NvimTreeOpenedFile guifg=#bf9eee guibg=NONE gui=bold cterm=bold
   hi NvimTreeModifiedFile guifg=#ffb86c guibg=NONE gui=NONE cterm=NONE
   hi! link NvimTreeSpecialFile Special
   hi NvimTreeIndentMarker guifg=#3F3B52 guibg=NONE gui=NONE cterm=NONE
