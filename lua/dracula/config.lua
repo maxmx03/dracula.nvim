@@ -1,7 +1,7 @@
 ---@class dracula.config
 ---@field transparent? boolean
 ---@field on_highlights? fun(colors: dracula.palette, color: table): dracula.highlights
----@field on_colors? fun(colors: dracula.palette, color: table): dracula.palette
+---@field on_colors? fun(colors: dracula.palette, color: dracula.color): dracula.palette
 return {
   transparent = false,
   on_highlights = nil,
