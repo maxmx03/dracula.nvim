@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/maxmx03/dracula.nvim/compare/v1.1.0...v1.1.1) (2024-02-25)
+
+
+### Bug Fixes
+
+* markupblockcode color, on_highlights ([9f71da8](https://github.com/maxmx03/dracula.nvim/commit/9f71da8e9e600045d165aa8e05db57ee50eb720c))
+
 ## [1.1.0](https://github.com/maxmx03/dracula.nvim/compare/v1.0.0...v1.1.0) (2024-02-24)
 
 
