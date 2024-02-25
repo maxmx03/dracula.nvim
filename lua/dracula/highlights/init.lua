@@ -519,7 +519,7 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('@markup.link.label', { fg = colors.cyan, underline = true })
     nvim_set_hl('@markup.link.url', { fg = colors.cyan, underline = true })
     nvim_set_hl('@markup.raw', { fg = colors.base01 })
-    nvim_set_hl('@markup.raw.block', { fg = colors.base01 })
+    nvim_set_hl('@markup.raw.block', { fg = colors.base0 })
     nvim_set_hl('@markup.list', { fg = colors.purple })
     nvim_set_hl('@markup.list.checked', { fg = colors.git_added })
     nvim_set_hl('@markup.list.unchecked', { fg = colors.git_modified })
@@ -825,9 +825,9 @@ M.set_highlight = function(colors, config)
   if config.plugins['mini.cursorword'] then
     nvim_set_hl('MiniCursorword', { link = 'Visual' })
   end
-  if config.on_highlight then
+  if config.on_highlights then
     local color = require 'dracula.color'
-    local highlights = config.on_highlight(colors, color)
+    local highlights = config.on_highlights(colors, color)
 
     for group_name, group_val in pairs(highlights) do
       local hl = nvim_get_hl { name = group_name, link = true }

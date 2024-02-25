@@ -91,7 +91,7 @@ specification:
   markupInlineCode: &markupInlineCode
     fg: base01
   markupBlockCode: &markupBlockCode
-    fg: base01
+    fg: base0
   markupLinkUrl: &markupLinkUrl
     fg: cyan
     underline: true
