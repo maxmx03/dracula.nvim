@@ -344,6 +344,7 @@ end
 
 M.set_highlight = function(colors, config)
   if config.on_colors then
+    local color = require 'dracula.color'
     colors = vim.tbl_extend('force', colors, config.on_colors(colors))
   end
   -- EDITOR :h highlight-groups
@@ -826,7 +827,7 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('MiniCursorword', { link = 'Visual' })
   end
   if config.on_highlights then
-    local color = require 'dracula-soft.color'
+    local color = require 'dracula.color'
     local highlights = config.on_highlights(colors, color)
 
     for group_name, group_val in pairs(highlights) do

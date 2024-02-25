@@ -344,6 +344,7 @@ end
 
 M.set_highlight = function(colors, config)
   if config.on_colors then
+    local color = require 'dracula.color'
     colors = vim.tbl_extend('force', colors, config.on_colors(colors))
   end
   -- EDITOR :h highlight-groups
