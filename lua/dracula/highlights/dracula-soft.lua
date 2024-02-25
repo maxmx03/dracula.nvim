@@ -345,7 +345,7 @@ end
 M.set_highlight = function(colors, config)
   if config.on_colors then
     local color = require 'dracula.color'
-    colors = vim.tbl_extend('force', colors, config.on_colors(colors))
+    colors = vim.tbl_extend('force', colors, config.on_colors(colors, color))
   end
   -- EDITOR :h highlight-groups
   nvim_set_hl('ColorColumn', { bg = colors.base04 })
