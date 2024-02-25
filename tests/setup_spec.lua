@@ -9,7 +9,7 @@ describe('dracula.setup', function()
           mycolor = '#ffffff',
         }
       end,
-      on_highlight = function(colors)
+      on_highlights = function(colors)
         return {
           CustomHighlight = { fg = colors.mycolor },
         }
