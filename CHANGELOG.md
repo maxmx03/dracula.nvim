@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/maxmx03/dracula.nvim/compare/v1.2.0...v1.3.0) (2024-02-26)
+
+
+### Features
+
+* bufferline.nvim highlight groups removed ([31aef69](https://github.com/maxmx03/dracula.nvim/commit/31aef69aba109e340eed05cfa0a4d74a81db9d54))
+
 ## [1.2.0](https://github.com/maxmx03/dracula.nvim/compare/v1.1.1...v1.2.0) (2024-02-26)
 
 
