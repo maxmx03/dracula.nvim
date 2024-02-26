@@ -764,27 +764,6 @@ highlights:
         - name: IblScope
           fg: purple
           nocombine: true
-    - bufferline.nvim:
-        - name: BufferLineSeparator
-          fg: base04
-          bg: base04
-        - name: BufferLineSeparatorSelected
-          fg: base04
-          bg: base03
-        - name: BufferLineBufferSelected
-          fg: base0
-          bold: true
-          gui: bold
-          transparent: true
-        - name: BufferLineFill
-          fg: base0
-          bg: base04
-        - name: BufferLineIndicatorSelected
-          fg: base0
-        - name: BufferLineBufferVisible
-          fg: base01
-          bg: base03
-          transparent: true
     - neo-tree.nvim:
         - name: NeoTreeNormal
           fg: base0

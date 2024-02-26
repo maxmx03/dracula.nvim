@@ -73,7 +73,6 @@ return {
         ["nvim-navic"] = true,
         ["nvim-cmp"] = true,
         ["indent-blankline.nvim"] = true,
-        ["bufferline.nvim"] = true,
         ["neo-tree.nvim"] = true,
         ["nvim-tree.lua"] = true,
         ["which-key.nvim"] = true,
