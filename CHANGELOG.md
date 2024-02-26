@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.0](https://github.com/maxmx03/dracula.nvim/compare/v1.1.1...v1.2.0) (2024-02-26)
+
+
+### Features
+
+* barbecue ([dfc0cf8](https://github.com/maxmx03/dracula.nvim/commit/dfc0cf86444f84093585c9c284a3304cb09bf7eb))
+* lualine theme dracula-soft ([ad744ad](https://github.com/maxmx03/dracula.nvim/commit/ad744ad9ef26f5f8dbf76c985a8fd0f434dc7343))
+
+
+### Bug Fixes
+
+* on_colors ([c717f28](https://github.com/maxmx03/dracula.nvim/commit/c717f28b96814889e3f3a1d10aa55dc73073777a))
+* on_highlights,on_colors ([a5c2195](https://github.com/maxmx03/dracula.nvim/commit/a5c219550696a3b45863748b16ec26482d6aee3d))
+
 ## [1.1.1](https://github.com/maxmx03/dracula.nvim/compare/v1.1.0...v1.1.1) (2024-02-25)
 
 
