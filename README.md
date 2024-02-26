@@ -94,6 +94,17 @@ return {
       vim.cmd.colorscheme 'dracula'
       vim.cmd.colorscheme 'dracula-soft'
     end
+  },
+  {
+    'nvim-lualine/lualine.nvim',
+    opts = {
+      options = {
+        theme = vim.g.colors_name,
+        refresh = {
+          statusline = 1000,
+        },
+      },
+    },
   }
 }
 ```
