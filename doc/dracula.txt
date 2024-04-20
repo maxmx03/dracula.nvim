@@ -1,4 +1,4 @@
-*dracula.txt*            For NVIM v0.9.4            Last change: 2024 March 02
+*dracula.txt*            For NVIM v0.9.4            Last change: 2024 April 20
 
 ==============================================================================
 Table of Contents                                  *dracula-table-of-contents*
@@ -6,6 +6,7 @@ Table of Contents                                  *dracula-table-of-contents*
 1. Dracula                                                   |dracula-dracula|
   - Installation                                |dracula-dracula-installation|
   - Api                                                  |dracula-dracula-api|
+2. Links                                                       |dracula-links|
 
 ==============================================================================
 1. Dracula                                                   *dracula-dracula*
