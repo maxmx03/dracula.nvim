@@ -68,7 +68,7 @@ endif
 
 hi ColorColumn guifg=NONE guibg=#262626 gui=NONE cterm=NONE
 hi Conceal guifg=#44475a guibg=NONE gui=NONE cterm=NONE
-hi CurSearch guifg=#adf6f6 guibg=#394552 gui=NONE cterm=NONE
+hi CurSearch guifg=#ee6666 guibg=#46333D gui=NONE cterm=NONE
 hi Cursor guifg=#282a36 guibg=#adf6f6 gui=NONE cterm=NONE
 hi! link lCursor Cursor
 hi! link CursorIM Cursor
@@ -87,7 +87,7 @@ hi WinSeparator guifg=#7b7f8b guibg=#262626 gui=NONE cterm=NONE
 hi Folded guifg=#f8f8f2 guibg=#44475a gui=NONE cterm=NONE
 hi FoldColumn guifg=#f8f8f2 guibg=#262626 gui=NONE cterm=NONE
 hi! link SignColumn Normal
-hi IncSearch guifg=#adf6f6 guibg=#394552 gui=bold cterm=bold
+hi IncSearch guifg=#ee6666 guibg=#46333D gui=bold cterm=bold
 hi! link Substitute IncSearch
 hi LineNr guifg=#7b7f8b guibg=#282a36 gui=NONE cterm=NONE
 hi! link LineNrAbove LineNr

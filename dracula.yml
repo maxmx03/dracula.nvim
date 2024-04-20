@@ -151,8 +151,8 @@ highlights:
     - name: Conceal
       fg: base02
     - name: CurSearch
-      fg: cyan
-      bg: shade_cyan
+      fg: red
+      bg: shade_red
     - name: Cursor
       fg: base03
       bg: cyan
@@ -200,8 +200,8 @@ highlights:
     - name: SignColumn
       link: Normal
     - name: IncSearch
-      fg: cyan
-      bg: shade_cyan
+      fg: red
+      bg: shade_red
       bold: true
       gui: bold
       transparent: true
