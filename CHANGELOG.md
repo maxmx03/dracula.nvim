@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/maxmx03/dracula.nvim/compare/v1.3.0...v1.3.1) (2024-04-20)
+
+
+### Bug Fixes
+
+* css psudo_class_selector ([f6552f5](https://github.com/maxmx03/dracula.nvim/commit/f6552f53428b58c082eada492d4de6efba8d1f18))
+
 ## [1.3.0](https://github.com/maxmx03/dracula.nvim/compare/v1.2.0...v1.3.0) (2024-02-26)
 
 
