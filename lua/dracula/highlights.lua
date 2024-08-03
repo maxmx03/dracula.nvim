@@ -208,6 +208,7 @@
 ---@field NvimTreeEndOfBuffer? table
 ---@field NvimTreeWinSeparator? table
 ---@field WhichKey? table
+---@field WhichKeyNormal? table
 ---@field WhichKeyDesc? table
 ---@field WhichKeySeparator? table
 ---@field WhichKeyGroup? table
