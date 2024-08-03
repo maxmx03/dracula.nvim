@@ -832,7 +832,7 @@ M.set_highlight = function(colors, config)
   end
 
   if config.plugins['bufferline.nvim'] and config.transparent then
-    local color = require('dracula.color')
+    local color = require 'dracula.color'
     local background = color.shade(colors.base02, 2)
     nvim_set_hl('BufferLineFill', { bg = background })
     nvim_set_hl('BufferLineBufferSelected', { fg = colors.base0 })
