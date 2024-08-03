@@ -3,7 +3,7 @@ local nvim_get_hl = require('dracula.utils').nvim_get_hl
 describe('dracula.setup', function()
   setup(function()
     ---@type dracula
-    local dracula = require('dracula')
+    local dracula = require 'dracula'
 
     dracula.setup {
       transparent = true,
