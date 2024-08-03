@@ -396,11 +396,11 @@ M.set_highlight = function(colors, config)
   nvim_set_hl('MoreMsg', { link = 'ModeMsg' })
   nvim_set_hl('NonText', { fg = colors.base01 })
   nvim_set_hl('Normal', { fg = colors.base0, bg = colors.base03 }, { transparent = config.transparent })
-  nvim_set_hl('NormalFloat', { fg = colors.base0, bg = colors.base04 }, { transparent = config.transparent })
+  nvim_set_hl('NormalFloat', { fg = colors.base0, bg = colors.base04 })
   nvim_set_hl('FloatBorder', { link = 'WinSeparator' })
   nvim_set_hl('FloatTitle', { fg = colors.purple, bold = true })
   nvim_set_hl('NormalNC', { link = 'Normal' })
-  nvim_set_hl('Pmenu', { fg = colors.base0, bg = colors.base04 })
+  nvim_set_hl('Pmenu', { fg = colors.base0, bg = colors.base04 }, { transparent = config.transparent })
   nvim_set_hl('PmenuSel', { fg = colors.cyan, reverse = true })
   nvim_set_hl('PmenuKind', { link = 'Pmenu' })
   nvim_set_hl('PmenuKindSel', { link = 'PmenuSel' })
@@ -691,6 +691,7 @@ M.set_highlight = function(colors, config)
 
   if config.plugins['which-key.nvim'] then
     nvim_set_hl('WhichKey', { fg = colors.green })
+    nvim_set_hl('WhichKeyNormal', { fg = colors.green }, { transparent = config.transparent })
     nvim_set_hl('WhichKeyDesc', { fg = colors.orange, italic = true })
     nvim_set_hl('WhichKeySeparator', { fg = colors.pink })
     nvim_set_hl('WhichKeyGroup', { fg = colors.purple })
@@ -829,6 +830,17 @@ M.set_highlight = function(colors, config)
   if config.plugins['mini.cursorword'] then
     nvim_set_hl('MiniCursorword', { link = 'Visual' })
   end
+
+  if config.plugins['bufferline.nvim'] and config.transparent then
+    local color = require('dracula.color')
+    local background = color.shade(colors.base02, 2)
+    nvim_set_hl('BufferLineFill', { bg = background })
+    nvim_set_hl('BufferLineBufferSelected', { fg = colors.base0 })
+    nvim_set_hl('BufferLineSeparator', { fg = background })
+    nvim_set_hl('BufferLineSeparatorSelected', { fg = background })
+    nvim_set_hl('BufferLineSeparatorVisible', { fg = background })
+  end
+
   if config.on_highlights then
     local color = require 'dracula.color'
     local highlights = config.on_highlights(colors, color)

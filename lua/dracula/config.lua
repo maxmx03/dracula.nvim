@@ -48,5 +48,6 @@ return {
     ['mini.tabline'] = true,
     ['mini.starter'] = true,
     ['mini.cursorword'] = true,
+    ['bufferline.nvim'] = true,
   },
 }
