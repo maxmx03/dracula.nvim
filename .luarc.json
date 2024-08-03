@@ -1,3 +1,9 @@
 {
-  "diagnostics.disable": ["undefined-field"]
+  "diagnostics.disable": ["undefined-field", "duplicate-doc-field"],
+  "workspace.library": [
+    "/usr/share/nvim/runtime",
+    "${3rd}/luv/library",
+    "${3rd}/busted/library",
+    "${3rd}/luassert/library"
+  ]
 }

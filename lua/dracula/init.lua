@@ -21,13 +21,9 @@ M.load = function(theme)
   end
 
   vim.g.colors_name = theme
-  local ok, highlights = pcall(require, 'dracula.highlights.' .. theme)
-  if not ok then
-    highlights = require 'dracula.highlights'
-  end
+  local highlights = require 'dracula.highlights'
+  local ok, colors = pcall(require, 'dracula.palette.' .. theme)
 
-  local colors = {}
-  ok, colors = pcall(require, 'dracula.palette.' .. theme)
   if not ok then
     colors = require 'dracula.palette'
   end
