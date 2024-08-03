@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/maxmx03/dracula.nvim/compare/v1.3.1...v1.4.0) (2024-08-03)
+
+
+### Features
+
+* bufferline.nvim ([bb74938](https://github.com/maxmx03/dracula.nvim/commit/bb7493845daa9eedb1a86022f1119319c0af2fad))
+* config styles ([7bdaaff](https://github.com/maxmx03/dracula.nvim/commit/7bdaaffec92eabe57951988d96a403347db45369))
+
 ## [1.3.1](https://github.com/maxmx03/dracula.nvim/compare/v1.3.0...v1.3.1) (2024-04-20)
 
 
