@@ -19,22 +19,14 @@ Below is an example of how to enable them.
 lspconfig.lua_ls.setup {
   settings = {
     Lua = {
-      runtime = {
-        version = 'LuaJIT',
-      },
       workspace = {
-        checkThirdParty = false,
+        checkThirdParty = true,
         library = {
           vim.env.VIMRUNTIME,
-          '~/.local/share/nvim/lazy/dracula',
+          '~/.local/share/nvim/lazy/dracula.nvim',
         },
       },
-      hint = {
-        enable = true,
-      },
-      completion = {
-        callSnippet = 'Replace',
-      },
+      -- other settings ...
     },
   },
   capabilities = capabilities,
@@ -52,6 +44,16 @@ return {
       local dracula = require "dracula"
 
       dracula.setup({
+      styles = {
+        types = {},
+        functions = {},
+        parameters = {},
+        comments = {},
+        strings = {},
+        keywords = {},
+        variables = {},
+        constants = {},
+      },
       transparent = false,
       on_colors = function (colors, color)
         ---@type dracula.palette

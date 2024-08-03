@@ -117,7 +117,6 @@ describe('dracula.load', function()
     local Underlined = nvim_get_hl 'Underlined'
     assert.True('#8BE9FD' == Underlined.fg)
 
-    local Ignore = nvim_get_hl 'Ignore'
     local Error = nvim_get_hl 'Error'
     assert.True('#FF5555' == Error.fg)
 
