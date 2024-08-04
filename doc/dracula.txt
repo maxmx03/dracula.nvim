@@ -1,4 +1,4 @@
-*dracula.txt*            For NVIM v0.9.4           Last change: 2024 August 03
+*dracula.txt*            For NVIM v0.9.4           Last change: 2024 August 04
 
 ==============================================================================
 Table of Contents                                  *dracula-table-of-contents*
@@ -99,6 +99,7 @@ Annotations can be enabled. Below is an example of how to enable them.
             ["mini.tabline"] = true,
             ["mini.starter"] = true,
             ["mini.cursorword"] = true,
+            ['bufferline.nvim'] = true,
           }
           })
           vim.cmd.colorscheme 'dracula'
