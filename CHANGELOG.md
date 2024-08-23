@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.1](https://github.com/maxmx03/dracula.nvim/compare/v1.5.0...v1.5.1) (2024-08-23)
+
+
+### Bug Fixes
+
+* rainbow delimiter blue color ([1804d3e](https://github.com/maxmx03/dracula.nvim/commit/1804d3e6de135f88e57ea328376d71449add3496))
+* rainbow-delimiter violet color ([0b0ff4f](https://github.com/maxmx03/dracula.nvim/commit/0b0ff4faa9ec19350226b85cde2ca8355d9375ea))
+
 ## [1.5.0](https://github.com/maxmx03/dracula.nvim/compare/v1.4.0...v1.5.0) (2024-08-23)
 
 
