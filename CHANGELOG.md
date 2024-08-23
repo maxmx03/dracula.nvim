@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/maxmx03/dracula.nvim/compare/v1.4.0...v1.5.0) (2024-08-23)
+
+
+### Features
+
+* **plugin:** Add support for `rainbow-delimiters` ([ef689e5](https://github.com/maxmx03/dracula.nvim/commit/ef689e56aa5ef3f9711cc38180bc0c2c3c9eabf8))
+
 ## [1.4.0](https://github.com/maxmx03/dracula.nvim/compare/v1.3.1...v1.4.0) (2024-08-03)
 
 
