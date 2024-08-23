@@ -559,7 +559,7 @@ M.set_highlight = function(colors, config)
   if config.plugins['rainbow-delimiters'] then
     nvim_set_hl('RainbowDelimiterRed', { fg = colors.red })
     nvim_set_hl('RainbowDelimiteYellow', { fg = colors.yellow })
-    nvim_set_hl('RainbowDelimiterBlue', { fg = colors.blue })
+    nvim_set_hl('RainbowDelimiterBlue', { fg = colors.pink })
     nvim_set_hl('RainbowDelimiterOrange', { fg = colors.orange })
     nvim_set_hl('RainbowDelimiterGreen', { fg = colors.green })
     nvim_set_hl('RainbowDelimiterViolet', { fg = colors.purple })
