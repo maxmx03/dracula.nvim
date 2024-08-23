@@ -562,7 +562,7 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('RainbowDelimiterBlue', { fg = colors.blue })
     nvim_set_hl('RainbowDelimiterOrange', { fg = colors.orange })
     nvim_set_hl('RainbowDelimiterGreen', { fg = colors.green })
-    nvim_set_hl('RainbowDelimiterViolet', { fg = colors.violet })
+    nvim_set_hl('RainbowDelimiterViolet', { fg = colors.purple })
     nvim_set_hl('RainbowDelimiterCyan', { fg = colors.cyan })
   end
 
