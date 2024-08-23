@@ -310,6 +310,13 @@
 ---@field MiniStarterSection? table
 ---@field MiniStarterQuery? table
 ---@field MiniCursorword? table
+---@field RainbowDelimiterRed? table
+---@field RainbowDelimiteYellow? table
+---@field RainbowDelimiterBlue? table
+---@field RainbowDelimiterOrange? table
+---@field RainbowDelimiterGreen? table
+---@field RainbowDelimiterViolet? table
+---@field RainbowDelimiterCyan? table
 
 local M = {}
 
