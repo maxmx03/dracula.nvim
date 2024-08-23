@@ -549,6 +549,16 @@ M.set_highlight = function(colors, config)
     nvim_set_hl('@property.scss', { fg = colors.cyan })
   end
 
+  if config.plugins['rainbow-delimiters'] then
+    nvim_set_hl('RainbowDelimiterRed', { fg = colors.red })
+    nvim_set_hl('RainbowDelimiteYellow', { fg = colors.yellow })
+    nvim_set_hl('RainbowDelimiterBlue', { fg = colors.blue })
+    nvim_set_hl('RainbowDelimiterOrange', { fg = colors.orange })
+    nvim_set_hl('RainbowDelimiterGreen', { fg = colors.green })
+    nvim_set_hl('RainbowDelimiterViolet', { fg = colors.violet })
+    nvim_set_hl('RainbowDelimiterCyan', { fg = colors.cyan })
+  end
+
   if config.plugins['nvim-lspconfig'] then
     nvim_set_hl('@lsp.type.class', { link = 'Type' })
     nvim_set_hl('@lsp.type.decorator', { fg = colors.green })

@@ -71,6 +71,7 @@ return {
       end,
       plugins = {
         ["nvim-treesitter"] = true,
+        ["rainbow-delimiters"] = true,
         ["nvim-lspconfig"] = true,
         ["nvim-navic"] = true,
         ["nvim-cmp"] = true,
