@@ -173,7 +173,7 @@ hi Todo guifg=#bf9eee guibg=NONE gui=bold cterm=bold
 if g:dracula-soft.plugins["nvim-treesitter"]
 endif
 
-if g:dracula-soft.plugins["nvim-lspconfig"]
+if g:dracula.plugins["nvim-lspconfig"]
   hi DiagnosticError guifg=#ee6666 guibg=NONE gui=NONE cterm=NONE
   hi DiagnosticWarn guifg=#ffb86c guibg=NONE gui=NONE cterm=NONE
   hi DiagnosticInfo guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
@@ -195,7 +195,7 @@ if g:dracula-soft.plugins["nvim-lspconfig"]
   hi LspInlayHint guifg=#689494 guibg=NONE gui=NONE cterm=NONE
 endif
 
-if g:dracula-soft.plugins["nvim-navic"]
+if g:dracula.plugins["nvim-navic"]
   hi NavicText guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
   hi! link NavicSeparator Statement
   hi! link NavicIconsMethod Function
@@ -223,7 +223,7 @@ if g:dracula-soft.plugins["nvim-navic"]
   hi! link NavicIconsTypeParameter Type
 endif
 
-if g:dracula-soft.plugins["nvim-cmp"]
+if g:dracula.plugins["nvim-cmp"]
   hi! link CmpItemKindText String
   hi! link CmpItemKindMethod Function
   hi! link CmpItemKindFunction Function
@@ -249,12 +249,12 @@ if g:dracula-soft.plugins["nvim-cmp"]
   hi! link CmpItemKindTypeParameter Type
 endif
 
-if g:dracula-soft.plugins["indent-blankline.nvim"]
+if g:dracula.plugins["indent-blankline.nvim"]
   hi IblIndent guifg=#3F3B52 guibg=NONE gui=NONE cterm=NONE
   hi IblScope guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
 endif
 
-if g:dracula-soft.plugins["bufferline.nvim"]
+if g:dracula.plugins["bufferline.nvim"]
   hi BufferLineSeparator guifg=#262626 guibg=#262626 gui=NONE cterm=NONE
   hi BufferLineSeparatorSelected guifg=#262626 guibg=#282a36 gui=NONE cterm=NONE
   hi BufferLineBufferSelected guifg=#f8f8f2 guibg=NONE gui=bold cterm=bold
@@ -263,7 +263,7 @@ if g:dracula-soft.plugins["bufferline.nvim"]
   hi BufferLineBufferVisible guifg=#7b7f8b guibg=#282a36 gui=NONE cterm=NONE
 endif
 
-if g:dracula-soft.plugins["neo-tree.nvim"]
+if g:dracula.plugins["neo-tree.nvim"]
   hi NeoTreeNormal guifg=#f8f8f2 guibg=#262626 gui=NONE cterm=NONE
   hi! link NeoTreeNormalNC NeoTreeNormal
   hi NeoTreeDotFile guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
@@ -280,7 +280,7 @@ if g:dracula-soft.plugins["neo-tree.nvim"]
   hi NeoTreeGitStaged guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
 endif
 
-if g:dracula-soft.plugins["nvim-tree.lua"]
+if g:dracula.plugins["nvim-tree.lua"]
   hi! link NvimTreeSymlink Underlined
   hi! link NvimTreeSymlinkIcon Directory
   hi NvimTreeFolderName guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
@@ -304,14 +304,14 @@ if g:dracula-soft.plugins["nvim-tree.lua"]
   hi NvimTreeWinSeparator guifg=#262626 guibg=#262626 gui=NONE cterm=NONE
 endif
 
-if g:dracula-soft.plugins["which-key.nvim"]
+if g:dracula.plugins["which-key.nvim"]
   hi WhichKey guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
   hi WhichKeyDesc guifg=#ffb86c guibg=NONE gui=italic cterm=italic
   hi WhichKeySeparator guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
   hi WhichKeyGroup guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
 endif
 
-if g:dracula-soft.plugins["dashboard-nvim"]
+if g:dracula.plugins["dashboard-nvim"]
   hi DashboardHeader guifg=#ee6666 guibg=NONE gui=NONE cterm=NONE
   hi DashboardFooter guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
   hi! link DashboardDesc Directory
@@ -320,13 +320,13 @@ if g:dracula-soft.plugins["dashboard-nvim"]
   hi DashboardShotCut guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
 endif
 
-if g:dracula-soft.plugins["gitsigns.nvim"]
+if g:dracula.plugins["gitsigns.nvim"]
   hi GitSignsAdd guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
   hi GitSignsChange guifg=#ffb86c guibg=NONE gui=NONE cterm=NONE
   hi GitSignsDelete guifg=#ee6666 guibg=NONE gui=NONE cterm=NONE
 endif
 
-if g:dracula-soft.plugins["neogit"]
+if g:dracula.plugins["neogit"]
   hi! link NeogitCursorLine CursorLine
   hi NeogitBranch guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
   hi NeogitRemote guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
@@ -340,7 +340,7 @@ if g:dracula-soft.plugins["neogit"]
   hi NeogitDiffAdd guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
 endif
 
-if g:dracula-soft.plugins["todo-comments.nvim"]
+if g:dracula.plugins["todo-comments.nvim"]
   hi TodoFgTODO guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
   hi TodoFgWARN guifg=#ffb86c guibg=NONE gui=NONE cterm=NONE
   hi TodoFgTEST guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
@@ -364,14 +364,14 @@ if g:dracula-soft.plugins["todo-comments.nvim"]
   hi TodoBgFIX guifg=#ee6666 guibg=NONE gui=reverse cterm=reverse
 endif
 
-if g:dracula-soft.plugins["lazy.nvim"]
+if g:dracula.plugins["lazy.nvim"]
   hi LazyH1 guifg=#bf9eee guibg=#262626 gui=NONE cterm=NONE
   hi LazyButton guifg=#f8f8f2 guibg=#44475a gui=NONE cterm=NONE
   hi LazyButtonActive guifg=NONE guibg=#44475a gui=NONE cterm=NONE
   hi LazyReasonStart guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
 endif
 
-if g:dracula-soft.plugins["telescope.nvim"]
+if g:dracula.plugins["telescope.nvim"]
   hi! link TelescopeSelection CursorLine
   hi TelescopeSelectionCaret guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
   hi TelescopeMultiIcon guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
@@ -393,7 +393,7 @@ if g:dracula-soft.plugins["telescope.nvim"]
   hi TelescopePromptPrefix guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
 endif
 
-if g:dracula-soft.plugins["noice.nvim"]
+if g:dracula.plugins["noice.nvim"]
   hi NoiceFormatProgressTodo guifg=#62e884 guibg=#314742 gui=NONE cterm=NONE
   hi NoiceFormatProgressDone guifg=#62e884 guibg=NONE gui=reverse cterm=reverse
   hi NoiceLspProgressSpinner guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
@@ -401,13 +401,13 @@ if g:dracula-soft.plugins["noice.nvim"]
   hi! link NoiceLspProgressTitle Title
 endif
 
-if g:dracula-soft.plugins["hop.nvim"]
+if g:dracula.plugins["hop.nvim"]
   hi HopNextKey guifg=#ee6666 guibg=NONE gui=NONE cterm=NONE
   hi HopNextKey1 guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
   hi HopUnmatched guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
 endif
 
-if g:dracula-soft.plugins["mini.statusline"]
+if g:dracula.plugins["mini.statusline"]
   hi MiniStatuslineModeNormal guifg=#282a36 guibg=#bf9eee gui=NONE cterm=NONE
   hi MiniStatuslineModeInsert guifg=#282a36 guibg=#62e884 gui=NONE cterm=NONE
   hi MiniStatuslineModeVisual guifg=#e7ee98 guibg=#282a36 gui=NONE cterm=NONE
@@ -419,7 +419,7 @@ if g:dracula-soft.plugins["mini.statusline"]
   hi MiniStatuslineInactive guifg=#7b7f8b guibg=#282a36 gui=NONE cterm=NONE
 endif
 
-if g:dracula-soft.plugins["mini.tabline"]
+if g:dracula.plugins["mini.tabline"]
   hi MiniTablineCurrent guifg=#f8f8f2 guibg=#282a36 gui=NONE cterm=NONE
   hi MiniTablineVisible guifg=#f8f8f2 guibg=#282a36 gui=NONE cterm=NONE
   hi MiniTablineHidden guifg=#7b7f8b guibg=#282a36 gui=NONE cterm=NONE
@@ -430,7 +430,7 @@ if g:dracula-soft.plugins["mini.tabline"]
   hi MiniTablineTabpagesection guifg=#f8f8f2 guibg=#262626 gui=NONE cterm=NONE
 endif
 
-if g:dracula-soft.plugins["mini.starter"]
+if g:dracula.plugins["mini.starter"]
   hi! link MiniStarterCurrent CursorLine
   hi MiniStarterHeader guifg=#ee6666 guibg=NONE gui=NONE cterm=NONE
   hi MiniStarterFooter guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
@@ -441,6 +441,6 @@ if g:dracula-soft.plugins["mini.starter"]
   hi MiniStarterQuery guifg=#f286c4 guibg=NONE gui=bold cterm=bold
 endif
 
-if g:dracula-soft.plugins["mini.cursorword"]
+if g:dracula.plugins["mini.cursorword"]
   hi! link MiniCursorword Visual
 endif
