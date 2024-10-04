@@ -114,11 +114,7 @@ return {
 
 ### Vim
 
-```vim
-Plug 'maxmx03/dracula.nvim', { 'branch': 'vim' }
-colorscheme dracula
-colorscheme dracula-soft
-```
+[vim-docs](https://github.com/maxmx03/dracula.nvim/tree/vim)
 
 ## Api
 
