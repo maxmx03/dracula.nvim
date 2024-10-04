@@ -393,7 +393,7 @@ highlights:
     - name: Todo
       <<: *markupHeading
   plugins:
-    - nvim-treesitter:
+    - treesitter:
         - name: "@variable"
           <<: *identifier
         - name: "@variable.builtin"
@@ -562,7 +562,7 @@ highlights:
           fg: cyan
         - name: "@property.scss"
           fg: cyan
-    - nvim-lspconfig:
+    - lspconfig:
         - name: "@lsp.type.class"
           <<: *class
         - name: "@lsp.type.decorator"
@@ -659,7 +659,7 @@ highlights:
           link: Visual
         - name: LspInlayHint
           fg: inlay_hint
-    - nvim-navic:
+    - navic:
         - name: NavicText
           fg: base0
         - name: NavicSeparator
@@ -710,7 +710,7 @@ highlights:
           <<: *symbol_operator
         - name: NavicIconsTypeParameter
           <<: *symbol_type_parameter
-    - nvim-cmp:
+    - cmp:
         - name: CmpItemKindText
           <<: *symbol_text
         - name: CmpItemKindMethod
@@ -757,14 +757,14 @@ highlights:
           <<: *symbol_operator
         - name: CmpItemKindTypeParameter
           <<: *symbol_type_parameter
-    - indent-blankline.nvim:
+    - ibl:
         - name: IblIndent
           fg: shade_purple
           nocombine: true
         - name: IblScope
           fg: purple
           nocombine: true
-    - bufferline.nvim:
+    - bufferline:
         - name: BufferLineSeparator
           fg: base04
           bg: base04
@@ -785,7 +785,7 @@ highlights:
           fg: base01
           bg: base03
           transparent: true
-    - neo-tree.nvim:
+    - neotree:
         - name: NeoTreeNormal
           fg: base0
           bg: base04
@@ -815,7 +815,7 @@ highlights:
           fg: git_modified
         - name: NeoTreeGitStaged
           fg: git_added
-    - nvim-tree.lua:
+    - nvimtree:
         - name: NvimTreeSymlink
           link: Underlined
         - name: NvimTreeSymlinkIcon
@@ -860,7 +860,7 @@ highlights:
         - name: NvimTreeWinSeparator
           fg: base04
           bg: base04
-    - which-key.nvim:
+    - whichkey:
         - name: WhichKey
           <<: *function
         - name: WhichKeyDesc
@@ -869,7 +869,7 @@ highlights:
           <<: *keyword
         - name: WhichKeyGroup
           fg: purple
-    - dashboard-nvim:
+    - dashboard:
         - name: DashboardHeader
           fg: red
         - name: DashboardFooter
@@ -882,7 +882,7 @@ highlights:
           link: Directory
         - name: DashboardShotCut
           fg: base0
-    - gitsigns.nvim:
+    - gitsigns:
         - name: GitSignsAdd
           fg: git_added
         - name: GitSignsChange
@@ -917,7 +917,7 @@ highlights:
           bg: shade_green
         - name: NeogitDiffAdd
           fg: git_added
-    - todo-comments.nvim:
+    - todocomments:
         - name: TodoFgTODO
           fg: purple
         - name: TodoFgWARN
@@ -974,7 +974,7 @@ highlights:
           fg: diag_error
           reverse: true
           gui: reverse
-    - lazy.nvim:
+    - lazy:
         - name: LazyH1
           fg: purple
           bg: base04
@@ -986,7 +986,7 @@ highlights:
           reverse: true
         - name: LazyReasonStart
           fg: cyan
-    - telescope.nvim:
+    - telescope:
         - name: TelescopeSelection
           link: CursorLine
         - name: TelescopeSelectionCaret
@@ -1031,7 +1031,7 @@ highlights:
           link: NonText
         - name: TelescopePromptPrefix
           fg: purple
-    - noice.nvim:
+    - noice:
         - name: NoiceFormatProgressTodo
           fg: diag_ok
           bg: shade_ok
@@ -1045,14 +1045,14 @@ highlights:
           fg: diag_ok
         - name: NoiceLspProgressTitle
           link: Title
-    - hop.nvim:
+    - hop:
         - name: HopNextKey
           fg: red
         - name: HopNextKey1
           fg: cyan
         - name: HopUnmatched
           fg: base01
-    - mini.statusline:
+    - ministatusline:
         - name: MiniStatuslineModeNormal
           fg: base03
           bg: purple
@@ -1080,7 +1080,7 @@ highlights:
         - name: MiniStatuslineInactive
           fg: base01
           bg: base03
-    - mini.tabline:
+    - minitabline:
         - name: MiniTablineCurrent
           fg: base0
           bg: base03
@@ -1102,7 +1102,7 @@ highlights:
         - name: MiniTablineTabpagesection
           fg: base0
           bg: base04
-    - mini.starter:
+    - ministarter:
         - name: MiniStarterCurrent
           link: CursorLine
         - name: MiniStarterHeader
@@ -1121,6 +1121,6 @@ highlights:
           fg: pink
           bold: true
           gui: bold
-    - mini.cursorword:
+    - minicursorword:
         - name: MiniCursorword
           link: Visual
