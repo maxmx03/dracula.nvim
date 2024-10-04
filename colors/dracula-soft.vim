@@ -1,14 +1,15 @@
+vim9script
 
-" dracula-soft Colorscheme for vim
-" Url: maxmx03/dracula.nvim
-" Maintainer: Max Del Canto <github.com/maxmx03>
-" License: MIT License
+# dracula-soft Colorscheme for vim
+# Url: maxmx03/dracula.nvim
+# Maintainer: Max Del Canto <github.com/maxmx03>
+# License: MIT License
 
 if exists("g:loaded_dracula")
   finish
 endif
 
-let g:loaded_dracula = 1
+g:loaded_dracula = 1
 
 hi clear
 
@@ -17,50 +18,50 @@ if exists('syntax_on')
 endif
 
 set termguicolors
-let g:colors_name = 'dracula-soft'
-let g:dracula_transparency = get(g:, 'dracula_transparency', 0)
+g:colors_name = 'dracula-soft'
+g:dracula_transparency = get(g: 'dracula_transparency', false)
 
-let g:dracula_treesitter = get(g:, 'dracula_treesitter', 0)
-let g:dracula_lspconfig = get(g:, 'dracula_lspconfig', 0)
-let g:dracula_navic = get(g:, 'dracula_navic', 0)
-let g:dracula_cmp = get(g:, 'dracula_cmp', 0)
-let g:dracula_ibl = get(g:, 'dracula_ibl', 0)
-let g:dracula_bufferline = get(g:, 'dracula_bufferline', 0)
-let g:dracula_neotree = get(g:, 'dracula_neotree', 0)
-let g:dracula_nvimtree = get(g:, 'dracula_nvimtree', 0)
-let g:dracula_whichkey = get(g:, 'dracula_whichkey', 0)
-let g:dracula_dashboard = get(g:, 'dracula_dashboard', 0)
-let g:dracula_gitsigns = get(g:, 'dracula_gitsigns', 0)
-let g:dracula_neogit = get(g:, 'dracula_neogit', 0)
-let g:dracula_todocomments = get(g:, 'dracula_todocomments', 0)
-let g:dracula_lazy = get(g:, 'dracula_lazy', 0)
-let g:dracula_telescope = get(g:, 'dracula_telescope', 0)
-let g:dracula_noice = get(g:, 'dracula_noice', 0)
-let g:dracula_hop = get(g:, 'dracula_hop', 0)
-let g:dracula_ministatusline = get(g:, 'dracula_ministatusline', 0)
-let g:dracula_minitabline = get(g:, 'dracula_minitabline', 0)
-let g:dracula_ministarter = get(g:, 'dracula_ministarter', 0)
-let g:dracula_minicursorword = get(g:, 'dracula_minicursorword', 0)
+g:dracula_treesitter = get(g:, 'dracula_treesitter', false)
+g:dracula_lspconfig = get(g:, 'dracula_lspconfig', false)
+g:dracula_navic = get(g:, 'dracula_navic', false)
+g:dracula_cmp = get(g:, 'dracula_cmp', false)
+g:dracula_ibl = get(g:, 'dracula_ibl', false)
+g:dracula_bufferline = get(g:, 'dracula_bufferline', false)
+g:dracula_neotree = get(g:, 'dracula_neotree', false)
+g:dracula_nvimtree = get(g:, 'dracula_nvimtree', false)
+g:dracula_whichkey = get(g:, 'dracula_whichkey', false)
+g:dracula_dashboard = get(g:, 'dracula_dashboard', false)
+g:dracula_gitsigns = get(g:, 'dracula_gitsigns', false)
+g:dracula_neogit = get(g:, 'dracula_neogit', false)
+g:dracula_todocomments = get(g:, 'dracula_todocomments', false)
+g:dracula_lazy = get(g:, 'dracula_lazy', false)
+g:dracula_telescope = get(g:, 'dracula_telescope', false)
+g:dracula_noice = get(g:, 'dracula_noice', false)
+g:dracula_hop = get(g:, 'dracula_hop', false)
+g:dracula_ministatusline = get(g:, 'dracula_ministatusline', false)
+g:dracula_minitabline = get(g:, 'dracula_minitabline', false)
+g:dracula_ministarter = get(g:, 'dracula_ministarter', false)
+g:dracula_minicursorword = get(g:, 'dracula_minicursorword', false)
 
 if (has('termguicolors') && &termguicolors) || has('gui_running')
-  let g:terminal_ansi_colors = [
-    \ "#F8F8F2",
-    \ "#7B7F8B",
-    \ "#44475A",
-    \ "#282A36",
-    \ "#262626",
-    \ "#ADF6F6",
-    \ "#EE6666",
-    \ "#ADF6F6",
-    \ "#ADF6F6",
-    \ "#62E884",
-    \ "#FFB86C",
-    \ "#62E884",
-    \ "#FFB86C",
-    \ "#EE6666",
-    \ "#62E884",
-    \ "#689494",
-    \]
+  g:terminal_ansi_colors = [
+    "#F8F8F2",
+    "#7B7F8B",
+    "#44475A",
+    "#282A36",
+    "#262626",
+    "#ADF6F6",
+    "#EE6666",
+    "#ADF6F6",
+    "#ADF6F6",
+    "#62E884",
+    "#FFB86C",
+    "#62E884",
+    "#FFB86C",
+    "#EE6666",
+    "#62E884",
+    "#689494",
+    ]
 endif
 
 
@@ -101,18 +102,18 @@ hi! link MsgSeparator Normal
 hi! link MoreMsg ModeMsg
 hi NonText guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
 hi Normal guifg=#f8f8f2 guibg=#282a36 gui=NONE cterm=NONE
-if g:dracula_transparency == 1
+if g:dracula_transparency
   hi Normal guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
 endif
 hi NormalFloat guifg=#f8f8f2 guibg=#262626 gui=NONE cterm=NONE
-if g:dracula_transparency == 1
+if g:dracula_transparency
   hi NormalFloat guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
 endif
 hi! link FloatBorder WinSeparator
 hi FloatTitle guifg=#bf9eee guibg=NONE gui=bold cterm=bold
 hi! link NormalNC Normal
 hi Pmenu guifg=#f8f8f2 guibg=#262626 gui=NONE cterm=NONE
-if g:dracula_transparency == 1
+if g:dracula_transparency
   hi Pmenu guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
 endif
 hi PmenuSel guifg=#adf6f6 guibg=NONE gui=reverse cterm=reverse
@@ -178,110 +179,10 @@ hi Underlined guifg=#adf6f6 guibg=NONE gui=underline cterm=underline
 hi Ignore guifg=NONE guibg=NONE gui=NONE cterm=NONE
 hi Error guifg=#ee6666 guibg=NONE gui=bold cterm=bold
 hi Todo guifg=#bf9eee guibg=NONE gui=bold cterm=bold
-if g:dracula_treesitter == 1
-  hi @variable guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi @variable.builtin guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @variable.parameter guifg=#ffb86c guibg=NONE gui=italic cterm=italic
-  hi @variable.member guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi @constant guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @constant.builtin guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @constant.macro guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @module guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi @module.builtin guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @label guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @string guifg=#e7ee98 guibg=NONE gui=NONE cterm=NONE
-  hi @string.documentation guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @string.regexp guifg=#ee6666 guibg=NONE gui=NONE cterm=NONE
-  hi @string.escape guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @string.special guifg=#e7ee98 guibg=NONE gui=NONE cterm=NONE
-  hi @string.special.symbol guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi! link @string.special.url Underlined
-  hi @character guifg=#e7ee98 guibg=NONE gui=NONE cterm=NONE
-  hi @character.special guifg=#e7ee98 guibg=NONE gui=NONE cterm=NONE
-  hi @character.printf guifg=#ee6666 guibg=NONE gui=NONE cterm=NONE
-  hi @type guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @type.builtin guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @type.definition guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @type.qualifier guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @function guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
-  hi @function.builtin guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @function.call guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
-  hi @function.macro guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
-  hi @function.method guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
-  hi @function.method.call guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
-  hi @constructor guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @constructor.lua guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi @operator guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.coroutine guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.function guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.operator guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.import guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.repeat guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.return guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.debug guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.exception guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.conditional guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.conditional.ternary guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.directive guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @keyword.directive.define guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @punctuation.delimiter guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi @punctuation.bracket guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi @punctuation.special guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @comment guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
-  hi @comment.documentation guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
-  hi @comment.error guifg=#ee6666 guibg=#46333D gui=NONE cterm=NONE
-  hi @comment.warning guifg=#ffb86c guibg=#483F3E gui=NONE cterm=NONE
-  hi @comment.todo guifg=#bf9eee guibg=#3F3B52 gui=NONE cterm=NONE
-  hi @comment.note guifg=#adf6f6 guibg=#394552 gui=NONE cterm=NONE
-  hi @markup.strong guifg=#ffb86c guibg=NONE gui=NONE cterm=NONE
-  hi @markup.italic guifg=#e7ee98 guibg=NONE gui=italic cterm=italic
-  hi @markup.strikethrough guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
-  hi @markup.underline guifg=#adf6f6 guibg=NONE gui=underline cterm=underline
-  hi @markup.heading guifg=#bf9eee guibg=NONE gui=bold cterm=bold
-  hi @markup.quote guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
-  hi @markup.math guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @markup.environment guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
-  hi @markup.link guifg=#ffb86c guibg=NONE gui=NONE cterm=NONE
-  hi @markup.link.label guifg=#adf6f6 guibg=NONE gui=underline cterm=underline
-  hi @markup.link.url guifg=#adf6f6 guibg=NONE gui=underline cterm=underline
-  hi @markup.raw guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
-  hi @markup.raw.block guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
-  hi @markup.list guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @markup.list.checked guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
-  hi @markup.list.unchecked guifg=#ffb86c guibg=NONE gui=NONE cterm=NONE
-  hi @diff.plus guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
-  hi @diff.minus guifg=#ee6666 guibg=NONE gui=NONE cterm=NONE
-  hi @diff.delta guifg=#ffb86c guibg=NONE gui=NONE cterm=NONE
-  hi @tag guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @tag.attribute guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
-  hi @tag.delimiter guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi @property.yaml guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @property.json guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @property.css guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @property.scss guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
+if g:dracula_treesitter
 endif
 
-if g:dracula_lspconfig == 1
-  hi @lsp.type.class guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.decorator guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.enum guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.enumMember guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.interface guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.macro guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.namespace guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.parameter guifg=#ffb86c guibg=NONE gui=italic cterm=italic
-  hi @lsp.type.property guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.struct guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.type guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.typeParameter guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.type.variable guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.typemod.variable.defaultLibrary guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.typemod.variable.readonly guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.typemod.variable.global guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.typemod.keyword.documentation guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.typemod.class.documentation guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
-  hi @lsp.typemod.property.readonly guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
+if g:dracula_lspconfig
   hi DiagnosticError guifg=#ee6666 guibg=NONE gui=NONE cterm=NONE
   hi DiagnosticWarn guifg=#ffb86c guibg=NONE gui=NONE cterm=NONE
   hi DiagnosticInfo guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
@@ -303,7 +204,7 @@ if g:dracula_lspconfig == 1
   hi LspInlayHint guifg=#689494 guibg=NONE gui=NONE cterm=NONE
 endif
 
-if g:dracula_navic == 1
+if g:dracula_navic
   hi NavicText guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
   hi! link NavicSeparator Statement
   hi! link NavicIconsMethod Function
@@ -331,7 +232,7 @@ if g:dracula_navic == 1
   hi! link NavicIconsTypeParameter Type
 endif
 
-if g:dracula_cmp == 1
+if g:dracula_cmp
   hi! link CmpItemKindText String
   hi! link CmpItemKindMethod Function
   hi! link CmpItemKindFunction Function
@@ -357,12 +258,12 @@ if g:dracula_cmp == 1
   hi! link CmpItemKindTypeParameter Type
 endif
 
-if g:dracula_ibl == 1
+if g:dracula_ibl
   hi IblIndent guifg=#3F3B52 guibg=NONE gui=NONE cterm=NONE
   hi IblScope guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
 endif
 
-if g:dracula_bufferline == 1
+if g:dracula_bufferline
   hi BufferLineSeparator guifg=#262626 guibg=#262626 gui=NONE cterm=NONE
   hi BufferLineSeparatorSelected guifg=#262626 guibg=#282a36 gui=NONE cterm=NONE
   hi BufferLineBufferSelected guifg=#f8f8f2 guibg=NONE gui=bold cterm=bold
@@ -371,7 +272,7 @@ if g:dracula_bufferline == 1
   hi BufferLineBufferVisible guifg=#7b7f8b guibg=#282a36 gui=NONE cterm=NONE
 endif
 
-if g:dracula_neotree == 1
+if g:dracula_neotree
   hi NeoTreeNormal guifg=#f8f8f2 guibg=#262626 gui=NONE cterm=NONE
   hi! link NeoTreeNormalNC NeoTreeNormal
   hi NeoTreeDotFile guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
@@ -388,7 +289,7 @@ if g:dracula_neotree == 1
   hi NeoTreeGitStaged guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
 endif
 
-if g:dracula_nvimtree == 1
+if g:dracula_nvimtree
   hi! link NvimTreeSymlink Underlined
   hi! link NvimTreeSymlinkIcon Directory
   hi NvimTreeFolderName guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
@@ -412,14 +313,14 @@ if g:dracula_nvimtree == 1
   hi NvimTreeWinSeparator guifg=#262626 guibg=#262626 gui=NONE cterm=NONE
 endif
 
-if g:dracula_whichkey == 1
+if g:dracula_whichkey
   hi WhichKey guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
   hi WhichKeyDesc guifg=#ffb86c guibg=NONE gui=italic cterm=italic
   hi WhichKeySeparator guifg=#f286c4 guibg=NONE gui=NONE cterm=NONE
   hi WhichKeyGroup guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
 endif
 
-if g:dracula_dashboard == 1
+if g:dracula_dashboard
   hi DashboardHeader guifg=#ee6666 guibg=NONE gui=NONE cterm=NONE
   hi DashboardFooter guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
   hi! link DashboardDesc Directory
@@ -428,13 +329,13 @@ if g:dracula_dashboard == 1
   hi DashboardShotCut guifg=#f8f8f2 guibg=NONE gui=NONE cterm=NONE
 endif
 
-if g:dracula_gitsigns == 1
+if g:dracula_gitsigns
   hi GitSignsAdd guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
   hi GitSignsChange guifg=#ffb86c guibg=NONE gui=NONE cterm=NONE
   hi GitSignsDelete guifg=#ee6666 guibg=NONE gui=NONE cterm=NONE
 endif
 
-if g:dracula_neogit == 1
+if g:dracula_neogit
   hi! link NeogitCursorLine CursorLine
   hi NeogitBranch guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
   hi NeogitRemote guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
@@ -448,7 +349,7 @@ if g:dracula_neogit == 1
   hi NeogitDiffAdd guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
 endif
 
-if g:dracula_todocomments == 1
+if g:dracula_todocomments
   hi TodoFgTODO guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
   hi TodoFgWARN guifg=#ffb86c guibg=NONE gui=NONE cterm=NONE
   hi TodoFgTEST guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
@@ -472,14 +373,14 @@ if g:dracula_todocomments == 1
   hi TodoBgFIX guifg=#ee6666 guibg=NONE gui=reverse cterm=reverse
 endif
 
-if g:dracula_lazy == 1
+if g:dracula_lazy
   hi LazyH1 guifg=#bf9eee guibg=#262626 gui=NONE cterm=NONE
   hi LazyButton guifg=#f8f8f2 guibg=#44475a gui=NONE cterm=NONE
   hi LazyButtonActive guifg=NONE guibg=#44475a gui=NONE cterm=NONE
   hi LazyReasonStart guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
 endif
 
-if g:dracula_telescope == 1
+if g:dracula_telescope
   hi! link TelescopeSelection CursorLine
   hi TelescopeSelectionCaret guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
   hi TelescopeMultiIcon guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
@@ -501,7 +402,7 @@ if g:dracula_telescope == 1
   hi TelescopePromptPrefix guifg=#bf9eee guibg=NONE gui=NONE cterm=NONE
 endif
 
-if g:dracula_noice == 1
+if g:dracula_noice
   hi NoiceFormatProgressTodo guifg=#62e884 guibg=#314742 gui=NONE cterm=NONE
   hi NoiceFormatProgressDone guifg=#62e884 guibg=NONE gui=reverse cterm=reverse
   hi NoiceLspProgressSpinner guifg=#62e884 guibg=NONE gui=NONE cterm=NONE
@@ -509,13 +410,13 @@ if g:dracula_noice == 1
   hi! link NoiceLspProgressTitle Title
 endif
 
-if g:dracula_hop == 1
+if g:dracula_hop
   hi HopNextKey guifg=#ee6666 guibg=NONE gui=NONE cterm=NONE
   hi HopNextKey1 guifg=#adf6f6 guibg=NONE gui=NONE cterm=NONE
   hi HopUnmatched guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
 endif
 
-if g:dracula_ministatusline == 1
+if g:dracula_ministatusline
   hi MiniStatuslineModeNormal guifg=#282a36 guibg=#bf9eee gui=NONE cterm=NONE
   hi MiniStatuslineModeInsert guifg=#282a36 guibg=#62e884 gui=NONE cterm=NONE
   hi MiniStatuslineModeVisual guifg=#e7ee98 guibg=#282a36 gui=NONE cterm=NONE
@@ -527,7 +428,7 @@ if g:dracula_ministatusline == 1
   hi MiniStatuslineInactive guifg=#7b7f8b guibg=#282a36 gui=NONE cterm=NONE
 endif
 
-if g:dracula_minitabline == 1
+if g:dracula_minitabline
   hi MiniTablineCurrent guifg=#f8f8f2 guibg=#282a36 gui=NONE cterm=NONE
   hi MiniTablineVisible guifg=#f8f8f2 guibg=#282a36 gui=NONE cterm=NONE
   hi MiniTablineHidden guifg=#7b7f8b guibg=#282a36 gui=NONE cterm=NONE
@@ -538,7 +439,7 @@ if g:dracula_minitabline == 1
   hi MiniTablineTabpagesection guifg=#f8f8f2 guibg=#262626 gui=NONE cterm=NONE
 endif
 
-if g:dracula_ministarter == 1
+if g:dracula_ministarter
   hi! link MiniStarterCurrent CursorLine
   hi MiniStarterHeader guifg=#ee6666 guibg=NONE gui=NONE cterm=NONE
   hi MiniStarterFooter guifg=#7b7f8b guibg=NONE gui=NONE cterm=NONE
@@ -549,6 +450,6 @@ if g:dracula_ministarter == 1
   hi MiniStarterQuery guifg=#f286c4 guibg=NONE gui=bold cterm=bold
 endif
 
-if g:dracula_minicursorword == 1
+if g:dracula_minicursorword
   hi! link MiniCursorword Visual
 endif
