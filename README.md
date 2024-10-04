@@ -7,17 +7,17 @@
 To install Dracula-Soft, you need a plugin manager.
 In the example, bellow we are going to use vim-plug.
 
-## Transparency
-
-```vim
-g:dracula_transparency = true
-```
-
 ```vim
 Plug 'maxmx03/dracula.nvim', { 'branch': 'vim9' }
 
 colorscheme dracula
 colorscheme dracula-soft
+```
+
+## Transparency
+
+```vim
+g:dracula_transparency = true
 ```
 
 ## Plugins
