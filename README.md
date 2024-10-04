@@ -115,6 +115,7 @@ return {
 ### Vim
 
 [vim-docs](https://github.com/maxmx03/dracula.nvim/tree/vim)
+[vim9-docs](https://github.com/maxmx03/dracula.nvim/tree/vim9)
 
 ## Api
 
