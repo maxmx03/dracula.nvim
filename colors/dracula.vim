@@ -552,3 +552,25 @@ endif
 if g:dracula_minicursorword == 1
   hi! link MiniCursorword Visual
 endif
+unlet g:dracula_transparency
+unlet g:dracula_treesitter
+unlet g:dracula_lspconfig
+unlet g:dracula_navic
+unlet g:dracula_cmp
+unlet g:dracula_ibl
+unlet g:dracula_bufferline
+unlet g:dracula_neotree
+unlet g:dracula_nvimtree
+unlet g:dracula_whichkey
+unlet g:dracula_dashboard
+unlet g:dracula_gitsigns
+unlet g:dracula_neogit
+unlet g:dracula_todocomments
+unlet g:dracula_lazy
+unlet g:dracula_telescope
+unlet g:dracula_noice
+unlet g:dracula_hop
+unlet g:dracula_ministatusline
+unlet g:dracula_minitabline
+unlet g:dracula_ministarter
+unlet g:dracula_minicursorword
