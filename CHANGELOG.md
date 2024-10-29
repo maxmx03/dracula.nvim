@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/maxmx03/dracula.nvim/compare/v1.6.0...v1.7.0) (2024-10-29)
+
+
+### Features
+
+* dracula-soft termcolors ([dd68058](https://github.com/maxmx03/dracula.nvim/commit/dd6805825c359d44a8faa036954eeb792faf9b39))
+
 ## [1.6.0](https://github.com/maxmx03/dracula.nvim/compare/v1.5.1...v1.6.0) (2024-10-29)
 
 
