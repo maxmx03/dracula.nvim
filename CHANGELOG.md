@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.6.0](https://github.com/maxmx03/dracula.nvim/compare/v1.5.1...v1.6.0) (2024-10-29)
+
+
+### Features
+
+* load_spec removed ([be281db](https://github.com/maxmx03/dracula.nvim/commit/be281db5bafbc707eec472207541786e1af3af56))
+* queries removed ([350f629](https://github.com/maxmx03/dracula.nvim/commit/350f6298c038e92f31d6f89a9bb08aab2941146f))
+
 ## [1.5.1](https://github.com/maxmx03/dracula.nvim/compare/v1.5.0...v1.5.1) (2024-08-23)
 
 
