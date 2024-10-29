@@ -1,28 +1,32 @@
 ---@class dracula.styles
----@field types? vim.api.keyset.highlight
----@field functions? vim.api.keyset.highlight
----@field parameters? vim.api.keyset.highlight
----@field comments? vim.api.keyset.highlight
----@field strings? vim.api.keyset.highlight
----@field keywords? vim.api.keyset.highlight
----@field variables? vim.api.keyset.highlight
----@field constants? vim.api.keyset.highlight
+---@field Type? vim.api.keyset.highlight
+---@field Function? vim.api.keyset.highlight
+---@field Parameter? vim.api.keyset.highlight
+---@field Property? vim.api.keyset.highlight
+---@field Comment? vim.api.keyset.highlight
+---@field String? vim.api.keyset.highlight
+---@field Keyword? vim.api.keyset.highlight
+---@field Identifier? vim.api.keyset.highlight
+---@field Constant? vim.api.keyset.highlight
 
 ---@class dracula.config
----@field styles dracula.styles
+---@field styles? dracula.styles
 ---@field transparent? boolean
 ---@field on_highlights? fun(colors: dracula.palette, color: dracula.color): dracula.highlights
 ---@field on_colors? fun(colors: dracula.palette, color: dracula.color): dracula.palette
 return {
   styles = {
-    types = {},
-    functions = {},
-    parameters = {},
-    comments = {},
-    strings = {},
-    keywords = {},
-    variables = {},
-    constants = {},
+    Type = {},
+    Function = {},
+    Parameter = {},
+    Property = {},
+    Comment = {
+      italic = true,
+    },
+    String = {},
+    Keyword = {},
+    Identifier = {},
+    Constant = {},
   },
   transparent = false,
   on_highlights = nil,

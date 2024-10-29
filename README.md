@@ -45,14 +45,15 @@ return {
 
       dracula.setup({
       styles = {
-        types = {},
-        functions = {},
-        parameters = {},
-        comments = {},
-        strings = {},
-        keywords = {},
-        variables = {},
-        constants = {},
+        Type = {},
+        Function = {},
+        Parameter = {},
+        Property = {},
+        Comment = {},
+        String = {},
+        Keyword = {},
+        Identifier = {},
+        Constant = {},
       },
       transparent = false,
       on_colors = function (colors, color)
@@ -60,6 +61,7 @@ return {
         return {
           -- override or create new colors
           mycolor = "#ffffff",
+          -- mycolor = 0xffffff,
         }
       end,
       on_highlights = function (colors, color)
