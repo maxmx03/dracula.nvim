@@ -8,11 +8,11 @@ describe('dracula.setup', function()
     dracula.setup {
       transparent = true,
       styles = {
-        comments = { italic = true },
+        Comment = { italic = true },
       },
       on_colors = function()
         return {
-          mycolor = '#ffffff',
+          mycolor = 0xffffff,
         }
       end,
       on_highlights = function(colors)

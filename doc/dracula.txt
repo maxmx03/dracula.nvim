@@ -54,14 +54,15 @@ Annotations can be enabled. Below is an example of how to enable them.
     
           dracula.setup({
           styles = {
-            types = {},
-            functions = {},
-            parameters = {},
-            comments = {},
-            strings = {},
-            keywords = {},
-            variables = {},
-            constants = {},
+            Type = {},
+            Function = {},
+            Parameter = {},
+            Property = {},
+            Comment = {},
+            String = {},
+            Keyword = {},
+            Identifier = {},
+            Constant = {},
           },
           transparent = false,
           on_colors = function (colors, color)
