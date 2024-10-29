@@ -24,6 +24,28 @@ if config.on_colors then
   colors = vim.tbl_extend('force', colors, config.on_colors(colors, color))
 end
 
+local term = {
+  'base04',
+  'red',
+  'green',
+  'yellow',
+  'pink',
+  'purple',
+  'cyan',
+  'base01',
+  'base01',
+  'orange',
+  'green',
+  'yellow',
+  'cyan',
+  'pink',
+  'green',
+  'base01',
+}
+for index, key in ipairs(term) do
+  vim.g['terminal_color_' .. index - 1] = colors[key]
+end
+
 local hl = vim.api.nvim_set_hl
 local none = 'NONE'
 
