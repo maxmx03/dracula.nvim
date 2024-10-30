@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.7.1](https://github.com/maxmx03/dracula.nvim/compare/v1.7.0...v1.7.1) (2024-10-30)
+
+
+### Bug Fixes
+
+* css highlights ([b7d73e2](https://github.com/maxmx03/dracula.nvim/commit/b7d73e212c0d384808f78e2bd2477f854d338171))
+* html tags and attributes ([0e7156e](https://github.com/maxmx03/dracula.nvim/commit/0e7156e20c0af9cbc9aa751132b0bd9578fb1fb0))
+
 ## [1.7.0](https://github.com/maxmx03/dracula.nvim/compare/v1.6.0...v1.7.0) (2024-10-29)
 
 
